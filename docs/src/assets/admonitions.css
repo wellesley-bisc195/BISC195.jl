@@ -1,0 +1,7 @@
+.admonition.practice > .admonition-title {
+ background-color: rgba(152,78,163,0.8);
+}
+
+.admonition.practice {
+ background-color: rgba(152,78,163,0.3);
+}
