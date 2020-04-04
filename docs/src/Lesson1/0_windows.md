@@ -11,12 +11,12 @@ expect the later, a so-called "Unix" environment.
 The good news is that Windows 10 has a way
 to run a Unix environment side-by-side with Windows.
 
-!!! note "Windows Users"
+!!! compat "Windows Users"
     Throughout this course,
     you will see boxes like this labeled "Windows Users."
     These contain information about ways in which
     Windows is different from Unix operating systems.
-    Pay careful attention to these boxes,
+    **Pay careful attention** to these boxes,
     since other instructions may be unclear if you don't modify them accordingly.
 
 Much of this guide was cribbed from [Michael Treat's guide](https://github.com/michaeltreat/Windows-Subsystem-For-Linux-Setup-Guide),
@@ -39,7 +39,7 @@ This guide might not open after restart, so be sure to make note of the url or s
 
 1. Click here to go to Microsoft store and install the [Ubuntu App](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6?activetab=pivot%3aoverviewtab)
 1. Follow the on-screen prompts to install the app.
-1. When the app is ready, the button that said 'Install' will change to say 'Launch'. Click Launch. This will start the Ubuntu installation. This installation only happens the first time the app is launched. It's the actual Ubuntu (or Linux) OS installing and mounting to your Windows FS.
+1. When the app is ready, the button that said 'Install' will change to say 'Launch'. Click Launch. This will start the Ubuntu installation. This installation only happens the first time the app is launched. It's the actual Ubuntu (or Linux) OS installing and mounting to your Windows file system.
 
 ## Step 0.3 - Finish Installing the Ubuntu App.
 
@@ -62,16 +62,16 @@ This guide might not open after restart, so be sure to make note of the url or s
      then stop and reach out to me.
      You should NOT have to worry about any permissions with this,
      and if you do get stuck there then I need to know so I can help troubleshoot you through this,
-     or so we know we need to update this guide*.
+     or so we know we need to update this guide.
 
 3. Finally, the prompt will change and you will be on a command line.
    Type `pwd` and press enter to see where you currently are in the FS.
-   you should be at `/home/<your username>`.
+   you should be at `/home/<your_username>`.
    This is the root level of your Ubuntu user (more on that later).
 
 ## Step 0.4 - Updating Default Software.
 
-You will need to run a quick couple commands in order to run updates software updater.
+You will need to run a quick couple commands in order to run the software updater.
 The Ubuntu OS is shipped with a ton of built-in software,
 but those libraries may have had more recent updates come out
 since the OS was shipped.

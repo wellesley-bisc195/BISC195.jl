@@ -36,7 +36,7 @@ After completing this course, students will be able to:
 
 - Navigate their computer and manipulate files using a command line interface.
 - Write a script to perform statistical analyses on and plot a large numerical dataset.
-- Find, download, and process large biological sequence datasets from an online source.s
+- Find, download, and process large biological sequence datasets from an online source.
 - Search for a solution to a novel error or software bug and implement it in code.
 - Use a version control system to keep track of changes to their code.
 

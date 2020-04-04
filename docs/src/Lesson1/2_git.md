@@ -113,9 +113,18 @@ So you need to install it
 
 The easiest way to install git on a mac is using [`homebrew`](http://brew.sh).
 
-**Step 1b**: If you're using a mac and don't have git instealled,
-copy and paste the following command into your terminal (excluding the `$`),
+**Step 1b**: If you're using a mac and don't have git installed,
+copy and paste the following commands into your terminal (excluding the `$`),
 then press `enter` to execute.
+
+```sh
+$ xcode-select --install
+```
+
+This may prompt you to download and install "command line developer tools"
+from the app store.
+If it does, click install and follow the prompts.
+When that's finished, and you see the command prompt (`$`) again, run:
 
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -157,7 +166,7 @@ $ git config --global user.email kbonham@wellesley.edu
 **Step 3:** In your terminal,
 change your working directory to your `Documents` folder (`~/Documents`)
 
-!!! note "Windows Users"
+!!! compat "Windows Users"
     You can perform the following steps either in
     the `Documents/` folder of your linux filesystem found at `~/Documents`,
     or of your Windows filesystem, which is found at `/mnt/c/Users/<your_username>/Documents`
@@ -193,7 +202,7 @@ Initialized empty Git repository in /home/kevin/Documents/my_repo/.git/
 **Step 6:** Open the folder in your operating system's file system navigator
 (Finder on a Mac, Explorer in Windows).
 
-!!! note "Windows Users"
+!!! compat "Windows Users"
     If you created the repository in the linux filesystem,
     the easiest way to do this is to execute `explorer.exe ./`
     from the command line.

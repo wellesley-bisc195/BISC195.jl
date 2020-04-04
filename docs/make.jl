@@ -11,8 +11,16 @@ makedocs(;
         canonical="https://wellesley-bisc195.github.io/BISC195.jl",
         assets=String[],
     ),
-    pages=[
+    pages = [
         "Home" => "index.md",
+        "Syllabus" => "Syllabus.md",
+        "Lesson 1 - Getting Started" => [
+            "Lesson1/index.md",
+            "Windows Users" => "Lesson1/0_windows.md",
+            "Using the Terminal" => "Lesson1/1_terminal.md",
+            "Using the Terminal" => "Lesson1/2_git.md",
+            "Arithmetic in Julia" => "Lesson1/3_arithmetic.md"
+            ]
     ],
 )
 
