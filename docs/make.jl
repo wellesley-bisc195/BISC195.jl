@@ -4,11 +4,11 @@ using Documenter
 makedocs(;
     modules=[BISC195],
     authors="Kevin Bonham <kevbonham@gmail.com>",
-    repo="https://github.com/kescobo/BISC195.jl/blob/{commit}{path}#L{line}",
+    repo="https://github.com/wellesley-bisc195/BISC195.jl/blob/{commit}{path}#L{line}",
     sitename="BISC195.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://kescobo.github.io/BISC195.jl",
+        canonical="https://wellesley-bisc195.github.io/BISC195.jl",
         assets=String[],
     ),
     pages=[
@@ -17,5 +17,5 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/kescobo/BISC195.jl",
+    repo="github.com/wellesley-bisc195/BISC195.jl",
 )
