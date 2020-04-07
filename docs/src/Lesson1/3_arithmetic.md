@@ -2,27 +2,34 @@
 
 Today we will be learning how to perform basic arithmetic calculations in Julia.
 
-Similar to what you learned in math class, `+`, `-`, and `*` are used for addition, subtraction, and multiplication. Try it out for yourself!
+Similar to what you learned in math class, `+`, `-`, `*`, and `/` are used for addition, subtraction, multiplication, and division. Try it out for yourself!
 
-```julia
+```@repl
 38 + 2
 
 44 - 4
 
 8 * 5
-```
 
-For division, the `\`operator is used:
-
-```julia
-80/2
+80 / 2
 ```
 
 And for exponentiating numbers, you can use `^`.
 
-```julia
+```@repl
 6^2 + 4
 ```
+
+The order of operations works just like in math too -
+[remember PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations)
+(or **P**lease **E**xcuse **M**y **D**ear **A**unt **S**ally):
+
+```@repl
+6^2 + 4 # exponent comes before division
+
+6^(2 + 4) # parentheses cause the addition to happen first
+```
+
 
 # Values and Types
 
@@ -47,6 +54,6 @@ Strings, which are sequences of characters fall under the type `String`. Basical
 
 For example, explore what happens if you were to use the `typeof()` function on `2`.
 
-```julia
+```@repl
 typeof("2")
 ```

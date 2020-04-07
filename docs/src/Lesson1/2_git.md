@@ -673,6 +673,8 @@ Good work!
 
 [^staged]: Files with changes that are ready to be committed.
 [^commit]: A unique reference to a specific state of a repository.
+[^clone]: A copy of a repository in a different location.
+    Clones can be linked to enable easy syncing of commits.
 [^remote]: A clone of a repository that exists on a server,
     rather than your local machine.
     You can see what remotes are linked to your local repo
