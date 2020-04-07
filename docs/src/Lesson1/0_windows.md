@@ -1,4 +1,4 @@
-# Step 0: Windows users need Windows Subsystem for Linux (WSL)
+# Part 0: Windows users need Windows Subsystem for Linux (WSL)
 
 If you are working on a Mac,
 you can skip this section and go straight to

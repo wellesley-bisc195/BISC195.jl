@@ -9,7 +9,7 @@ makedocs(;
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://wellesley-bisc195.github.io/BISC195.jl",
-        assets=String[],
+        assets=String["assets/admonitions.css"],
     ),
     pages = [
         "Home" => "index.md",

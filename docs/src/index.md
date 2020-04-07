@@ -4,7 +4,9 @@ CurrentModule = BISC195
 
 # BISC195
 
-```@index
+```@contents
+Depth = 4
+```
 ```
 
 ```@autodocs
