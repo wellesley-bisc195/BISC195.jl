@@ -67,7 +67,7 @@ but in this course, we're going to use [Visual Studio Code](https://code.visuals
 
     Check with Kevin about your choice if you're unsure.
 
-### Installing julia
+### [Installing julia](@id install_julia)
 
 In this course,
 we're primarily going to be programming in the [julia programming language](https://julialang.org/).

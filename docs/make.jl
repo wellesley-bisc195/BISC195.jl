@@ -18,8 +18,8 @@ makedocs(;
             "Lesson1/index.md",
             "Windows Users" => "Lesson1/0_windows.md",
             "Using the Terminal" => "Lesson1/1_terminal.md",
-            "Using the Terminal" => "Lesson1/2_git.md",
-            "Arithmetic in Julia" => "Lesson1/3_arithmetic.md"
+            "Git for Version Control" => "Lesson1/2_git.md",
+            "The Julia REPL" => "Lesson1/3_julia_REPL.md"
             ]
     ],
 )
