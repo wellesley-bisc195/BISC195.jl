@@ -1,17 +1,30 @@
 #nb # %% slideshow [markdown] {"slideshow": {"slide_type": "slide"}}
-# # A Literate slideshow
+# # Lecture 1 - Getting Started
 # 
-# This is some text
+# **Essential Skills For Computational Biology**  
+# *{Date}*  
+# Kevin Bonham, PhD
 
-%% a code block [code] {"slideshow": {"slide_type": "slide"}}
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
+# ## Learning Objectives
+# After completing this lesson, students will be able to:
+# - Navigate their computer's file system using a command line interface
+# - Use a plain text editor (Atom) to modify source code
+# - Install command line software using homebrew
+# - Clone, commit to, and push from a git repository
+
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
+# ## What is a computer program?
+
+#nb %% A slide [code] {"slideshow": {"slide_type": "slide"}}
 function hello(x)
     println("Hello, $(x)!")
 end
 
-#nb # %% a subslide [markdown] {"slideshow": {"slide_type": "fragment"}}
+#nb # %% a fragment [markdown] {"slideshow": {"slide_type": "fragment"}}
 # Some explanation
 
-%% a code block [code] {"slideshow": {"slide_type": "fragment"}}
+#nb %% a code block [code] {"slideshow": {"slide_type": "fragment"}}
 hello("Students")
 
 #nb # %% a subslide [markdown] {"slideshow": {"slide_type": "slide"}}
