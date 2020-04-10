@@ -639,7 +639,7 @@ bisc195 $ ls
 all_files.txt file10.txt    file6.txt     file7.txt     file8.txt     file9.txt     lesson1
 ```
 
-!!! info "Practice"
+!!! practice
     Can you figure out how to move the rest of the `file*.txt` files
     to the `lesson1/` directory using a glob pattern?
 
