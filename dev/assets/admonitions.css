@@ -1,7 +1,7 @@
-.admonition.practice > .admonition-title {
+.admonition.is-category-practice > .admonition-header {
  background-color: rgba(152,78,163,0.8);
 }
 
-.admonition.practice {
- background-color: rgba(152,78,163,0.3);
+.admonition.is-category-practice > .admonition-body {
+ background-color: rgba(152,78,163,0.2);
 }
