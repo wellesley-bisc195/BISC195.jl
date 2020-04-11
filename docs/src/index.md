@@ -139,6 +139,56 @@ that contain different kinds of information:
 
 #### Code formatting
 
+Throughout the course,
+you will see examples of code.
+Sometimes, code will appear "inline" with other text,
+but will be formatted differently so that it's clearly code.
+For example, `x = 2` and `f(x) = 2x + 3`.
+
+Other times, code will appear in a block.
+The following is julia code:
+
+```julia
+function my_func(x, y)
+    for i in 1:x
+        println(i + y)
+    end
+end
+```
+
+As you can see, this block of code is formatted differently from normal text.
+
+Sometimes, you will see "command prompts"
+such as `$` for the shell or `julia>` for the julia REPL
+(don't worry if you don't know what the shell or a REPL are right now). 
+In these cases, when copying the code, **do not include the command prompt**.
+I will remind you about this again when it comes up,
+but just as an example, the following is a shell command and its output:
+
+```sh
+$ ls -l ~/Desktop
+```
+```
+  rw-r--r--   1  ksb  staff    30 KiB  Wed Apr  8 20:12:59 2020  C0005_3F_1A_1000k_1_profile.tsv
+  rw-rw-r--   1  ksb  staff     4 GiB  Wed Mar 18 15:48:06 2020  ko_profiles.sqlite
+  rw-rw-r--   1  ksb  staff     9 MiB  Mon Mar  9 16:41:35 2020  metadata.sqlite
+  rw-r--r--   1  ksb  staff     0 B    Fri Mar 27 15:07:47 2020  test.txt
+```
+
+In this example, you would type just `ls -l ~/Desktop` and press `enter`.
+Notice that in the second block,
+there is no command prompt (`$`) a the beginning.
+That's because this is output, and is not intended to be run as code.
+
+!!! tip
+    As much as possible, when copying code examples,
+    try to type the code out yourself,
+    rather than just copying and pasting.
+    You will learn faster this way,
+    and your typos will show you errors that are worth seeing.
+
+
+
 
 ```@contents
 Depth = 4
