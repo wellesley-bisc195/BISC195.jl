@@ -23,7 +23,7 @@ this is the julia "Read, evaluate, print, loop", or "REPL".
 When you enter text at the `julia>` prompt,
 the REPL **read**s it,
 **evaluate**s it as julia code,
-**[^print]**s the result,
+**print**s[^1] the result,
 and then **loop**s back to the prompt.
 
 Let's try it! Type `println("Hello, World!")` at the prompt and hit enter.
@@ -108,6 +108,6 @@ typeof("2")
 ```
 
 
-[^print]: In the days before monitors,
+[^1]: In the days before monitors,
     results would literally be printed on a piece of paper.
     These days, "printing" just means displaying the results.

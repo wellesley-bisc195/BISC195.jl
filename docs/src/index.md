@@ -87,8 +87,8 @@ though each page should stand on its own
 Throughout lessons, there will be colored boxes
 that contain different kinds of information:
 
-!!! warning
-    These orange boxes will be very rare,
+!!! danger
+    These red boxes will be very rare,
     but are present where you should be especially careful about the inputs to a command.
     In the vast majority of cases,
     messing up an input will not be a problem,
@@ -97,11 +97,9 @@ that contain different kinds of information:
     
     Ask Kevin if you want advice on keeping your computer backed up.
 
-!!! practice "Examples, practice, and checking questions"
-    These purple boxes contain code examples or instructions
-    that you should try to run on your own computer.
-    They may also contain questions that you should try to answer,
-    and often the answer to the question will require writing code.
+!!! warning "Checking Questions"
+    These orange boxes contain questions that you should try to answer,
+    and in many cases the answer to the question will require writing code.
 
     I will often ask questions
     that are not explicitly answered earlier in the lesson.
@@ -109,6 +107,10 @@ that contain different kinds of information:
     try some different approaches,
     or search the internet.
     (Don't look down on googling! It's an essential programming skill!)
+
+!!! practice "ToDos, Examples, and practice"
+    These purple boxes contain code examples or instructions
+    that you should try to run on your own computer.
 
     If you get stuck, in most cases
     it should be fine to contiue the lesson,

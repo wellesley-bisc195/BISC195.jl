@@ -8,7 +8,7 @@ But we'll come back to this.
 
 To complete this lesson, follow the instructions below.
 
-!!! warning
+!!! tip
     It is even more important than usual
     to read and follow instructions
     when it comes to computers and programming.
