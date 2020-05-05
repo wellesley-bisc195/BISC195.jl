@@ -43,7 +43,7 @@ we'll be primarily interacting with that computer code as plain text,
 but there are a bunch of tools that people have built
 to make that job a bit easier.
 
-### Installing your IDE
+### [Installing your IDE](@id install-ide)
 
 One of those tools is an "Integrated Development Environment" or "IDE".
 This is basically just a text editor with a bunch of bells and whistles.

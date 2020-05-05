@@ -82,24 +82,46 @@ The order of operations works just like in math too -
 
 # Values and Types
 
-In computer science, a **value** is just some data that can be manipulated by a program. In this lesson, we have encountered many different values, such as numbers or words.
+In computer science, a **value** is just some data that can be manipulated by a program.
+In this lesson, we have encountered many different values, such as numbers or words.
 
 In the previous section, you may have noticed that the result of dividing 80 by 2 was `40.0` and not `40`.
 
-This is because computer scientists differentiate between numbers with and without decimal points as two different data types. In Julia, numbers with decimal points like `40.0` belong to the type `Float64`, and numbers without decimal points like  `40` belong to
-the type `Int64`.
+This is because computers differentiate
+between numbers with and without decimal points
+as two different data types.
+In Julia, numbers with decimal points like `40.0` belong to the type `Float64`,
+and numbers without decimal points like  `40` belong to the type `Int64`.
 
-!!!Note:
+You can find the `type` of any value by using the `typeof()` function.
 
-When you are working with really big numbers such as `1,000,000`, do not include the commas if you want Julia to recognize it as an integer. For example, if you were to run this code:
+```@repl
+typeof(40)
 
-```julia
-1,000,000
+typeof(40.)
 ```
 
-you would see that Julia thinks that `1,000,000` is a list of integers!
+`Int` refers to integers, 
+and `Float` refers to "floating point"[^2] numbers.
 
-Strings, which are sequences of characters fall under the type `String`. Basically, any characters defined within quotes are strings, even if they are numbers.
+!!! tip
+    When you are working with really big numbers such as `1,000,000`, do not include the commas if you want `julia` to recognize it as an integer. For example, if you were to run this code:
+
+    ```julia
+    julia> 1,000,000
+    (1, 0, 0)
+    ```
+
+    you can see that `julia` thinks that `1,000,000` is a group of 3 integers (`1`, `0`, and `0`)!
+    Instead, `julia` allows you to use underscores to break up large integers.
+
+    ```julia
+    julia> 1_000_000
+    1000000
+    ```
+
+Strings, which are sequences of characters fall under the type `String`.
+Basically, any characters defined within quotes are strings, even if they are numbers.
 
 For example, explore what happens if you were to use the `typeof()` function on `2`.
 
@@ -108,6 +130,10 @@ typeof("2")
 ```
 
 
-[^1]: In the days before monitors,
+[^1]: **print** - In the days before monitors,
     results would literally be printed on a piece of paper.
     These days, "printing" just means displaying the results.
+[^2]: **Floating point numbers** are a way of representing numbers in computers,
+    which encode information in 0's and 1's.
+    It's not necessary to understand, but if you're interested in reading more,
+    [see here](https://en.wikipedia.org/wiki/Floating-point_arithmetic)

@@ -1,6 +1,6 @@
 # # Instructions for Assignment {{{ASSIGNMENT}}}
 #
-# ## Introdiction
+# ## Introduction
 # 
 # Some description of the Assignment
 

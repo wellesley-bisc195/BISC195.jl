@@ -183,9 +183,10 @@ there is no command prompt (`$`) a the beginning.
 That's because this is output, and is not intended to be run as code.
 
 !!! tip
-    As much as possible, when copying code examples,
+    As much as possible, when executing code examples,
     try to type the code out yourself,
-    rather than just copying and pasting.
+    rather than just copying and pasting
+    (unless it's a really long and complicated command).
     You will learn faster this way,
     and your typos will show you errors that are worth seeing.
 

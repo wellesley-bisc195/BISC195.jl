@@ -233,6 +233,8 @@ df.csv  dm.csv  dupes.csv  itp.svg
 The output here should be the same as what you got above.
 But what if we're in a different location?
 
+#### [Change directory](@id cd)
+
 In order to `c`hange the working `d`irectory,
 we use the `cd` command,
 giving a path as an argument.
@@ -566,7 +568,7 @@ so `ls` won't return anything.
 If you see `ls: lesson1: No such file or directory`,
 don't move on to the next step.
 
-!!! warning
+!!! danger
     Neither the `mv` nor `cp` command ask before overwriting files,
     and there's no "undo" at the command line.
     In other words, if you move or copy a file
@@ -714,7 +716,7 @@ _and_ the `lesson1/` directory.
 
 ### Rename and `r`e`m`ove files
 
-!!! warning
+!!! danger
     Once again, there is NO undo when using the terminal.
     I once deleted 10 Gb of sequencing files from a lab server
     in 2 seconds with a 13 character command.
@@ -735,7 +737,7 @@ lesson1
 Come to think of it - we don't need any of these files.
 Let's remove them all.
 
-!!! warning
+!!! danger
     I know, I'm repeating myself.
     `rm` combined with glob patterns can do a lot of damage very quickly.
     Beware!

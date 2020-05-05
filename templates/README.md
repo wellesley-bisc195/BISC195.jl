@@ -24,7 +24,7 @@ templ = Template(
         user="wellesley-bisc195",
         authors="Kevin Bonham, PhD <kbonham@wellesley.edu>",
         dir="/Users/ksb/repos/courses",
-        julia=v"1.2",
+        julia=v"1.4",
         plugins=[# other than defaults
             SrcDir(file="templates/module_template.jl"),
             Tests(file="templates/tests_template.jl", project=true),
