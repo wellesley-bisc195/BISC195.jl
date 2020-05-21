@@ -21,7 +21,11 @@ makedocs(;
             "Git for Version Control" => "Lesson1/2_git.md",
             "The Julia REPL" => "Lesson1/3_julia_REPL.md",
             "Assignment01" => "Lesson1/4_Assignment01.md"
-            ]
+            ],
+        "Lesson 2 - Data Types and Functions" => [
+            "Lesson2/index.md",
+            "Data Types" => "Lesson2/1_data_types"
+        ]
     ],
 )
 

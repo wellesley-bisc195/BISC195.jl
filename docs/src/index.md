@@ -49,6 +49,11 @@ and how to get the most out of taking this course.
     is a critical skill in programming.
     I will warn you when going off the beaten path with code
     might be dangerous.
+4. **Run all the code in the examples and exercises from _Think Julia_**
+    A lot of information will be redundant between the book,
+    lectures, and course content, 
+    but this is intentional.
+    Have I mentioned before how important practice is?
 4. **Fail early and fail often. Embrace your error messages.**
     If you never make a mistake, you are not learning how to program.
     If you are practicing enough, trying new things,
