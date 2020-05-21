@@ -53,20 +53,21 @@ and keeping track of the versions of multiple files at the same time is necessar
 That is, it helps one keep track of one's code,
 and the information about versions is distributed among many systems.
 
-Early version control systems were centralized -
-there was a single server that kept track of
-all of the information about a code repository.
-Users could "checkout" individual files to edit them,
-and the central repository would lock that file to prevent conflicting changes.
-This makes it easy to prevent conflicts,
-but is also a bit impractical.
+!!! note
+    Early version control systems were centralized -
+    there was a single server that kept track of
+    all of the information about a code repository.
+    Users could "checkout" individual files to edit them,
+    and the central repository would lock that file to prevent conflicting changes.
+    This makes it easy to prevent conflicts,
+    but is also a bit impractical.
 
-By contrast, git is distributed -
-each user's system contains the entire revision history,
-and conflicts between versions are explicitly managed when
-two different edits to the code are brought together.
-Don't worry if this isn't super clear at this stage -
-we'll get into some practical examples in a sec.
+    By contrast, git is distributed -
+    each user's system contains the entire revision history,
+    and conflicts between versions are explicitly managed when
+    two different edits to the code are brought together.
+    Don't worry if this isn't super clear at this stage -
+    we'll get into some practical examples in a sec.
 
 You can think of a `git` "repository" (usually shortened to "repo")
 as a directory with super powers.
@@ -130,7 +131,8 @@ or a linux operation system, `git` should already be installed.
     This may prompt you to download and install "command line developer tools"
     from the app store.
     If it does, click install and follow the prompts.
-    When that's finished, and you see the command prompt (`$`) again, run:
+    When that's finished, and you see the command prompt (`$`) again, run the following command.
+    Note: this is a case when you should probably use copy/paste.
 
     ```
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -300,9 +302,9 @@ but it tells you it's not being tracked.
         new file:   fox.txt
     ```
 
-The file is now "staged[^1]" -
+The file is now "staged"[^1] -
 that is ready to be "committed."
-In git, a "commit[^2]" is used to register a specific version of a repository.
+In git, a "commit"[^2] is used to register a specific version of a repository.
 The current state of all of the tracked files in the repository
 will be recorded.
 
@@ -425,24 +427,8 @@ should give you some confidence that it's important.
 
 In any case, this entire course will use git and github.com
 (a website for managing and collaborating on git repositories).
-So let's work on doing that.
+In the [first assignment](@ref Assignment01),
+you'll learn how to do this.
 
-**Step 1:**
-
-!!! practice "ToDo: Sign up for github"
-    If you haven't already, sign up for a github account at https://github.com/join
-
-    !!! danger "Privacy Note"
-        You do not need to use your `wellesley.edu` email address to create this account,
-        but let Kevin know if you use a different address
-        so that you get credit for your work.
-
-    If you'd like, you may sign up for a [github student discount pack](https://education.github.com/pack)
-    This is not necessary for this course.
-
-**Step 2:
-
-!!! practice "Join the classroom"
-    ```@raw html
-    <!-- TODO: add instructions -->
-
+[^1]: `staged` - Files with changes that are ready to be committed.
+[^2]: `commit` - A unique reference to a specific state of a repository.

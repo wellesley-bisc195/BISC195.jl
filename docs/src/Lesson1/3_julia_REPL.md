@@ -1,4 +1,13 @@
-# Part 3 - The Julia REPL
+# Part 3 - Running julia code
+
+For a lot of this course,
+we will be using the julia programming language
+rather than the command line.
+
+There are a few different ways to run julia code,
+and this section will get you acquaninted with a couple of them.
+
+## The julia REPL
 
 Open julia, which you [should have installed](@ref install_julia) in the first part of this lesson.
 
@@ -47,93 +56,61 @@ we'll get there.
     println(Hello, World!)
     ```
 
-## First steps - arithmetic in julia
+## Running julia from the command line
 
-Today we will be learning how to perform basic arithmetic calculations in Julia.
+You can also execute short snippets of code from the command line.
 
-Similar to what you learned in math class, `+`, `-`, `*`, and `/` are used for addition, subtraction, multiplication, and division. Try it out for yourself!
+!!! practice "To Do"
+    Open your terminal and enter the following:
 
-```@repl
-38 + 2
-
-44 - 4
-
-8 * 5
-
-80 / 2
-```
-
-And for exponentiating numbers, you can use `^`.
-
-```@repl
-6^2 + 4
-```
-
-The order of operations works just like in math too -
-[remember PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations)
-(or **P**lease **E**xcuse **M**y **D**ear **A**unt **S**ally):
-
-```@repl
-6^2 + 4 # exponent comes before division
-
-6^(2 + 4) # parentheses cause the addition to happen first
-```
-
-
-# Values and Types
-
-In computer science, a **value** is just some data that can be manipulated by a program.
-In this lesson, we have encountered many different values, such as numbers or words.
-
-In the previous section, you may have noticed that the result of dividing 80 by 2 was `40.0` and not `40`.
-
-This is because computers differentiate
-between numbers with and without decimal points
-as two different data types.
-In Julia, numbers with decimal points like `40.0` belong to the type `Float64`,
-and numbers without decimal points like  `40` belong to the type `Int64`.
-
-You can find the `type` of any value by using the `typeof()` function.
-
-```@repl
-typeof(40)
-
-typeof(40.)
-```
-
-`Int` refers to integers, 
-and `Float` refers to "floating point"[^2] numbers.
-
-!!! tip
-    When you are working with really big numbers such as `1,000,000`, do not include the commas if you want `julia` to recognize it as an integer. For example, if you were to run this code:
-
-    ```julia
-    julia> 1,000,000
-    (1, 0, 0)
+    ```sh
+    $ julia -e 'println("Hello, World!")'
+    ```
+    ```
+    Hello, World!
     ```
 
-    you can see that `julia` thinks that `1,000,000` is a group of 3 integers (`1`, `0`, and `0`)!
-    Instead, `julia` allows you to use underscores to break up large integers.
+The `-e` is a command-line flag that tells julia to just execute the next command as julia code.
+Note the use of single quotes (`'`) surrounding the command.
 
-    ```julia
-    julia> 1_000_000
-    1000000
-    ```
+!!! warning "Checking Questions"
+    1. What happens if you just enter `julia` at the command line without additional arguments?
+    2. What happens if you use double quotes instead of single quotes? 
+       Why do you think that is?
 
-Strings, which are sequences of characters fall under the type `String`.
-Basically, any characters defined within quotes are strings, even if they are numbers.
+## Running julia scripts
 
-For example, explore what happens if you were to use the `typeof()` function on `2`.
+Our code is often going to be much more complicated than what we've done so far.
+In those cases, and in order to keep a record of what we're doing,
+it's useful to put our julia code in a file.
 
-```@repl
-typeof("2")
-```
+!!! practice "To Do"
+    1. Open up VS Code, and create a new file called `hello.jl`.
+    2. Type `println("Hello, World!")` into the file and save it.
+       Note the path to the directory where you saved the file!
+    3. run:
 
+        ```sh
+        $ julia <path_to_directory>/hello.jl
+        ```
+        ```
+        Hello, World!
+        ```
+
+When code is saved into a file that can be run from the commandline,
+it's called a "script."
+All of your assigments will be julia code written into files
+and commited to code repositories using `git`.
+
+But it's important to realize that all of this code is the same;
+it's just text.
+That text has specific requirements in order to be parsed
+by the julia interpreter,
+but whether you run code in the REPL,
+from the command line,
+or in a script,
+it has the same behavior.
 
 [^1]: **print** - In the days before monitors,
     results would literally be printed on a piece of paper.
     These days, "printing" just means displaying the results.
-[^2]: **Floating point numbers** are a way of representing numbers in computers,
-    which encode information in 0's and 1's.
-    It's not necessary to understand, but if you're interested in reading more,
-    [see here](https://en.wikipedia.org/wiki/Floating-point_arithmetic)

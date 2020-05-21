@@ -1,4 +1,28 @@
-# Getting started
+# Lesson 1 - Getting started
+
+## Learning Objectives
+
+**Concepts** - After completing this lesson, students will be able to:
+
+- Compare and contrast computer code meaning and syntax
+- Identify common "algorithms" used in their daily lives
+
+**Skills** - After completing this lesson, students will be able to:
+
+- Navigate their computer's file system using a command line interface
+- Clone, commit to, and push from a git repository
+- Use the `julia` REPL to do basic arithmatic
+
+**Assignments** - This lesson is complete when students have:
+
+- Completed the BISC195 entrance survey
+- Completed the BISC195 pretest
+- Read the [Preface](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_preface)
+  and [Chapter 1](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap01)
+  of Think Julia
+- Installed visual studio code and julia on their computers
+  - Windows users should also have installed Windows Terminal
+- Run all code examples from Lesson 1 on their own computers
 
 This file contains instructions for completing today's lesson.
 It is written in a language called "markdown",
@@ -19,7 +43,12 @@ To complete this lesson, follow the instructions below.
     can lead to unexpected results.
 
 ```@contents
-Pages = ["Lesson1/index.md", "Lesson1/0_windows.md","Lesson1/1_terminal.md", "Lesson1/2_git.md"]
+Pages = ["Lesson1/index.md", 
+         "Lesson1/0_windows.md",
+         "Lesson1/1_terminal.md",
+         "Lesson1/2_git.md",
+         "Lesson1/3_julia_REPL.md",
+         "Lesson1/4_Assignent01.md"]
 Depth = 3
 ```
 
@@ -109,3 +138,23 @@ julia>
 ```
 
 You can close the window in the normal way, or type `exit()` and hit enter.
+
+### [Sign up for github classroom](@id github_signup)
+
+All assignments will be distributed,
+turned in and graded through [github classroom](http://classroom.github.com/).
+
+To use it, you need to sign up for a github account
+if you don't have one already.
+
+!!! practice "To Do"
+    If you don't have an account already, get one at https://github.com/join.
+
+    !!! warning "Privacy Note"
+        You do not need to use your wellesley.edu email address to create this account, but let Kevin know if you use a different address so that you get credit for your work.
+
+    If you'd like, you may sign up for a [github student discount pack](https://education.github.com/pack)
+    This is not necessary for this course.
+
+!!! practice "To Do"
+    Next, [join the classroom](https://classroom.github.com/classrooms/49307558-wellesley-bisc195).

@@ -19,7 +19,8 @@ makedocs(;
             "Windows Users" => "Lesson1/0_windows.md",
             "Using the Terminal" => "Lesson1/1_terminal.md",
             "Git for Version Control" => "Lesson1/2_git.md",
-            "The Julia REPL" => "Lesson1/3_julia_REPL.md"
+            "The Julia REPL" => "Lesson1/3_julia_REPL.md",
+            "Assignment01" => "Lesson1/4_Assignment01.md"
             ]
     ],
 )

@@ -1,7 +1,7 @@
 # Part 1 - Navigating the filesystem using the terminal
 
 You are probably already familiar with
-your computer's **[^filesystem]**.
+your computer's "filesystem"[^1].
 If you've ever looked at files on your `Desktop`,
 or opened `Finder`/`Explorer` and navigated to your `Documents` folder,
 you've been using the file system.
@@ -20,14 +20,14 @@ I will use the terms interchangeably.
 
 You may not have thought much about how the filesystem is organized,
 but you probably have an intuitive sense of how this works.
-Your **[^home]** directory contains the `Desktop` and `Documents` directories,
+Your "home"[^3] directory contains the `Desktop` and `Documents` directories,
 each of which might contain many other subdirectories and/or files,
 and each subdirectory may have yet more subdirectories and files and so on.
 
 `Finder`/`Explorer` are examples of a graphical user interface (GUI - pronounced "gooey"),
 that is a program that allows you to interact with it visually.
 However, GUIs are difficult to design and maintain,
-so most bioinformatics tools are built around **[^commandline]**
+so most bioinformatics tools are built around "command line"[^4]
 or text-based interfaces.
 The good news is that the organization of the filesystem
 is the same whether you're interacting with it in a GUI or in the terminal.
@@ -67,7 +67,7 @@ may or may not contain objects (files),
 and may have one or many roads leading to new locations (subdirectories).
 
 Your present location,
-referred to as the **[^workingdirectory]**,
+referred to as the "working directory"[^5],
 is your home folder when you first open the terminal.
 Let's see where that is.
 
@@ -141,7 +141,7 @@ as well as other directories you may recognize.
 
 
 The `ls` command can also take a directory
-as an "[^argument]."
+as an "argument."[^8]
 We'll talk more about what that means later -
 for now, just add `Desktop` to the command, separated by a space
 
@@ -159,7 +159,7 @@ If your `Desktop` is pristine, congratulations!
 You won't see any output.
 
 The filesystem is organized hierarchically -
-At the very top of the hierarchy is the **[^root]**,
+At the very top of the hierarchy is the **[^2]**,
 which you can think of as a folder that contains all other files and folders.
 On a Mac (and other Unix systems),
 the root is referred to with a single forward slash (`/`),
@@ -187,7 +187,7 @@ One way to do this would be to give directions from where you are:
 3. ... etc
 
 In this case,
-you're providing a [^relativepath] -
+you're providing a "relative path"[^6] -
 the directions only make sense if the person is starting in your room.
 If they're at the Science Center and they follow your instructions,
 they will become hopelessly lost.
@@ -201,7 +201,7 @@ you could provide directions from a shared point of reference.
 3. ... etc
 
 In this case,
-you're providing an [^absolutepath] -
+you're providing an "absolute path"[^7] -
 no matter where the person is at the time,
 the directions will make sense.
 
@@ -374,7 +374,7 @@ $ pwd
 
 Now, copy and execute the following command -
 don't worry about what it does.
-(if you really want to know, you can read about it here: [^whileloop])
+(if you really want to know, you can read about it here: "while loop"[^9])
 
 ```sh
 bisc195 $ for i in {1..10}; do echo "This is file #${i}" > "file${i}.txt"; done
@@ -796,21 +796,21 @@ bisc195 $
 
 ## Key Terms
 
-[^filesystem]: a hierarchical organization of files and directories. [Additional reading](https://en.wikipedia.org/wiki/File_system)
+[^1]: **filesystem** - a hierarchical organization of files and directories. [Additional reading](https://en.wikipedia.org/wiki/File_system)
 
-[^root]: the top of the filesystem hierarchy. A folder that contains all other files and folders.
+[^2]: **root** - the top of the filesystem hierarchy. A folder that contains all other files and folders.
 
-[^home]: a user's primary folder containing `Desktop`, `Documents`, and other user-specific folders and files.
+[^3]: **home** - a user's primary folder containing `Desktop`, `Documents`, and other user-specific folders and files.
 
-[^commandline]: a text-based interface for interacting with your computer. Also referred to as "terminal" or "shell."
+[^4]: **command line** - a text-based interface for interacting with your computer. Also referred to as "terminal" or "shell."
 
-[^workingdirectory]: the current beginning of relative paths. Equivalent to `.` or `./`
+[^5]: **working directory** - the current beginning of relative paths. Equivalent to `.` or `./`
 
-[^relativepath]: a path originating at the current working directory
+[^6]: **relative path** - a path originating at the current working directory
 
-[^absolutepath]: a path originating at the home folder (`~/`) or root `/`
+[^7]: **absolute path** - a path originating at the home folder (`~/`) or root `/`
 
-[^argument]: a value passed to a function to operate on
+[^8]: **argument** - a value passed to a function to operate on
 
 ### More info
 
@@ -818,7 +818,7 @@ Here's some more information for the curious,
 but at least for now,
 it's not necessary to understand it.
 
-[^whileloop]: The code
+[^9]: The code
 
       ```sh
       for counter in {1..10}; do echo "This is file #${counter}" > "file${counter}.txt"; done
