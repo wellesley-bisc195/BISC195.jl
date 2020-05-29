@@ -24,7 +24,8 @@ makedocs(;
             ],
         "Lesson 2 - Data Types and Functions" => [
             "Lesson2/index.md",
-            "Data Types" => "Lesson2/1_data_types"
+            "Data Types" => "Lesson2/1_data_types.md",
+            "Functions" => "Lesson2/2_functions.md"
         ]
     ],
 )
