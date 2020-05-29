@@ -23,6 +23,10 @@ that's ok.
 
 ## Practice for Variables, Expressions and Statements
 
+The following examples are intended to reinforce and extend what you've learned.
+In many cases, they are intended to expose behavior that may be unintuitive,
+or lead to errors that are worth understanding.
+
 !!! warning "Checking Questions"
     1. For each of the following expressions,
         What is the `type` of the value that gets returned after execution?
@@ -65,6 +69,32 @@ that's ok.
 
         What happens if you assign each of these expressions to a variable?
 
+    4. What is the difference between `Float64` and `Int64`?
+       
+       Are there situations where one is obviously preferred over the other
+       in a math problem?
+
+    5. Without evaluating the following expressions,
+       try to guess what the return type will be, `Int64` or `Float64`.
+
+       ```julia
+       julia> 1 + 1
+
+       julia> 2. - 2.
+
+       julia> 3 * 3.
+
+       julia> 4. * 4
+
+       julia> 5 / 5
+
+       julia> "6" + "6.0"
+
+       julia> 1e7 + 1
+       ```
+
+       Now evaluate them - did you get them right?
+       use `typeof()` if you're not sure.
 
 
 !!! tip

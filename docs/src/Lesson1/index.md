@@ -52,7 +52,7 @@ Pages = ["Lesson1/index.md",
 Depth = 3
 ```
 
-## First steps
+## [First steps](@id first-steps)
 
 Most modern computer code is just text
 that tells a computer what to do.

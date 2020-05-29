@@ -32,6 +32,7 @@
 
 ```@contents
 Pages = ["Lesson2/index.md", 
-         "Lesson2/1_data_types.md"]
+         "Lesson2/1_data_types.md",
+         "Lesson2/2_functions.md"]
 Depth = 3
 ```
