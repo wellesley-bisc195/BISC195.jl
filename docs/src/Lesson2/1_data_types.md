@@ -31,7 +31,7 @@ or lead to errors that are worth understanding.
     1. For each of the following expressions,
        What is the `type` of the value that gets returned after execution?
        
-       ```
+       ```julia
        julia> 1+2
        3
 
@@ -46,28 +46,28 @@ or lead to errors that are worth understanding.
        ```
     
     2. Assign each of these values to a different variable (eg `my_sum = 1+2`).
-        And use the `typeof()` function to test your answers above.
-        For example
-
-        ```julia
-        julia> x = "42" * "6"
-        "426"
-
-        julia> typeof(x)
-        String
-        ```
+       And use the `typeof()` function to test your answers above.
+       For example   
+       
+       ```julia
+       julia> x = "42" * "6"
+       "426"   
+       
+       julia> typeof(x)
+       String
+       ```
     
     3. What is the difference between the following expressions?
 
-        ```julia
-        julia> "AATTCC"^2
-        "AATTCCAATTCC"
+       ```julia
+       julia> "AATTCC"^2
+       "AATTCCAATTCC"
 
-        julia> println("AATTCC"^2)
-        AATTCCAATTCC
-        ```
+       julia> println("AATTCC"^2)
+       AATTCCAATTCC
+       ```
 
-        What happens if you assign each of these expressions to a variable?
+       What happens if you assign each of these expressions to a variable?
 
     4. What is the difference between `Float64` and `Int64`?
        
