@@ -29,21 +29,21 @@ or lead to errors that are worth understanding.
 
 !!! warning "Checking Questions"
     1. For each of the following expressions,
-        What is the `type` of the value that gets returned after execution?
+       What is the `type` of the value that gets returned after execution?
        
-        ```julia
-        julia> 1+2
-        3
+       ```
+       julia> 1+2
+       3
 
-        julia> 3 / 2
-        1.5
+       julia> 3 / 2
+       1.5
 
-        julia> "42 * 6"
-        "42 * 6"
+       julia> "42 * 6"
+       "42 * 6"
 
-        julia> "42" * "6"
-        "426"
-        ```
+       julia> "42" * "6"
+       "426"
+       ```
     
     2. Assign each of these values to a different variable (eg `my_sum = 1+2`).
         And use the `typeof()` function to test your answers above.

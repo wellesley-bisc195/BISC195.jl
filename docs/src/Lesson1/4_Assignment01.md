@@ -49,7 +49,7 @@ If not, go back and follow the [instructions here](@ref github_signup).
 
     You should now have a new directory called `Assignment01-<your_username>/`.
 
-!!! practice ToDo
+!!! practice "To Do"
     **Step 4:** 
     First, change your working directory to `Assignment01-<your_username>/`, 
     (you remember how to [do this right](@ref cd)?).
@@ -117,7 +117,7 @@ function say_age(age)
 end
 ```
 
-!!! practice "ToDo"
+!!! practice "To Do"
     Explore this directory from your terminal using `ls` and `cat`.
     Don't change the working directory, 
     or if you do, make sure you know how to return.
@@ -130,7 +130,8 @@ end
 This assignment is just a directory with text files,
 some of which contain code.
 
-VS Code, which you should [already have installed](@ref install-ide),
+VS Code, which you should already have installed
+(if you don't, [click here](@ref install-ide)),
 is designed to explore exactly this kind of project.
 
 !!! practice "To Do: open the assignment in VS Code"
@@ -159,7 +160,9 @@ You can run this code in your terminal:
 I'm guessing the output of this program is incorrect -
 at least for you.
 
-!!! practice "ToDo"
+!!! practice "To Do"
+    **Step 5**: Edit the files.
+
     Open up `src/some_variables.jl` in VS code
     and change the values "Kevin" and 36
     to be more appropriate.
@@ -169,9 +172,11 @@ at least for you.
     The output of the program should say your name
     and your age, rather than mine.
 
-**Step 3:** 
+
 
 !!! practice "To Do"
+    **Step 6:** Commit the changes.
+    
     Once you have it working,
     go ahead and commit the changes.
     Be sure to use an informative commit message.
@@ -211,9 +216,8 @@ you can see `say_name(n)` and `say_age(a)`.
 
 This is not an accident.
 
-**Step 4:** 
-
 !!! practice "ToDo"
+    **Step 7:**
     Change the line `function say_name(name)`
     in `some_functions.jl` to `function say_the_name(name)`,
     save the file,
@@ -239,7 +243,7 @@ This is not an accident.
     - Can you find the name of the error?
     - Are their parts of the message in plain english?
       Those parts are usually quite helpful.
-    - can you find line numbers/file names
+    - Can you find line numbers/file names
       pointing to where the problem might be?
 
 OK, changing to `say_the_name` is maybe not worth it.
@@ -288,7 +292,8 @@ that is have the name tell you something about what they're for.
 The `src` directory in the `Assignment01` repo
 contains a code file called `assignment.jl`.
 
-Follow the instructions in the comments.
+Open this file in VS Code
+and follow the instructions in the comments.
 
 !!! tip
     In julia, comment lines start with `#`,

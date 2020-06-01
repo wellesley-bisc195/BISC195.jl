@@ -1,7 +1,6 @@
 # Lesson 2: Types of data, operations on data
 
-[Lesson repository](#)
-[Assignment repository](#)
+[![Assignment 02](https://img.shields.io/badge/Assignment-02-blue?style=for-the-badge&logo=open%20badges)](#)
 
 ## Learning Objectives
 
@@ -29,6 +28,7 @@
   of Think Julia.
 - Cloned the Assignment 2 repository with github classroom.
 - Completed assignment 2 with all tests passing.
+- Run all code examples from Lesson 2 on their own computers
 
 ```@contents
 Pages = ["Lesson2/index.md", 
