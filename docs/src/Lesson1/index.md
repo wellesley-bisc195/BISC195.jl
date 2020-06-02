@@ -2,7 +2,6 @@
 
 [![Assignment 01](https://img.shields.io/badge/Assignment-01-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
 
-
 ## Learning Objectives
 
 **Concepts** - After completing this lesson, students will be able to:
