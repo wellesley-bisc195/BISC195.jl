@@ -44,7 +44,7 @@ and there are 3 arguments (in this case, all `String`s).
 But functions show up in other ways too. 
 All of the math you were doing in the previous section
 was calling functions.
-In julia, `1 + 1` is just a convenient syntax for `+(1,1)`
+In julia, `1 + 1` is just a convenient syntax[^1] for `+(1,1)`
 
 ```@repl
 +(42,7)
@@ -62,7 +62,7 @@ In chapter 3 of _Think Julia_, you read that
 to functions. 
 
 The more technical way to say that is that the inside of functions
-have their own "scope"[^1].
+have their own "scope"[^2].
 This will start to become familiar as you write more code,
 but it can be confusing at first.
 
@@ -86,8 +86,16 @@ newprint("Hello there")
 This should seem pretty straightforward.
 The function `newprint()` takes a single argument,
 and prints that, appending `", students!"`.
+Inside the function,
+the value passed as an argument - `"Hello there"` -
+is passed in everywhere you see `my_arg`,
+but `my_arg` doesn't exist outside the function.
 
-We could also have passed a _variable_ as arguments.
+```@example args
+my_arg
+```
+
+We could also have passed a _variable_ as the argument.
 
 ```@example args
 gb = "Goodbye"
@@ -95,8 +103,8 @@ gb = "Goodbye"
 newprint(gb)
 ```
 
-Inside of `newprint()`, whatever _value_ was passed as the argument
-will be substituted everywhere that `my_arg` lives in the function.
+Same thing - the _variable_ `gb` refers to the _value_ `"Goodbye"`,
+and will be substituted everywhere that `my_arg` lives in the function.
 
 Let's look at a slightly more confusing example.
 
@@ -115,7 +123,7 @@ What do you expect?
 Try it out and see if you're right.
 
 When we call `nelly(other_arg)`,
-we're passing `"Huzzah"` as the argument.
+we're passing the value `"Huzzah"` as the argument.
 So inside the scope of the function,
 `some_arg` is `"Huzzah"`.
 
@@ -158,9 +166,34 @@ In many cases, they are intended to expose behavior that may be unintuitive,
 or lead to errors that are worth understanding.
 
 !!! warning "Checking Questions"
-    1. 
+    1. For each of the expressions ending with `# ?`,
+       try to predict what the output will be.
+       Then, run them in the REPL and see if you were correct.
 
-[^1]: **Scope** - The region of a program in which assigned variables are available.
+       ```julia
+       julia> x = 4; # note: putting `;` prevents the "print" of the REPL
+       
+       julia> x # ?
+       ```
+       ```julia
+       julia> y = 2.0;
+
+       julia> y + x # ?
+       ```
+       ```julia
+       julia> z = y * 2;
+
+       julia> z # ?
+       ```
+
+[^1]: **Syntax** - The rules that govern how characters in your code files
+      are translated into instructions that the computer understands.
+      Julia has one kind of syntax, and the shell has another.
+      One of my great hopes for this course is that you'll come to recognize that,
+      though you will learn some syntax for these specific languages,
+      most of the skills you're learning are transferrable
+      to learning any programming language.
+[^2]: **Scope** - The region of a program in which assigned variables are available.
       In julia, scopes tend to be much more restrictive by default than in other languages.
       If you ever get an `UndefVarError` when you think that you've actually defined the variable,
       it's probably not in the right scope. 
