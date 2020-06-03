@@ -3,14 +3,13 @@ using Documenter
 using Literate 
 
 lsrc = joinpath(@__DIR__, "lectures")
-lslides = joinpath(@__DIR__, "lectures", "slides")
 outdir = joinpath(@__DIR__, "src", "Lectures")
 
 for l in readdir(lsrc, join=true)
     isfile(l) || continue
     splitext(l)[2] == ".jl" || continue
     Literate.markdown(l, outdir)
-    Literate.notebook(l, lslides, execute=false)
+    Literate.notebook(l, outdir, execute=false)
 end
 
 makedocs(;
@@ -41,7 +40,10 @@ makedocs(;
             "Assignment02" => "Lesson2/3_Assignment02.md"
         ],
         "Assignments" => "Assignments.md",
-        "Lectures" => ["Lecture 1"=> "Lectures/lecture1.md"]
+        "Lectures" => [
+            "Lecture 1"=> "Lectures/lecture1.md",
+            "Lecture 2"=> "Lectures/lecture2.md"
+        ]
     ]
 )
 

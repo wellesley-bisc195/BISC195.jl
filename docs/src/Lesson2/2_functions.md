@@ -185,6 +185,40 @@ or lead to errors that are worth understanding.
 
        julia> z # ?
        ```
+    2. Write a function called `multiraise()` that
+
+       - takes **2 arguments**
+       - multiplies them together
+       - returns the product raised to the second power
+
+       Once you've defined the function,
+       you should be able to run
+
+       ```julia
+       julia> multiraise(2, 5)
+       100
+
+       julia> multiraise("2","5")
+       "2525"
+
+       julia> multiraise(1,2.0,3.0)
+       ERROR: MethodError: no method matching multiraise(::Int64, ::Float64, ::Float64)
+       # ... stack trace
+
+       julia> multiraise(1,"2")
+       ERROR: MethodError: no method matching *(::Int64, ::String)
+       # ... stack trace
+       ```
+       
+       Your output will also contain "stack traces"[^3] for each error.
+       Don't worry about trying to understand it right now
+       (though it will be very helpful later on).
+
+    3. Both `multiraise(1,2.0,3.0)` and `multiraise(1,"2")` raise `MethodError`s.
+       Notice that the former says "no method matching `multiraise(`...",
+       while the later says "no method matching `*(`..."
+       What accounts for this difference?
+
 
 [^1]: **Syntax** - The rules that govern how characters in your code files
       are translated into instructions that the computer understands.
@@ -196,4 +230,11 @@ or lead to errors that are worth understanding.
 [^2]: **Scope** - The region of a program in which assigned variables are available.
       In julia, scopes tend to be much more restrictive by default than in other languages.
       If you ever get an `UndefVarError` when you think that you've actually defined the variable,
-      it's probably not in the right scope. 
+      it's probably not in the right scope.
+[^3]: **Stack trace** - This part of error messages can be super daunting at first,
+      especially as your programs get more complicated,
+      but can also be incredibly helpful when debugging.
+      Essentially, they are displaying the [stack diagram](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#stack_diagrams)
+      for your program where the error occured,
+      including pointing to the specific line in the code files
+      (or REPL block number) where the error occurred.

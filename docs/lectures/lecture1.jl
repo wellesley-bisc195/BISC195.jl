@@ -2,7 +2,7 @@
 # # Lecture 1 - Getting Started
 # 
 # **Essential Skills For Computational Biology**  
-# *{Date}*  
+# *2020-06-08*  
 # Kevin Bonham, PhD
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
