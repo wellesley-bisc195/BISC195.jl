@@ -41,7 +41,7 @@ makedocs(;
             "Assignment02" => "Lesson2/3_Assignment02.md"
         ],
         "Assignments" => "Assignments.md",
-        "Lectures" => ["Lecture 1"=> "lectures/lecture1.md"]
+        "Lectures" => ["Lecture 1"=> "Lectures/lecture1.md"]
     ]
 )
 
