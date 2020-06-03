@@ -185,7 +185,7 @@ or lead to errors that are worth understanding.
 
        julia> z # ?
        ```
-    2. Write a function called `multiraise()` that
+    2. Write a function called `multisquare()` that
 
        - takes **2 arguments**
        - multiplies them together
@@ -195,17 +195,17 @@ or lead to errors that are worth understanding.
        you should be able to run
 
        ```julia
-       julia> multiraise(2, 5)
+       julia> multisquare(2, 5)
        100
 
-       julia> multiraise("2","5")
+       julia> multisquare("2","5")
        "2525"
 
-       julia> multiraise(1,2.0,3.0)
-       ERROR: MethodError: no method matching multiraise(::Int64, ::Float64, ::Float64)
+       julia> multisquare(1,2.0,3.0)
+       ERROR: MethodError: no method matching multisquare(::Int64, ::Float64, ::Float64)
        # ... stack trace
 
-       julia> multiraise(1,"2")
+       julia> multisquare(1,"2")
        ERROR: MethodError: no method matching *(::Int64, ::String)
        # ... stack trace
        ```
@@ -214,11 +214,22 @@ or lead to errors that are worth understanding.
        Don't worry about trying to understand it right now
        (though it will be very helpful later on).
 
-    3. Both `multiraise(1,2.0,3.0)` and `multiraise(1,"2")` raise `MethodError`s.
-       Notice that the former says "no method matching `multiraise(`...",
+    3. Both `multisquare(1,2.0,3.0)` and `multisquare(1,"2")` raise `MethodError`s.
+       Notice that the former says "no method matching `multisquare(`...",
        while the later says "no method matching `*(`..."
        What accounts for this difference?
 
+    4. Everything we've done here so far is using `julia`,
+       but the same concepts are applicable on the command line too,
+       just with different syntax.
+
+       When you change directories with 
+       
+       ```sh
+       $ cd ~/Desktop 
+       ```
+
+       `cd` is a function and `~/Desktop` is the argument
 
 [^1]: **Syntax** - The rules that govern how characters in your code files
       are translated into instructions that the computer understands.

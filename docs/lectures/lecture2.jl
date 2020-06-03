@@ -1,8 +1,11 @@
 #nb # %% slideshow [markdown] {"slideshow": {"slide_type": "slide"}}
-# # Lecture 2 - Types and Functions
-# 
+#md # # [Lecture 2 - Types and Functions](@id lecture2)
+#!md # # [Lecture 2 - Types and Functions]
+#
 # **Essential Skills For Computational Biology**  
+#
 # *2020-06-08*  
+#
 # Kevin Bonham, PhD
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}

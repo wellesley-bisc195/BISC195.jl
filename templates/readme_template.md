@@ -1,31 +1,10 @@
 # Assignment {{{ASSIGNMENT}}} - Lesson Name
 
-| **Documentation**                       | **Build Status**                 |
-|:---------------------------------------:|:--------------------------------:|
-| [![][docs-stable-img]][docs-stable-url] | [![][travis-img]][travis-url]    |
+[![Assignment {{ASSIGNMENT}} - Repository](https://img.shields.io/badge/Assignment{{ASSIGNMENT}}-Repository-blue?style=for-the-badge&logo=open%20badges)](#)
+[![Assignment {{ASSIGNMENT}} - Description](https://img.shields.io/badge/Assignment{{ASSIGNMENT}}-Description-blue?style=for-the-badge&logo=open%20badges)](https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/Assignment{{ASSIGNMENT}}.html)
+[![Assignment {{ASSIGNMENT}} - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge&logo=open%20badges)](https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/Assignment{{ASSIGNMENT}}.html)
 
-[Lesson repository](#)
-
-## Learning Objectives
-
-**Concepts** - After completing this lesson, students will be able to:
-
-- Compare and contrast ...
-- Identify ...
-- Explain ...
-
-**Skills** - After completing this lesson, students will be able to:
-
-- 
-
-**Assignments** - This lesson is complete when students have:
-
--
 
 ## Description
 
-In this lesson ...
-
-
-[docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
-[docs-stable-url]: https://wellesley-bisc195.github.io/assignment_{{{ASSIGNMENT}}}/stable
+This assignment is designed to...

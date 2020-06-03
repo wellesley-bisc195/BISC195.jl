@@ -31,19 +31,16 @@ makedocs(;
             "Using the Terminal" => "Lesson1/1_terminal.md",
             "Git for Version Control" => "Lesson1/2_git.md",
             "The Julia REPL" => "Lesson1/3_julia_REPL.md",
-            "Assignment01" => "Lesson1/4_Assignment01.md"
+            "Assignment01" => "Assignments/Assignment01.md"
         ],
         "Lesson 2 - Data Types and Functions" => [
             "Lesson2/index.md",
             "Data Types" => "Lesson2/1_data_types.md",
             "Functions" => "Lesson2/2_functions.md",
-            "Assignment02" => "Lesson2/3_Assignment02.md"
+            "Assignment02" => "Assignments/Assignment02.md"
         ],
-        "Assignments" => "Assignments.md",
-        "Lectures" => [
-            "Lecture 1"=> "Lectures/lecture1.md",
-            "Lecture 2"=> "Lectures/lecture2.md"
-        ]
+        "Assignments" => "Assignments/Assignments.md",
+        "Lectures" => "Lectures/Lectures.md"
     ]
 )
 

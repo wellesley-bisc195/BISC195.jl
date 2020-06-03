@@ -1,8 +1,11 @@
 #nb # %% slideshow [markdown] {"slideshow": {"slide_type": "slide"}}
-# # Lecture 1 - Getting Started
+#md # # [Lecture 1 - Getting Started](@id lecture1)
+#!md # # [Lecture 1 - Getting Started]
 # 
 # **Essential Skills For Computational Biology**  
+#
 # *2020-06-08*  
+#
 # Kevin Bonham, PhD
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
