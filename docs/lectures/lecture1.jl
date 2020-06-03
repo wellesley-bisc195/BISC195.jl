@@ -48,7 +48,7 @@ hello("Students")
 42 / 2
 #-
 #nb %% a subslide [code] {"slideshow": {"slide_type": "fragment"}}
-5 + "2"
+## 5 + "2"
 
 #nb # %% a subslide [markdown] {"slideshow": {"slide_type": "slide"}}
 # ## What are "essential" skills?
@@ -115,3 +115,9 @@ hello("Students")
 # **All students are expected to attend lecture**
 # 
 # **All students should be able to come to at least two lab periods**
+
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
+# ## Let's get started!
+#
+# - Course bible: https://wellesley-bisc195.github.io/BISC195.jl/stable/
+# - [Lesson 1 - Getting Started](https://wellesley-bisc195.github.io/BISC195.jl/stable/Lesson1/)
