@@ -2,13 +2,16 @@ using BISC195
 using Documenter
 using Literate 
 
-# lectures = normpath.(readdir(joinpath(@__DIR__, "..", "lectures"), join=true))
-# filter!(l-> endswith(l, ".jl"), lectures)
-# outdir = joinpath(@__DIR__, "src","lectures")
+lsrc = joinpath(@__DIR__, "lectures")
+lslides = joinpath(@__DIR__, "lectures", "slides")
+outdir = joinpath(@__DIR__, "src", "Lectures")
 
-# for l in lectures
-#     Literate.markdown(l, outdir)
-# end
+for l in readdir(lsrc, join=true)
+    isfile(l) || continue
+    splitext(l)[2] == ".jl" || continue
+    Literate.markdown(l, outdir)
+    Literate.notebook(l, lslides, execute=false)
+end
 
 makedocs(;
     modules=[BISC195],
@@ -38,10 +41,11 @@ makedocs(;
             "Assignment02" => "Lesson2/3_Assignment02.md"
         ],
         "Assignments" => "Assignments.md",
-        # "Lectures" => ["Lecture 1"=> "lectures/lecture1.md"]
+        "Lectures" => ["Lecture 1"=> "lectures/lecture1.md"]
     ]
 )
 
 deploydocs(;
     repo="github.com/wellesley-bisc195/BISC195.jl",
+    push_preview = true
 )
