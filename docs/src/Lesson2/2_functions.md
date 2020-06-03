@@ -91,7 +91,7 @@ the value passed as an argument - `"Hello there"` -
 is passed in everywhere you see `my_arg`,
 but `my_arg` doesn't exist outside the function.
 
-```@example args
+```@repl args
 my_arg
 ```
 

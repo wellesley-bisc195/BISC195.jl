@@ -6,6 +6,7 @@
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://wellesley-bisc195.github.io/BISC195.jl/dev)
 
 ## Learning Objectives 
+
 After completing this course, students will be able to:
 - Navigate their computer and manipulate files using a command line interface.
 - Design and write a program from scratch to perform statistical analyses on and plot a large numerical dataset.
@@ -14,7 +15,12 @@ After completing this course, students will be able to:
 - Use a version control system to keep track of changes to their code.
 - Approach new programming languages, computational problems or software tools with confidence.
 
-## Syllabus
+## Wellesley SRP Summer 2020
 
-[![Syllabus](https://img.shields.io/badge/BISC195-Syllabus-blueviolet.svg)](https://wellesley-bisc195.github.io/BISC195.jl/dev/Syllabus/)
+**June 8th - July 17th**
 
+### Course Meeting Times
+
+- **Tu/Th 10am - 11am**: Reserved for lecture  
+- **M/W 10am - 12pm**: Lab / Office Hours
+- **Tu/Th 1pm - 3pm**: Lab / Office Hours

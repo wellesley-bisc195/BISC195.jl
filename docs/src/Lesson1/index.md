@@ -1,6 +1,8 @@
-# Lesson 1 - Getting started
+# Getting started
 
-[![Assignment 01](https://img.shields.io/badge/Assignment-01-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
+[![Assignment 01 - Repository](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
+[![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref Assignment01)
+[![Assignment 01 - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref Assignment01)
 
 ## Learning Objectives
 
