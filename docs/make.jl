@@ -1,5 +1,15 @@
 using BISC195
 using Documenter
+using Literate
+
+lectures = normpath.(readdir(joinpath(@__DIR__, "..", "lectures"), join=true))
+filter!(l-> endswith(l, ".jl"), lectures)
+lecture_out = joinpath(@__DIR__, "src/Lectures")
+!isdir(lecture_out) && mkdir(lecture_out)
+
+for l in lectures
+    Literate.markdown(l, lecture_out, documenter=false)
+end
 
 makedocs(;
     modules=[BISC195],
@@ -28,7 +38,10 @@ makedocs(;
             "Functions" => "Lesson2/2_functions.md",
             "Assignment02" => "Lesson2/3_Assignment02.md"
         ],
-        "Assignments" => "Assignments.md"
+        "Assignments" => "Assignments.md",
+        "Lectures" => [
+            "Lecture 1 (2020-06-09)" => "Lectures/lecture1.md"
+        ]
     ]
 )
 
