@@ -1,10 +1,10 @@
 using BISC195
 using Documenter
-# using Literate 
+using Literate 
 
 # lectures = normpath.(readdir(joinpath(@__DIR__, "..", "lectures"), join=true))
 # filter!(l-> endswith(l, ".jl"), lectures)
-# outdir = joinpath(dirname(@__FILE__), "src","lectures")
+# outdir = joinpath(@__DIR__, "src","lectures")
 
 # for l in lectures
 #     Literate.markdown(l, outdir)
