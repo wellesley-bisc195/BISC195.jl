@@ -1,5 +1,9 @@
 # Assignment01
 
+[![Assignment 01 - Repository](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
+[![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref Assignment01)
+[![Assignment 01 - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref Assignment01)
+
 In this course,
 assignments are provided through github classroom.
 This assigment is mostly designed to familiarize you with the process
