@@ -1,4 +1,4 @@
-# [Assignment01](@id assignment1)
+# [Assignment01](@id assignment01)
 
 [![Assignment 01 - Invitation](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
 [![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment01)
@@ -306,6 +306,10 @@ and follow the instructions in the comments.
 
     These lines are skipped by the julia parser entirely,
     even if they contain valid code.
+
+    The formatting of the comments might look a little weird,
+    it allows me to generate [a website](@ref assignment01-code) from the code that's
+    a bit easier too look at
 
 Then use `git add` and `git commit`
 to commit these changes to the repository.

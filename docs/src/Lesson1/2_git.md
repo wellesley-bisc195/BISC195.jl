@@ -427,7 +427,7 @@ should give you some confidence that it's important.
 
 In any case, this entire course will use git and github.com
 (a website for managing and collaborating on git repositories).
-In the [first assignment](@ref Assignment01),
+In the [first assignment](@ref assignment01),
 you'll learn how to do this.
 
 [^1]: `staged` - Files with changes that are ready to be committed.

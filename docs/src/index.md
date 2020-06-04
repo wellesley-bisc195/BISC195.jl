@@ -194,10 +194,3 @@ That's because this is output, and is not intended to be run as code.
     (unless it's a really long and complicated command).
     You will learn faster this way,
     and your typos will show you errors that are worth seeing.
-
-
-
-
-```@contents
-Depth = 4
-```

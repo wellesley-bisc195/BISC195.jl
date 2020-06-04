@@ -1,4 +1,4 @@
-# [Assignment02](@id assignment2)
+# [Assignment02](@id assignment02)
 
 [![Assignment 02 - Invitation](https://img.shields.io/badge/Assignment02-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/kCXCpki4)
 [![Assignment 02 - Description](https://img.shields.io/badge/Assignment02-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment02)

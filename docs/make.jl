@@ -2,14 +2,23 @@ using BISC195
 using Documenter
 using Literate 
 
-lsrc = joinpath(@__DIR__, "lectures")
-outdir = joinpath(@__DIR__, "src", "Lectures")
+lect_src = joinpath(@__DIR__, "literate", "lectures")
+lect_out = joinpath(@__DIR__, "src", "Lectures")
 
-for l in readdir(lsrc, join=true)
+for l in readdir(lect_src, join=true)
     isfile(l) || continue
     splitext(l)[2] == ".jl" || continue
-    Literate.markdown(l, outdir)
-    Literate.notebook(l, outdir, execute=false)
+    Literate.markdown(l, lect_out)
+    Literate.notebook(l, lect_out, execute=false)
+end
+
+assig_src = joinpath(@__DIR__, "literate", "assignment_scripts")
+assig_out = joinpath(@__DIR__, "src", "Assignments")
+
+for l in readdir(assig_src, join=true)
+    isfile(l) || continue
+    splitext(l)[2] == ".jl" || continue
+    Literate.markdown(l, assig_out)
 end
 
 makedocs(;

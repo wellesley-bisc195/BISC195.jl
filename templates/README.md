@@ -13,7 +13,7 @@ Replacements(; kwargs...) = Replacements(Dict(string(k) => v for (k, v) in pairs
 PkgTemplates.user_view(::PkgTemplates.Plugin, t::Template, ::AbstractString) =
     PkgTemplates.getplugin(t, Replacements).d
 
-PkgTemplates.@with_kw_noshow struct Assignment <: PkgTemplates.Plugin
+PkgTemplates.@with_kw_noshow struct Assignment <: PkgTemplates.FileTemplate
     file::String = "templates/assignment_template.jl"
 end
 
@@ -33,6 +33,7 @@ function templ(num)
                 Readme(file="templates/readme_template.md"),
                 Git(ssh=true),
                 GitHubActions(),
+                Documenter{GitHubActions}(),
                 Replacements(; ASSIGNMENT=a),
                 Assignment()
             ])
