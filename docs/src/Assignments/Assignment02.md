@@ -21,7 +21,7 @@ has automated "unit testing" set up to check that your code works as expected.
 Once you've completed the assignment,
 you will see a green checkmark next to the commit in github
 
-![Github CI passing](https://imgur.com/kb5YuDL)
+![Github CI passing](https://imgur.com/kb5YuDL.png)
 
 You can also check this on your own computer -
 with your assignment repository as the working directory, run:
