@@ -30,4 +30,3 @@ diploid(chromosomes) # this is a program
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "fragment"}}
 # [Placeholder for video link](#)
-
