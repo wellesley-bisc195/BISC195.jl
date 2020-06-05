@@ -131,6 +131,6 @@ Example tests |    1     1      1      3
     can you find any relevant information in the stacktrace?
 
 If you'd like to examine the tests for this assignment,
-take a look inside `test/runtests.jl`.
+take a look inside `test/runtests.jl` in your assignment repository.
 A lot of things will likely be unfamiliar,
 but you might find some hints for how to finish the assignment...

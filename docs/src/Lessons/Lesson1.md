@@ -1,4 +1,159 @@
-# Part 1 - Navigating the filesystem using the terminal
+# Lesson 1 - Getting started
+
+[![Assignment 01 - Invitation](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
+[![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment01)
+[![Assignment 01 - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment01)
+
+## Learning Objectives
+
+**Concepts** - After completing this lesson, students will be able to:
+
+- Compare and contrast computer code meaning and syntax
+- Identify common "algorithms" used in their daily lives
+
+**Skills** - After completing this lesson, students will be able to:
+
+- Navigate their computer's file system using a command line interface
+- Clone, commit to, and push from a git repository
+- Use the `julia` REPL to do basic arithmatic
+
+**Assignments** - This lesson is complete when students have:
+
+- Completed the BISC195 entrance survey
+- Completed the BISC195 pretest
+- Read the [Preface](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_preface)
+  and [Chapter 1](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap01)
+  of Think Julia
+- Installed visual studio code and julia on their computers
+  - Windows users should also have installed Windows Terminal
+- Run all code examples from Lesson 1 on their own computers
+
+This file contains instructions for completing today's lesson.
+It is written in a language called "markdown",
+which allows plain text to be easily converted
+into nicely formatted webpages like the one you're looking at now.
+But we'll come back to this.
+
+To complete this lesson, follow the instructions below.
+
+!!! tip
+    It is even more important than usual
+    to read and follow instructions
+    when it comes to computers and programming.
+    We will be interacting with our computers
+    using procedural language - that is,
+    language that follows a strict set of procedures.
+    Skipping steps or doing things out of order
+    can lead to unexpected results.
+
+## [Part 1 - First steps](@id first-steps)
+
+Most modern computer code is just text
+that tells a computer what to do.
+The part that is complicated is that code tends to be:
+
+1. Literal - the computer can only do exactly what you specifically tell it;
+   it won't try to guess your meaning
+   and it doesn't understand nuance.
+1. Procedural - you must provide **all** of the commands
+   and you must provide them **in the correct order**
+
+[Watch this video](https://www.youtube.com/watch?v=cDA3_5982h8)
+to get a sense of why this matters so much.
+
+In this course,
+we'll be primarily interacting with that computer code as plain text,
+but there are a bunch of tools that people have built
+to make that job a bit easier.
+
+### [Installing your IDE](@id install-ide)
+
+One of those tools is an "Integrated Development Environment" or "IDE".
+This is basically just a text editor with a bunch of bells and whistles.
+
+There are a number of different text editors to chose from,
+but in this course, we're going to use [Visual Studio Code](https://code.visualstudio.com/)
+
+1. [Click here](https://code.visualstudio.com/Download)
+    and select the correct download for your operating system
+
+    ![vscode-download](../assets/img/vs-code-download.png)
+
+1. Open the downloaded file and follow the prompts to install the program
+
+!!! tip
+    If you prefer to use a different text editor, that's ok,
+    but it's important to be sure it's a _plain text_ editor
+    and not a _rich text_ editor like MS Word. 
+    The files saved by rich text editors contain extraneous information,
+    and are not suitable for programming.
+
+    Check with Kevin about your choice if you're unsure.
+
+### [Installing julia](@id install_julia)
+
+In this course,
+we're primarily going to be programming in the [julia programming language](https://julialang.org/).
+Julia is a modern programming language
+designed for scientific computing.
+
+1. Go to the [julia downloads page](https://julialang.org/downloads/)
+    and select the correct download for your operating system.
+
+    ![julia-download](../assets/img/julia-releases.png)
+
+1. Open the downloaded file and follow the prompts to install it.
+    1. Mac users, once the `.dmg` file is opened,
+       you will need to drag the app file into your `Applications` folder
+    1. Windows users - there will be a `.exe` file - open it to start the installation.
+1. Once the julia application is installed, open it.
+   This should cause a text window to open looking something like this:
+
+```
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.4.0 (2020-03-21)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia>
+```
+
+Type `2+2` and hit `enter`, you should see the number `4`, and then another julia prompt:
+
+```
+julia> 2+2
+4
+
+julia>
+```
+
+You can close the window in the normal way, or type `exit()` and hit enter.
+
+### [Sign up for github classroom](@id github_signup)
+
+All assignments will be distributed,
+turned in and graded through [github classroom](http://classroom.github.com/).
+
+To use it, you need to sign up for a github account
+if you don't have one already.
+
+!!! practice "To Do"
+    If you don't have an account already, get one at https://github.com/join.
+
+    !!! warning "Privacy Note"
+        You do not need to use your wellesley.edu email address to create this account, but let Kevin know if you use a different address so that you get credit for your work.
+
+    If you'd like, you may sign up for a [github student discount pack](https://education.github.com/pack)
+    This is not necessary for this course.
+
+!!! practice "To Do"
+    Next, [join the classroom](https://classroom.github.com/classrooms/49307558-wellesley-bisc195).
+
+## Part 2 - Navigating the filesystem using the terminal
 
 You are probably already familiar with
 your computer's "filesystem"[^1].
@@ -34,7 +189,7 @@ is the same whether you're interacting with it in a GUI or in the terminal.
 And once you learn how to use the command line interface,
 you'll see that it is a powerful way to get a lot done quickly.
 
-## 1.1: Open the terminal application
+### Open the terminal application
 
 **Mac Users**:  
 1. Open Applications
@@ -58,7 +213,7 @@ This is the command prompt.
     or highlight a section of text to be deleted.
     Instead, you have to use `←` and `→` keys.
 
-## 1.2 Walk around your file system
+### Walk around your file system
 
 Think of your filesystem as a branching network of roads
 that you can walk along.
@@ -176,7 +331,7 @@ While on Windows machines, the root is probably `C:\`.
     If you want to see the files in your Windows `Desktop/` directory for example,
     look in `/mnt/c/Users/yourname/Desktop`.
 
-### Moving around
+#### Moving around
 
 Say you are sitting in your room,
 and you want to give someone directions to [Lulu](https://w100.wellesley.edu/lulu).
@@ -300,7 +455,7 @@ and then move into my Documents folder.
 
 You can also move up more than just one directory. For example, you can go up two directories with `../../`
 
-### Practice
+#### Practice
 
 Practice moving around your file system using `cd`,
 and checking where you are using `pwd` and `ls`.
@@ -327,7 +482,7 @@ just enter `cd ~/` to get yourself home.
     Get into the habit of typing a little bit of a path,
     then hitting `<TAB>` (twice if nothing shows up the first time).
 
-## 1.3 Manipulating files and directories
+### Manipulating files and directories
 
 Of course, looking around is not the only thing you can do from the terminal.
 Using the terminal allows you to rapidly
@@ -361,7 +516,7 @@ the command to `m`a`k`e a `dir`ectory is `mkdir <path>`.
     (including the `<` and `>` characters)
     with the appropriate value.
 
-### Create and explore directories and files
+### [Create and explore directories and files](@id directories-and-files)
 
 ```sh
 $ mkdir ~/Documents/bisc195
@@ -772,7 +927,7 @@ bisc195 $ ls
 bisc195 $
 ```
 
-## Summary
+### Summary of Terminal commands
 
 - `cd` changes the current working directory
 - `pwd` prints (shows) the current working directory
@@ -794,15 +949,562 @@ bisc195 $
 - `rm` removes files
 - `rmdir` removes (empty) directories
 
+## Part 2 - git for version control
+
+If you've ever worked on an assignment
+and ended up with a list of files like
+
+- `assignment1.docx`
+- `assignment1_v2.docx`
+- `assignment1_v2_kevins_comments.docx`
+- `assignment1_v3_fix_final.docx`
+- `assignment1_v3_fix_final_for_real_this_time.docx`
+
+... you'll understand the importance of version control.
+
+It goes well beyond naming of course.
+How can you tell what changed between version 1 and version2?
+Does version 3 take the comments Kevin made on v2 into account?
+Is `...fix_final_for_real_this_time` _really_ the last version?
+
+It's even worse if multiple people are working on the same document.
+If you and your lab partner are editing a document at the same time,
+How can you gracefully merge the changes?
+What if the changes you make and the changes she makes are incompatible?
+
+Software like Google Docs can address some of these issues,
+but incompatible changes can still occur.
+Imagine you're writing an essay about a dog.
+At the beginning of the essay, you've written
+
+> The quick brown fox jumped over the lazy dog
+
+You and your partner are both refining this epic story at the same time,
+and further on you write,
+
+> Because of how lazy the dog was, she didn't chase the fox.
+
+But your partner decided the first line needed some more detail
+and changes it to
+
+> The quick brown female fox jumped over the lazy male dog.
+
+so your pronouns are out of step.
+
+In writing, a mistake like this might just look silly,
+but in programming, it can mean your code doesn't run
+or generates the wrong answer.
+Even more critically,
+code often involves many files working together,
+and keeping track of the versions of multiple files at the same time is necessary.
+
+### `git` is a program for version control
+
+`git` is a distributed version control system (DVCS).
+That is, it helps one keep track of one's code,
+and the information about versions is distributed among many systems.
+
+!!! note
+    Early version control systems were centralized -
+    there was a single server that kept track of
+    all of the information about a code repository.
+    Users could "checkout" individual files to edit them,
+    and the central repository would lock that file to prevent conflicting changes.
+    This makes it easy to prevent conflicts,
+    but is also a bit impractical.
+
+    By contrast, git is distributed -
+    each user's system contains the entire revision history,
+    and conflicts between versions are explicitly managed when
+    two different edits to the code are brought together.
+    Don't worry if this isn't super clear at this stage -
+    we'll get into some practical examples in a sec.
+
+You can think of a `git` "repository" (usually shortened to "repo")
+as a directory with super powers.
+If you're looking at the directory using Finder or Explorer,
+it might not look any different,
+but it's much more powerful.
+Before we get into that, though,
+we need to get `git` installed.
+
+### Installing git
+
+If you are using Windows Subsystem for linux,
+or a linux operation system, `git` should already be installed.
+
+**Step 1:**
+
+!!! practice "ToDo: Check if git is installed"
+    Check if `git` is installed by executing `git --help` in the terminal.
+
+    ```sh
+    $ git --help
+    ```
+    ```
+    usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+            [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+            [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+            [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+            <command> [<args>]
+
+    These are common Git commands used in various situations:
+
+    start a working area (see also: git help tutorial)
+    clone      Clone a repository into a new directory
+    init       Create an empty Git repository or reinitialize an existing one
+    # ... output truncated
+    ```
+
+    If you're using a Mac, git might not be installed.
+    Executing the command above will probably result in an error message:
+
+    ```
+    bash: git: command not found...
+    ```
+
+    So you need to install it
+    (if the `git` help message appeared, you can skip [to here](@ref configuring_git)).
+
+    The easiest way to install git on a mac is using [`homebrew`](http://brew.sh).
+
+**Step 1b**: 
+
+!!! practice "ToDo: Install git"
+    If you're using a mac and don't have git installed,
+    enter the following commands into your terminal (excluding the `$`),
+    then press `enter` to execute.
+
+    ```sh
+    $ xcode-select --install
+    ```
+
+    This may prompt you to download and install "command line developer tools"
+    from the app store.
+    If it does, click install and follow the prompts.
+    When that's finished, and you see the command prompt (`$`) again, run the following command.
+    Note: this is a case when you should probably use copy/paste.
+
+    ```
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ```
+    ```
+    ==> This script will install:
+    /usr/local/bin/brew
+    /usr/local/share/doc/homebrew
+    /usr/local/share/man/man1/brew.1
+    /usr/local/share/zsh/site-functions/_brew
+    /usr/local/etc/bash_completion.d/brew
+    /usr/local/Homebrew
+    ==> The following new directories will be created:
+    /usr/local/sbin
+    # ...
+    ```
+
+    And follow the prompts.
+    If you are asked for your password,
+    use the one you use to log into your computer.
+    Note that you will not see anything appear as you type,
+    just type the password and hit `enter`.
+
+### [Configuring git](@id configuring_git)
+
+The next step is to tell git your name and email address,
+so that you are credited with the changes you make to repositories.
+
+**Step 2:**
+
+!!! practice "ToDo: Configure git"
+    Enter the following commands,
+    changing the name and e-mail address to yours.
+
+    ```sh
+    $ git config --global user.name "Kevin Bonham, PhD"
+    $ git config --global user.email kbonham@wellesley.edu
+    ```
+
+### Practice: Create your first git repository
+
+**Step 3:**
+
+!!! practice "ToDo"
+    In your terminal,
+    change your working directory to your `Documents` folder (`~/Documents`)
+
+!!! compat "Windows Users"
+    You can perform the following steps either in
+    the `Documents/` folder of your linux filesystem found at `~/Documents`,
+    or of your Windows filesystem, which is found at `/mnt/c/Users/<your_username>/Documents`
+
+**Step 4:** 
+
+!!! practice "ToDo"
+    Next, create a new directory called `my_repo`.
+
+!!! tip "Reminders"
+    - `cd` is the command for changing working directory
+    - `mkdir` is the command for making a directory
+
+    Look back at the previous section for more information,
+    and don't worry if you need to keep looking up stuff like this.
+    The stuff you do regularly will become second nature,
+    and the other stuff is always a Google search away.
+
+**Step 5:** 
+
+!!! practice "ToDo: initiate the repo"
+
+    Now, change your working directory into the newly created `my_repo/`
+    and initialize a git repository using the command `git init`
+
+    ```sh
+    my_repo $ git init
+    ```
+    ```
+    Initialized empty Git repository in /home/kevin/Documents/my_repo/.git/
+    ```
+
+!!! warning "Checking Questions"
+    Is the path shown in the output a *relative* or *absolute* path?
+
+    If you use the command `ls` to list the contents of the current directory,
+    can you see the `.git/` directory that was created?
+    Why or why not?
+
+**Step 6:** 
+
+!!! practice "ToDo"
+    Open the folder in your operating system's file system navigator
+    (Finder on a Mac, Explorer in Windows).
+
+    !!! compat "Windows Users"
+        If you created the repository in the linux filesystem,
+        the easiest way to do this is to execute `explorer.exe ./`
+        from the command line.
+        [See here](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/)
+        for more information about how the Windows and Linux filesystems interact.
+
+    This folder appears empty right now,
+    but in fact, there's a hidden `.git` folder
+    that will include all of the version information
+    for all of the files that you track.
+
+    Let's see how this works.
+
+**Step 7:** 
+
+!!! practice "ToDo"
+    open the [`VS Code`](https://code.visualstudio.com/) text editor and create a new file,
+    then save it in your repository directory as `fox.txt`.
+
+**Step 8:**
+
+!!! practice "ToDo"
+    In your terminal, list the contents of the directory
+    to be sure the file was created.
+
+    ```sh
+    my_repo $ ls
+    ```
+    ```
+    fox.txt
+    ```
+
+When you create new files, git does not track them automatically.
+Let's see what git sees at the moment:
+
+!!! practice "ToDo"
+    ```sh
+    $ git status
+    ```
+    ```
+    On branch master
+
+    No commits yet
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+
+        fox.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+
+So `git` sees the file exists,
+but it tells you it's not being tracked.
+
+**Step 9:**
+
+!!! practice "ToDo"
+    Let's fix that (the `status` message helpfully tells you how):
+
+    ```sh
+    my_repo $ git add fox.txt
+    my_repo $ git status
+    ```
+    ```
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+
+        new file:   fox.txt
+    ```
+
+The file is now "staged"[^10] -
+that is ready to be "committed."
+In git, a "commit"[^11] is used to register a specific version of a repository.
+The current state of all of the tracked files in the repository
+will be recorded.
+
+We don't really need to track an empty file,
+let's add some text to it.
+
+**Step 10:** 
+
+!!! practice "ToDo"
+    In Atom, add the following line to `fox.txt` **and save**.
+
+    ```
+    The quick fox jumped.
+    ```
+
+    Now, back in the terminal, what's the status?
+
+    ```sh
+    $ git status
+    ```
+    ```
+    On branch master
+
+    No commits yet
+
+    Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+
+        new file:   fox.txt
+
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   fox.txt
+    ```
+
+Notice that `fox.txt` now appears under both
+"Changes to be committed" and
+"Changes not staged for commit".
+
+Why?
+Because you initially staged an empty file,
+and now there's a modified version of the file that has not been staged.
+You can see the difference between the current state of the file
+and what's staged using `git diff`
+
+```sh
+$ git diff fox.txt | cat
+```
+```
+diff --git a/fox.txt b/fox.txt
+index e69de29..395235f 100644
+--- a/fox.txt
++++ b/fox.txt
+@@ -0,0 +1 @@
++The quick fox jumped.
+```
+
+The syntax of this output is perhaps a bit confusing,
+but it's saying that a line was added to `fox.txt`.
+
+**Step 11:** 
+
+Let's go ahead and stage this change,
+and then make our first commit.
+
+!!! practice "ToDo"
+    ```sh
+    $ git add fox.txt
+    $ git commit -m "my first commit"
+    ```
+    ```
+    [master (root-commit) b183d56] my first commit
+    1 file changed, 1 insertion(+)
+    create mode 100644 fox.txt
+    ```
+
+    ```sh
+    $ git status
+    ```
+    ```
+    On branch master
+    nothing to commit, working tree clean
+    ```
+
+Congratulations! You have a git repository.
+
+### Just keep committing
+
+!!! practice
+    Try making some more changes to this file,
+    make some new files,
+    and use `git add`,
+    `git commit`, and
+    `git status`
+    to keep track of those changes.
+
+!!! danger
+    If you enter `git commit` without including a commit message
+    with the `-m` flag,
+    your terminal may transform into a text editor.
+    If this happens,
+    you may find it difficult to return to the command prompt.
+    Try typing (don't copy/paste) `:q!` then `enter`.
+
+    If this doesn't work, ask for assistance.
+    If Kevin or the TAs are unavailable,
+    you can always close and re-open your terminal.
+
+    In either case, your commit will be aborted.
+
+### Using git in this course
+
+It might not be clear to you yet why
+using a version control system is worthwhile.
+If you don't trust me,
+the fact that almost every software company uses git (or something similar)
+should give you some confidence that it's important.
+
+In any case, this entire course will use git and github.com
+(a website for managing and collaborating on git repositories).
+In the [first assignment](@ref assignment01),
+you'll learn how to do this.
+
+## Part 3 - Running julia code
+
+For a lot of this course,
+we will be using the julia programming language
+rather than the command line.
+
+There are a few different ways to run julia code,
+and this section will get you acquaninted with a couple of them.
+
+### The julia REPL
+
+Open julia, which you [should have installed](@ref install_julia) in the first part of this lesson.
+
+Your terminal application should open, running julia:
+
+```
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.4.0 (2020-03-21)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia>
+```
+
+Technically speaking,
+this is the julia "Read, evaluate, print, loop", or "REPL".
+
+When you enter text at the `julia>` prompt,
+the REPL **read**s it,
+**evaluate**s it as julia code,
+**print**s[^12] the result,
+and then **loop**s back to the prompt.
+
+Let's try it! Type `println("Hello, World!")` at the prompt and hit enter.
+
+```@repl
+println("Hello, World!")
+```
+
+Don't worry if you don't understand all of the components of this command - 
+we'll get there.
+
+!!! tip
+    As much as possible, try typing out the commands in these lessons,
+    rather than copy-pasting.
+    It's important to build the muscle memory,
+    and to see the errors that appear when you have typos!
+
+    For example, what did I miss here:
+
+    ```@repl
+    println(Hello, World!)
+    ```
+
+### Running julia from the command line
+
+You can also execute short snippets of code from the command line.
+
+!!! practice "To Do"
+    Open your terminal and enter the following:
+
+    ```sh
+    $ julia -e 'println("Hello, World!")'
+    ```
+    ```
+    Hello, World!
+    ```
+
+The `-e` is a command-line flag that tells julia to just execute the next command as julia code.
+Note the use of single quotes (`'`) surrounding the command.
+
+!!! warning "Checking Questions"
+    1. What happens if you just enter `julia` at the command line without additional arguments?
+    2. What happens if you use double quotes instead of single quotes? 
+       Why do you think that is?
+
+### Running julia scripts
+
+Our code is often going to be much more complicated than what we've done so far.
+In those cases, and in order to keep a record of what we're doing,
+it's useful to put our julia code in a file.
+
+!!! practice "To Do"
+    1. Open up VS Code, and create a new file called `hello.jl`.
+    2. Type `println("Hello, World!")` into the file and save it.
+       Note the path to the directory where you saved the file!
+    3. run:
+
+        ```sh
+        $ julia <path_to_directory>/hello.jl
+        ```
+        ```
+        Hello, World!
+        ```
+
+When code is saved into a file that can be run from the commandline,
+it's called a "script."
+All of your assigments will be julia code written into files
+and commited to code repositories using `git`.
+
+But it's important to realize that all of this code is the same;
+it's just text.
+That text has specific requirements in order to be parsed
+by the julia interpreter,
+but whether you run code in the REPL,
+from the command line,
+or in a script,
+it has the same behavior.
+
 ## Key Terms
 
-[^1]: **filesystem** - a hierarchical organization of files and directories. [Additional reading](https://en.wikipedia.org/wiki/File_system)
+[^1]: **filesystem** - a hierarchical organization of files and directories. 
+      [Additional reading](https://en.wikipedia.org/wiki/File_system)
 
 [^2]: **root** - the top of the filesystem hierarchy. A folder that contains all other files and folders.
 
 [^3]: **home** - a user's primary folder containing `Desktop`, `Documents`, and other user-specific folders and files.
 
-[^4]: **command line** - a text-based interface for interacting with your computer. Also referred to as "terminal" or "shell."
+[^4]: **command line** - a text-based interface for interacting with your computer. 
+      Also referred to as "terminal" or "shell."
 
 [^5]: **working directory** - the current beginning of relative paths. Equivalent to `.` or `./`
 
@@ -812,9 +1514,17 @@ bisc195 $
 
 [^8]: **argument** - a value passed to a function to operate on
 
-### More info
+[^10]: **stage** - Files with changes that are ready to be committed.
 
-Here's some more information for the curious,
+[^11]: **commit** - A unique reference to a specific state of a repository.
+
+[^12]: **print** - In the days before monitors,
+    results would literally be printed on a piece of paper.
+    These days, "printing" just means displaying the results.
+
+## More info on loops
+
+Here's some more information about the loop you [ran earlier](@ref directories-and-files),
 but at least for now,
 it's not necessary to understand it.
 

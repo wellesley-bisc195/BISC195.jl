@@ -35,11 +35,7 @@ makedocs(;
         "Home" => "index.md",
         "Syllabus" => "Syllabus.md",
         "Lesson 1" => [
-            "Getting Started"         => "Lesson1/index.md",
-            "Windows Users"           => "Lesson1/0_windows.md",
-            "Using the Terminal"      => "Lesson1/1_terminal.md",
-            "Git for Version Control" => "Lesson1/2_git.md",
-            "The Julia REPL"          => "Lesson1/3_julia_REPL.md",
+            "Getting Started"         => "Lessons/Lesson1.md",
             "Assignment01"            => "Assignments/Assignment01.md"
         ],
         "Lesson 2" => [
