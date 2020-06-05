@@ -1,5 +1,8 @@
 # Lesson 1 - Getting started
 
+[![Lecture 1 - slides](https://img.shields.io/badge/Lecture01-Slides-purple?style=for-the-badge)](@ref lecture1)
+![Lecture 1 - date](https://img.shields.io/badge/Date-6%2F9%2F2020-orange?style=for-the-badge)
+
 [![Assignment 01 - Invitation](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
 [![Assignment 01 - Description](https://img.shields.io/badge/01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment01)
 [![Assignment 01 - Rendered](https://img.shields.io/badge/01-Rendered-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment01)
