@@ -34,18 +34,16 @@ makedocs(;
     pages = [
         "Home" => "index.md",
         "Syllabus" => "Syllabus.md",
-        "Lesson 1" => [
-            "Getting Started"         => "Lessons/Lesson1.md",
-            "Assignment01"            => "Assignments/Assignment01.md"
+        "Lesson 1 - Getting Started" => [
+            "Lesson docs"  => "Lessons/Lesson1.md",
+            "Assignment01" => "Assignments/Assignment01.md"
         ],
         "Lesson 2" => [
-            "Data Types and Functions" => "Lesson2/index.md",
-            "Data Types"               => "Lesson2/1_data_types.md",
-            "Functions"                => "Lesson2/2_functions.md",
-            "Assignment02"             => "Assignments/Assignment02.md"
+            "Lesson docs"  => "Lessons/Lesson2.md",
+            "Assignment02" => "Assignments/Assignment02.md"
         ],
-        "Assignments" => "Assignments/Assignments.md",
-        "Lectures" => "Lectures/Lectures.md"
+        "Assignment Index" => "Assignments/Assignments.md",
+        "Lecture Index"    => "Lectures/Lectures.md"
     ]
 )
 
