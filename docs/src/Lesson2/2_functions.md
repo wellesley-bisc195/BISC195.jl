@@ -152,7 +152,7 @@ and your function arguments different things.
 
 !!! tip
     Just to reiterate,
-    use differentt names for variables that refer to data
+    use different names for variables that refer to data
     and function arguments.
 
     And typically, it's also good practice to make your code "self-documenting",
