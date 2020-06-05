@@ -79,7 +79,7 @@ Example
     false
 """
 function question2()
-    # put your code here
+    ## put your code here
 end
 
 # At the moment, this function doesn't do what it says it should.
@@ -131,18 +131,18 @@ Example
     0.0
 """
 function question3(sequence)
-    # throw an error if the string contains anything other than ACGT
+    ## throw an error if the string contains anything other than ACGT
     if any(c-> !in(c, ['A','C','G','T']), sequence)
         throw(ArgumentError("Sequence must only contain ACGT"))
     end
 
-    # change line to assign `seqlength` to the length of `sequence` instead of `1`
-    # If you're stuck, search for "length of string julia"
+    ## change line to assign `seqlength` to the length of `sequence` instead of `1`
+    ## If you're stuck, search for "length of string julia"
     seqlength = 1
 
-    # count the number of G's
+    ## count the number of G's
     gs = count(==('G'), sequence)
-    # count the number of C's
+    ## count the number of C's
     cs = count(==('C'), sequence)
 
     return gs + cs / seqlength # something is wrong with this line...
@@ -178,6 +178,6 @@ Example
     1.0
 """
 function question4(sequence)
-    # Your code here
+    ## Your code here
 end
 
