@@ -15,9 +15,11 @@
 # make sure you change it back or your assignment may not work correctly
 
 ## To view additional instructions for this assignment, #jl
-## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Lessons/lesson02_file.md #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment02.html #jl
 
-## This code is used for setup - do not modify
+## To view a rendered version of this document, #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment02_code.html #jl
+
 using Random
 Random.seed!(42)
 
@@ -38,7 +40,6 @@ my_seq = generate_sequence(20)
 #
 # Hint1: rather than guess, you can just use the `typeof()` function.
 
-## What is the type of `my_seq`? Assign the correct type to the varaible `question1`
 question1 = ""
 
 # Hint2: If you're having trouble, 
@@ -63,22 +64,19 @@ question1 = ""
 # (that is, copy from the tripple quotes down to the "end"
 # and paste it into the REPL, then hit enter)
 
-## Complete the following function according to the specification in the docstring
 """
     question2(sequence)
 
 Checks if `sequence` is a String.
 
 Example
-=======
+≡≡≡≡≡≡≡≡≡
 
-```julia
-julia> question2("hello")
-true
+    julia> question2("hello")
+    true
 
-julia> question2(1001)
-false
-```
+    julia> question2(1001)
+    false
 """
 function question2()
     # put your code here
@@ -113,7 +111,6 @@ end
 # If you use this function on `my_seq`,
 # you should get the answer `0.3`
 
-## Complete the following function according to the specification in the docstring
 """
     question3(sequence)
 
@@ -122,18 +119,16 @@ The GC ratio is the total number of G and C bases divided by the total length of
 For more info about GC content, see here:
 
 Example
-=======
+≡≡≡≡≡≡≡≡≡≡
 
-```julia
-julia> question3("AATG")
-0.25
+    julia> question3("AATG")
+    0.25
 
-julia> question3("CCCGG")
-1.0
+    julia> question3("CCCGG")
+    1.0
 
-julia> question3("ATTA")
-0.0
-```
+    julia> question3("ATTA")
+    0.0
 """
 function question3(sequence)
     # throw an error if the string contains anything other than ACGT
@@ -161,7 +156,6 @@ end
 # That is, don't copy any code from `question3`,
 # just call it!
 
-## Complete the following function according to the specification in the docstring
 """
     question4(sequence)
 
@@ -169,21 +163,19 @@ Calculates the GC content of a DNA sequence
 and prints it to the screen.
 
 Example
-=======
+≡≡≡≡≡≡≡≡≡≡
 
-```julia
-julia> question4("AATC")
-Sequence: 
-AATC
-GC Content:
-0.25
+    julia> question4("AATC")
+    Sequence: 
+    AATC
+    GC Content:
+    0.25
 
-julia> question4("CCCGG")
-Sequence:
-CCCGG
-GC Content:
-1.0
-```
+    julia> question4("CCCGG")
+    Sequence:
+    CCCGG
+    GC Content:
+    1.0
 """
 function question4(sequence)
     # Your code here

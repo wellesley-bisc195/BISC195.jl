@@ -1,8 +1,9 @@
 # [Assignment01](@id assignment01)
 
 [![Assignment 01 - Invitation](https://img.shields.io/badge/Assignment01-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/jOe6EhXJ)
-[![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment01)
-[![Assignment 01 - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment01)
+[![Assignment 01 - Description](https://img.shields.io/badge/Assignment01-Description-blue?style=for-the-badge)](@ref assignment01)
+[![Assignment 01 - Assignment script](https://img.shields.io/badge/Assignment01-Script-blue?style=for-the-badge)](@ref Instructions-for-Assignment01)
+[![Assignment 01 - Due](https://img.shields.io/badge/Due-6%2F11%2F2020-orange?style=for-the-badge)](@ref assignment01)
 
 In this course,
 assignments are provided through github classroom.
@@ -308,7 +309,7 @@ and follow the instructions in the comments.
     even if they contain valid code.
 
     The formatting of the comments might look a little weird,
-    it allows me to generate [a website](@ref assignment01-code) from the code that's
+    it allows me to generate [a website](@ref Instructions-for-Assignment01) from the code that's
     a bit easier too look at
 
 Then use `git add` and `git commit`

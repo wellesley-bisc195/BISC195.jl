@@ -171,7 +171,7 @@ or lead to errors that are worth understanding.
        Then, run them in the REPL and see if you were correct.
 
        ```julia
-       julia> x = 4; # note: putting `;` prevents the "print" of the REPL
+       julia> x = 4; # putting `;` prevents the "print" part "read-eval-print-loop"
        
        julia> x # ?
        ```
@@ -230,6 +230,16 @@ or lead to errors that are worth understanding.
        ```
 
        `cd` is a function and `~/Desktop` is the argument
+
+       Can you identify the function and the argument(s)
+       in the following shell commands?
+
+       ```sh
+       $ ls -l ~/Documents
+       ```
+       ```sh
+       $ mv ace-ventura1.mov /home/kevin/Movies
+       ```
 
 [^1]: **Syntax** - The rules that govern how characters in your code files
       are translated into instructions that the computer understands.

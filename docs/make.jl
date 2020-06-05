@@ -18,7 +18,7 @@ assig_out = joinpath(@__DIR__, "src", "Assignments")
 for l in readdir(assig_src, join=true)
     isfile(l) || continue
     splitext(l)[2] == ".jl" || continue
-    Literate.markdown(l, assig_out)
+    Literate.markdown(l, assig_out, documenter=false)
 end
 
 makedocs(;

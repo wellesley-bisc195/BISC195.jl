@@ -3,3 +3,4 @@ Manifest.toml
 *.ipynb*
 .DS_Store
 /docs/src/Lectures
+/docs/src/Assignments/*_code.md

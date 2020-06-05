@@ -1,12 +1,13 @@
 # [Assignment02](@id assignment02)
 
 [![Assignment 02 - Invitation](https://img.shields.io/badge/Assignment02-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/kCXCpki4)
-[![Assignment 02 - Description](https://img.shields.io/badge/Assignment02-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment02)
-[![Assignment 02 - Due](https://img.shields.io/badge/Due-6%2F14-orange?style=for-the-badge&logo=open%20badges)](@ref assignment02)
+[![Assignment 02 - Description](https://img.shields.io/badge/Assignment02-Description-blue?style=for-the-badge)](@ref assignment02)
+[![Assignment 02 - Assignment script](https://img.shields.io/badge/Assignment02-Script-blue?style=for-the-badge)](@ref Instructions-for-Assignment02)
+[![Assignment 02 - Due](https://img.shields.io/badge/Due-6%2F14-orange?style=for-the-badge)](@ref assignment02)
 
 ## Instructions
 
-As you did with [Assignment01](@ref assignment1),
+As you did with [Assignment01](@ref assignment01),
 click the [invite link](https://classroom.github.com/a/kCXCpki4)
 to make a new copy of the assignment repository.
 
@@ -77,7 +78,7 @@ ERROR: There was an error during testing
 "Failing" tests are those that evaluate `false`.
 Errors are reported when the expression throws an error
 before returning a value,
-or when the expression doesn't return either `true` or `false.
+or when the expression doesn't return either `true` or `false`  .
 
 There are lots of different types of "boolean" expressions,
 those that return `true` or `false`.
@@ -124,10 +125,10 @@ Example tests |    1     1      1      3
 ```
 
 !!! warning "Checking Question"
-    Hopefully it's obvious which test failed,
-    but what's the source of the error?
-
-    Can you find any relevant information in the stacktrace?
+    Which test failed, and which test was an error?
+    
+    Run the example in the REPL;
+    can you find any relevant information in the stacktrace?
 
 If you'd like to examine the tests for this assignment,
 take a look inside `test/runtests.jl`.

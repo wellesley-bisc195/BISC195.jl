@@ -1,5 +1,4 @@
-#md # # [Instructions for Assignment 01](@id assignment01-code)
-#!md # Instructions for Assignment 01
+# # Instructions for Assignment01
 #
 # ## Introduction
 #
@@ -8,6 +7,13 @@
 # to download, complete, and test your assignments.
 # Make sure you have followed the instructions at <<URL>>
 # to set up your account and join the classroom.
+
+# To view additional instructions for this assignment, #jl
+# see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment01.html #jl
+
+# To view a rendered version of this document, #jl
+# see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment01_code.html #jl
+
 
 # ## Question 1
 #
