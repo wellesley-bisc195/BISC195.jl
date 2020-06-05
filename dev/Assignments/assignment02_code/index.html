@@ -22,7 +22,9 @@ Example
     julia&gt; question2(1001)
     false
 &quot;&quot;&quot;
-function question2()</code></pre><p>put your code here</p><pre><code class="language-julia">end</code></pre><p>At the moment, this function doesn&#39;t do what it says it should. Actually, it doesn&#39;t do anything. Fix the function so that it takes one argument and returns <code>true</code> if the argument is a String, and returns <code>false</code> otherwise. You should be able to run the examples in the docstring and get the correct answer, and to run this function using <code>my_seq</code> as the argument (it should return <code>true</code>).</p><p>Hint: You haven&#39;t explicitly encountered a way to check if a type is another type. Learning to search for answers is a key programming skill! Try searching &quot;check if type is string julia&quot;. Typically, when I see search results, I prioritize in this order:</p><ol><li>stackoverflow.com</li><li>docs.julialang.org</li><li>discourse.julialang.org</li><li>github.com</li></ol><h2 id="Question-3-1"><a class="docs-heading-anchor" href="#Question-3-1">Question 3</a><a class="docs-heading-anchor-permalink" href="#Question-3-1" title="Permalink"></a></h2><p>Let&#39;s try something a bit more complicated. The <code>question3()</code> function has a doc string, but is also incomplete. I&#39;ve writtten some code to get you started, complete it so that the examples work as expected in the docstring. If you use this function on <code>my_seq</code>, you should get the answer <code>0.3</code></p><pre><code class="language-julia">&quot;&quot;&quot;
+function question2()
+    # put your code here
+end</code></pre><p>At the moment, this function doesn&#39;t do what it says it should. Actually, it doesn&#39;t do anything. Fix the function so that it takes one argument and returns <code>true</code> if the argument is a String, and returns <code>false</code> otherwise. You should be able to run the examples in the docstring and get the correct answer, and to run this function using <code>my_seq</code> as the argument (it should return <code>true</code>).</p><p>Hint: You haven&#39;t explicitly encountered a way to check if a type is another type. Learning to search for answers is a key programming skill! Try searching &quot;check if type is string julia&quot;. Typically, when I see search results, I prioritize in this order:</p><ol><li>stackoverflow.com</li><li>docs.julialang.org</li><li>discourse.julialang.org</li><li>github.com</li></ol><h2 id="Question-3-1"><a class="docs-heading-anchor" href="#Question-3-1">Question 3</a><a class="docs-heading-anchor-permalink" href="#Question-3-1" title="Permalink"></a></h2><p>Let&#39;s try something a bit more complicated. The <code>question3()</code> function has a doc string, but is also incomplete. I&#39;ve writtten some code to get you started, complete it so that the examples work as expected in the docstring. If you use this function on <code>my_seq</code>, you should get the answer <code>0.3</code></p><pre><code class="language-julia">&quot;&quot;&quot;
     question3(sequence)
 
 Calculates the GC ratio of a DNA sequence.
@@ -41,9 +43,20 @@ Example
     julia&gt; question3(&quot;ATTA&quot;)
     0.0
 &quot;&quot;&quot;
-function question3(sequence)</code></pre><p>throw an error if the string contains anything other than ACGT</p><pre><code class="language-julia">    if any(c-&gt; !in(c, [&#39;A&#39;,&#39;C&#39;,&#39;G&#39;,&#39;T&#39;]), sequence)
+function question3(sequence)
+    # throw an error if the string contains anything other than ACGT
+    if any(c-&gt; !in(c, [&#39;A&#39;,&#39;C&#39;,&#39;G&#39;,&#39;T&#39;]), sequence)
         throw(ArgumentError(&quot;Sequence must only contain ACGT&quot;))
-    end</code></pre><p>change line to assign <code>seqlength</code> to the length of <code>sequence</code> instead of <code>1</code> If you&#39;re stuck, search for &quot;length of string julia&quot;</p><pre><code class="language-julia">    seqlength = 1</code></pre><p>count the number of G&#39;s</p><pre><code class="language-julia">    gs = count(==(&#39;G&#39;), sequence)</code></pre><p>count the number of C&#39;s</p><pre><code class="language-julia">    cs = count(==(&#39;C&#39;), sequence)
+    end
+
+    # change line to assign `seqlength` to the length of `sequence` instead of `1`
+    # If you&#39;re stuck, search for &quot;length of string julia&quot;
+    seqlength = 1
+
+    # count the number of G&#39;s
+    gs = count(==(&#39;G&#39;), sequence)
+    # count the number of C&#39;s
+    cs = count(==(&#39;C&#39;), sequence)
 
     return gs + cs / seqlength # something is wrong with this line...
 end</code></pre><h2 id="Question-4-1"><a class="docs-heading-anchor" href="#Question-4-1">Question 4</a><a class="docs-heading-anchor-permalink" href="#Question-4-1" title="Permalink"></a></h2><p>This process should be familiar by now.</p><p>Hint: you do not need to re-write code if you already have it. That is, don&#39;t copy any code from <code>question3</code>, just call it!</p><pre><code class="language-julia">&quot;&quot;&quot;
@@ -67,4 +80,6 @@ Example
     GC Content:
     1.0
 &quot;&quot;&quot;
-function question4(sequence)</code></pre><p>Your code here</p><pre><code class="language-julia">end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 5 June 2020 01:42">Friday 5 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+function question4(sequence)
+    # Your code here
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 5 June 2020 01:48">Friday 5 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
