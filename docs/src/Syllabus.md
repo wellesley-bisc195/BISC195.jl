@@ -54,7 +54,7 @@ Students without prior coursework in biology should be able to succeed with addi
 
 Recommended: Molecular and/or Cell Biology.
 
-### Course Materials
+## Course Materials
 
 **Online textbook (free):**
 [Think Julia: How to think like a computer scientist](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)
@@ -63,8 +63,8 @@ Recommended: Molecular and/or Cell Biology.
 #### Lessons
 
 ```@contents
-Pages = ["Lesson1/index.md",
-         "Lesson2/index.md"
+Pages = ["Lessons/Lesson1.md",
+         "Lessons/Lesson2.md"
           ]
 Depth = 1
 ```
@@ -72,8 +72,8 @@ Depth = 1
 #### Assignments
 
 ```@contents
-Pages = ["Lesson1/04_Assignment01.md",
-         "Lesson2/03_Assignment02.md"
+Pages = ["Assignments/Assignment01.md",
+         "Assignments/Assignment02.md"
           ]
 Depth = 1
 ```
