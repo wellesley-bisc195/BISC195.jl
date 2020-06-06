@@ -38,7 +38,7 @@ makedocs(;
             "Lesson docs"  => "Lessons/Lesson1.md",
             "Assignment01" => "Assignments/Assignment01.md"
         ],
-        "Lesson 2" => [
+        "Lesson 2 - Data Types and Functions" => [
             "Lesson docs"  => "Lessons/Lesson2.md",
             "Assignment02" => "Assignments/Assignment02.md"
         ],
