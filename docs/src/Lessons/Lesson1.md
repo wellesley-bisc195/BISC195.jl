@@ -154,9 +154,6 @@ if you don't have one already.
     If you'd like, you may sign up for a [github student discount pack](https://education.github.com/pack)
     This is not necessary for this course.
 
-!!! practice "To Do"
-    Next, [join the classroom](https://classroom.github.com/classrooms/49307558-wellesley-bisc195).
-
 ## Part 2 - Navigating the filesystem using the terminal
 
 You are probably already familiar with
