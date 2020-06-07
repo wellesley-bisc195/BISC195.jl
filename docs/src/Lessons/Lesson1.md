@@ -1443,6 +1443,25 @@ we'll get there.
 ### Running julia from the command line
 
 You can also execute short snippets of code from the command line.
+But first, you need to tell the terminal where to look for the julia program.
+
+Mac users, execute the following in your terminal:
+
+```
+$ echo 'export PATH=$PATH:/Applications/Julia-1.4.app/Contents/Resources/julia/bin/' >> ~/.bash_profile
+```
+
+!!! compat "Windows Users"
+    Your situation is a bit more complicated.
+    You'll need a separate julia installation
+    for your linux operating system in order to run julia
+    from the command line.
+
+    I will write up complete instructions soon.
+
+Then restart the terminal.
+Don't worry if you don't understand what that command is doing -
+it's not worth it to understand it at this moment. 
 
 !!! practice "To Do"
     Open your terminal and enter the following:
