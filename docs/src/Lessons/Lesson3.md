@@ -29,4 +29,33 @@
 - Completed assignment 3 with all tests passing.
 - Run all code examples from Lesson 2 on their own computers
 
-## 
+## Expanding the repetoire of functions
+
+We can build some useful functions with only the components we've discussed so far,
+but they would be somewhat limited.
+Let's work on expanding our repertoire
+with conditional execution, loops, and recursion.
+
+The following sections assume that you have read
+[chapter 5](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap05) and
+[chapter 6](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap06)
+in _Think Julia_.
+You can do chapter 4 if you like
+(it lets you play with 🐢's - it's fun!),
+but that's not required for now.
+
+### Computer logic - Booleans
+
+All computers are build on boolean (true/false) logic. 
+At it's core, the two compoents of computer programs
+(data and actions) are composed from "bits",
+which are physical objects that can have 2 states,
+`0` or `1`, `off` or `on`, `false` or `true`,
+and [logical operators](https://en.wikipedia.org/wiki/Logic_gate#Truth_tables).
+
+But we don't need to understand the all the details of how this works at a low-level
+(I certainly don't)
+to effectively use boolean operations in our code.
+There are a couple of things to keep in mind.
+
+As you read in _Think Julia_,
