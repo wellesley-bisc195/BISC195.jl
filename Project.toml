@@ -1,7 +1,7 @@
 name = "BISC195"
 uuid = "330f54e6-ee29-40e7-8c38-a258ddbc4e5e"
 authors = ["Kevin Bonham <kevbonham@gmail.com>"]
-version = "0.2.5"
+version = "0.2.6"
 desc = "Functions and documentation for 'Essental Skills for Computational Biology' course"
 licence = "MIT"
 
