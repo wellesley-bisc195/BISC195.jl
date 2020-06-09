@@ -331,12 +331,12 @@ Here, we're outside of the function scope,
 so `some_arg` is `"Woah"`.
 
 Because of this possibility for confusion,
-it's usually a good idea to name your function areguments
-and your function arguments different things. 
+it's usually a good idea to name your function arguments
+and your variables different things. 
 
 !!! tip
     Just to reiterate,
-    use differentt names for variables that refer to data
+    use different names for variables that refer to data
     and function arguments.
 
     And typically, it's also good practice to make your code "self-documenting",
