@@ -1266,7 +1266,7 @@ let's add some text to it.
 **Step 10:** 
 
 !!! practice "ToDo"
-    In Atom, add the following line to `fox.txt` **and save**.
+    In VS Code, add the following line to `fox.txt` **and save**.
 
     ```
     The quick fox jumped.
