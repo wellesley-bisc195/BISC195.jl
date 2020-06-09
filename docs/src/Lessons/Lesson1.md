@@ -1493,12 +1493,12 @@ it's useful to put our julia code in a file.
        Note the path to the directory where you saved the file!
     3. run:
 
-        ```sh
-        $ julia <path_to_directory>/hello.jl
-        ```
-        ```
-        Hello, World!
-        ```
+       ```sh
+       $ julia <path_to_directory>/hello.jl
+       ```
+       ```
+       Hello, World!
+       ```
 
 When code is saved into a file that can be run from the commandline,
 it's called a "script."
