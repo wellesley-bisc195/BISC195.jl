@@ -128,7 +128,7 @@ end
     or if you do, make sure you know how to return.
 
     When you're finished, you should be able to execute `pwd`
-    and see a path that ends with `Lesson01-<your-username>`
+    and see a path that ends with `Assignment01-<your-username>`
 
 ### Explore the assignment with VS code
 
