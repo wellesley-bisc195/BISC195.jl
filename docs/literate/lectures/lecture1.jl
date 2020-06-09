@@ -123,4 +123,4 @@ hello("Students")
 # ## Let's get started!
 #
 # - Course bible: https://wellesley-bisc195.github.io/BISC195.jl/stable/
-# - [Lesson 1 - Getting Started](https://wellesley-bisc195.github.io/BISC195.jl/stable/Lesson1/)
+# - [Lesson 1 - Getting Started](https://wellesley-bisc195.github.io/BISC195.jl/stable/Lessons/Lesson1/)
