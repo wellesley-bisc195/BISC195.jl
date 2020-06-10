@@ -1,0 +1,26 @@
+language: julia
+notifications:
+  email: false
+julia:
+  - 1.4
+os:
+  - linux
+  - osx
+  - windows
+arch:
+  - x64
+cache:
+  directories:
+    - ~/.julia/artifacts
+jobs:
+  fast_finish: true
+  include:
+  - stage: Documentation
+    julia: 1
+    script: |
+      julia --project=docs -e '
+        using Pkg
+        Pkg.develop(PackageSpec(path=pwd()))
+        Pkg.instantiate()
+        include("docs/make.jl")'
+    after_success: skip
