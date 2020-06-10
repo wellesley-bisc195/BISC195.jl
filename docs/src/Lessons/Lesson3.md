@@ -44,7 +44,7 @@ You can do chapter 4 if you like
 (it lets you play with 🐢's - it's fun!),
 but that's not required for now.
 
-### Computer logic - Booleans
+### [Computer logic - Booleans](@id booleans)
 
 All computers are build on boolean (true/false) logic. 
 At it's core, the two compoents of computer programs
@@ -80,6 +80,40 @@ julia> compliment('G')
 ERROR: Base G not supported
 # ...
 ```
+
+!!! tip
+    Notice that we can use variables
+    to insert values in strings using "interpolation"
+    with `$`
+
+    ```julia
+    julia> mystr = "hello";
+
+    julia> myint = 4;
+
+    julia> "Well, $mystr there. 2 + 2 is $myint"
+    "Well, hello there. 2 + 2 is 4"
+    ```
+
+    Any arbitrary expression can be interpolated,
+    though in many cases you'll need parentheses:
+
+    ```julia
+    julia> "2+2 is $(2+2)"
+    "2+2 is 4"
+    ```
+
+    If you want to include an actual `$` sign in a string,
+    you must "escape" it with `\`, or use a "raw" string:
+
+    ```julia
+    julia> println("That will be \$2.50")
+    That will be $2.50
+
+    julia> println(raw"But I don't have $2.50!'")
+    But I don't have $2.50!'
+
+
 
 Here, we're trying to make a function
 that returns the `compliment` of a DNA base -
@@ -247,7 +281,7 @@ and that part of the block is evaluated.
     2. Evaluate `'G' == "G"` - did you expect it to be `true` or `false`?
     3. What are the types of `'G'` and `"G"`?
     4. Use the `||` operator to modify the `if`/`elseif` statements
-       in your `compliment()` function from above
+       in your [`compliment()` function](@ref booleans) from above
        so that it works with either single-quoted or double-quoted ACGT.
 
        Note: you should have no more than 3 `elseif`s in your function,
