@@ -3,7 +3,7 @@
 [![Assignment 03 - Invitation](https://img.shields.io/badge/Assignment03-Repository-blue?style=for-the-badge&logo=open%20badges)](#)
 [![Assignment 03 - Description](https://img.shields.io/badge/03-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment03)
 [![Assignment 03 - Rendered](https://img.shields.io/badge/03-Script-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment03)
-[![Assignment 03 - Due](https://img.shields.io/badge/Due-6%2F19%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment03)
+[![Assignment 03 - Due](https://img.shields.io/badge/Due-6%2F18%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment03)
 
 ## Learning objectives
 
@@ -171,7 +171,7 @@ Here, there's no way for `elseif num == 42` to ever be true,
 since when `num` is 42, the `iseven(num)` gets hit first,
 and that part of the block is evaluated.
 
-!!! note "Short-circuit evaluation"
+!!! note
     The julia logic operators `&&` and `||`
     are "short circuiting", which means that
     if the answer can be known before the right-hand side is evaluated,
@@ -184,6 +184,7 @@ and that part of the block is evaluated.
     ```julia
     julia> function verbosehalf(x)
            iseven(x) && println("That's an even number!")
+           iseven(x) || println("That's an odd number!")
            x / 2
        end
     verbosehalf (generic function with 1 method)
@@ -193,21 +194,28 @@ and that part of the block is evaluated.
     21.0
 
     julia> verbosehalf(43)
+    That's an odd number!
     21.5
     ```
 
     When `43` is passed as an argument, `iseven(x)` evaluates to `false`.
     And because `false && <anything>` is always false,
     that line just evaluates to false without ever getting to the `println()` call.
-    In this case, that line is equivalent to
+    But `false || <anything>` depends on the right hand statement
+    (`false || true` is different than `false || false`),
+    the right hand statement must be evaluated.
+    
+    In this case, those lines are equivalent to
 
     ```julia
     if iseven(x)
         println("That's an even number!")
+    else
+        println("That's an odd number!")
     end
     ```
 
-    But be aware, chaining these expressions is NOT like `if/elseif/else` since,
+    But be aware, chaining these short-circuit expressions is NOT like `if/elseif/else` since,
     regardless of the outcome of the expression, the following lines _are_ evaluated.
     Eg, if I try to write the `oddhalf()` function from above like this:
 
@@ -236,7 +244,7 @@ and that part of the block is evaluated.
        (note the double quotes)?
        Can you explain this behavior?
 
-    2. Evaluate `'G' == "G"` - do you expect it to be `true` or `false`?
+    2. Evaluate `'G' == "G"` - did you expect it to be `true` or `false`?
     3. What are the types of `'G'` and `"G"`?
     4. Use the `||` operator to modify the `if`/`elseif` statements
        in your `compliment()` function from above
@@ -268,4 +276,6 @@ In fact, this is similar to how many shell programs
 interact with your file system
 (which is also like a tree).
 
-But beyond 
+But beyond noting that it has its uses,
+we won't spend much time on recursive functions in this course.
+

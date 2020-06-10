@@ -13,13 +13,6 @@ Replacements(; kwargs...) = Replacements(Dict(string(k) => v for (k, v) in pairs
 PkgTemplates.user_view(::PkgTemplates.Plugin, t::Template, ::AbstractString) =
     PkgTemplates.getplugin(t, Replacements).d
 
-PkgTemplates.@with_kw_noshow struct Assignment <: PkgTemplates.FileTemplate
-    file::String = "templates/assignment_template.jl"
-end
-
-PkgTemplates.source(p::Assignment) = p.file
-PkgTemplates.destination(::Assignment) = "src/assignment.jl"
-
 function templ(num)
     a = lpad(num, 2, "0")
     t = Template(
@@ -33,9 +26,7 @@ function templ(num)
                 Readme(file="templates/readme_template.md"),
                 Git(ssh=true),
                 GitHubActions(),
-                Documenter{GitHubActions}(),
                 Replacements(; ASSIGNMENT=a),
-                Assignment()
             ])
 
     # replace XX with lesson number
