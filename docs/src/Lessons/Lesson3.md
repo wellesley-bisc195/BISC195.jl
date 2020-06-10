@@ -263,4 +263,9 @@ other graph structures, such as those used in genome assembly.
 
 In these cases, we often want to perform and action on a node,
 and all the children of that node, which are also nodes,
-also with children... and so on. 
+also with children... and so on.
+In fact, this is similar to how many shell programs
+interact with your file system
+(which is also like a tree).
+
+But beyond 
