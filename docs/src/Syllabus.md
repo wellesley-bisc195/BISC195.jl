@@ -74,7 +74,7 @@ Depth = 1
 
 ```@contents
 Pages = ["Assignments/Assignment01.md",
-         "Assignments/Assignment02.md"
+         "Assignments/Assignment02.md",
          "Assignments/Assignment03.md"
           ]
 Depth = 1

@@ -65,7 +65,7 @@ Examples
     'G'
 """
 function compliment(base)
-    # See Lesson 3 for more info
+    ## See Lesson 3 for more info
 end
 
 # ## Question 2 - some boolean functions
@@ -91,7 +91,7 @@ Examples
     Error: "Base B not supported")
 """
 function ispurine(base)
-    # We haven't made this before, but you should have all the pieces
+    ## We haven't made this before, but you should have all the pieces
 end
 
 """
@@ -115,10 +115,9 @@ Examples
     Error: "Base X not supported"
 """
 function ispyrimidine(base)
-    base
-    # This is the strict opposite of `ispurine`.
-    # In principle, you can write this in one line - remember `!` means `NOT`.
-    # Eg `isuppercase(x)` means the same thing as `!islowercase(x)`
+    ## This is the strict opposite of `ispurine`.
+    ## In principle, you can write this in one line - remember `!` means `NOT`.
+    ## Eg `isuppercase(x)` means the same thing as `!islowercase(x)`
 end
 
 # ## Question 3 - Using boolean functions for composition
@@ -153,10 +152,10 @@ Examples
     purine
 """
 function base_type(base)
-    # Note: this is different than the `base_type()` we defined in the lesson.
-    # Here, we want a fruitful function that returns the value rather than `print`ing it.
-    # Also, there's no need to re-write the logic. If your `ispurine` / `ispyrimidine` functions work,
-    # you can use them here.
+    ## Note: this is different than the `base_type()` we defined in the lesson.
+    ## Here, we want a fruitful function that returns the value rather than `print`ing it.
+    ## Also, there's no need to re-write the logic. If your `ispurine` / `ispyrimidine` functions work,
+    ## you can use them here.
 end
 
 # ## Question 4 - Modifying arguments instead of adding a bunch of logic
@@ -230,8 +229,8 @@ Example
     0.0
 """
 function gc_content(sequence)
-    # Start with the same code as `question3()` from assignment 2.
-    # only a small modification is necessary to make this work.
+    ## Start with the same code as `question3()` from assignment 2.
+    ## only a small modification is necessary to make this work.
 end
 
 # ## Question 5 - Incremental development

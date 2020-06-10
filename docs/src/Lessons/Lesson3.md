@@ -112,7 +112,7 @@ ERROR: Base G not supported
 
     julia> println(raw"But I don't have $2.50!'")
     But I don't have $2.50!'
-
+    ```
 
 
 Here, we're trying to make a function
