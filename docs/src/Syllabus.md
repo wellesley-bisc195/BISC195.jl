@@ -64,7 +64,8 @@ Recommended: Molecular and/or Cell Biology.
 
 ```@contents
 Pages = ["Lessons/Lesson1.md",
-         "Lessons/Lesson2.md"
+         "Lessons/Lesson2.md",
+         "Lessons/Lesson3.md"
           ]
 Depth = 1
 ```
@@ -73,7 +74,8 @@ Depth = 1
 
 ```@contents
 Pages = ["Assignments/Assignment01.md",
-         "Assignments/Assignment02.md"
+         "Assignments/Assignment02.md",
+         "Assignments/Assignment03.md"
           ]
 Depth = 1
 ```

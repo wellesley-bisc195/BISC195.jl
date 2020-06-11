@@ -1,6 +1,8 @@
 using Assignment{{{ASSIGNMENT}}}
 using Test
 
+@testset "Assignment{{{ASSIGNMENT}}}" begin
+
 @testset "Question 1" begin
     @test typeof(question1) <: AbstractString
 end
@@ -20,3 +22,5 @@ end
 @testset "Question 5" begin
     @test typeof(question5) <: AbstractString
 end
+
+end # Assignment{{{ASSIGNMENT}}}

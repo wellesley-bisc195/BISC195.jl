@@ -6,9 +6,6 @@ export question1,
        question4,
        question5
 
-# using BISC195
-
 include("assignment.jl")
-# Write your package code here.
 
 end
