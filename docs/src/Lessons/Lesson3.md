@@ -163,7 +163,7 @@ true && false || true && true
 
 You might figure it out, but personally, my head hurts.
 In my experience, though, I am typically only comparing two things,
-so the rules are easy, or I'm using the logic (all `&&` or all `||`).
+so the rules are easy, or I'm using the same logic opperators throughout (all `&&` or all `||`).
 
 ```@example
 function basetype(base)
