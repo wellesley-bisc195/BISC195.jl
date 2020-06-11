@@ -31,9 +31,10 @@ function templ(num)
                 SrcDir(file="templates/module_template.jl"),
                 Tests(file="templates/tests_template.jl", project=true),
                 Readme(file="templates/readme_template.md"),
+                !TagBot(),
+                !CompatHelper(),
                 Git(ssh=true),
                 GitHubActions(),
-                Documenter{GitHubActions}(),
                 Replacements(; ASSIGNMENT=a),
                 Assignment()
             ])
