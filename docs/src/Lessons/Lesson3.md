@@ -272,7 +272,7 @@ and that part of the block is evaluated.
 
     Not exactly what we wanted...
 
-!!! warn "Checking Questions"
+!!! warning "Checking Questions"
     1. Referring back to our `compliment` function,
        What happens if you try to pass `"G"` as an argument
        (note the double quotes)?
