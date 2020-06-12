@@ -10,7 +10,7 @@
 **Concepts** - After completing this lesson, students will be able to:
 
 - Distinguish fruitful functions from void functions
-- Recognize boolean values and conditional statments
+- Recognize boolean values and conditional statements
 - Recognize errors resulting resulting from functions expecting boolean values
 
 **Skills** - After completing this lesson, students will be able to:
