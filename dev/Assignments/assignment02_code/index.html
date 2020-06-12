@@ -12,6 +12,7 @@ my_seq = generate_sequence(20)</code></pre><h2 id="Question-1-1"><a class="docs-
     question2(sequence)
 
 Checks if `sequence` is a String.
+Returns a boolean value, `true` or `false`.
 
 Example
 ≡≡≡≡≡≡≡≡≡
@@ -21,6 +22,11 @@ Example
 
     julia&gt; question2(1001)
     false
+
+    julia&gt; if question2(&quot;a string&quot;)
+               println(&quot;Hey, it&#39;s a string!&quot;)
+           end
+    Hey, it&#39;s a string!
 &quot;&quot;&quot;
 function question2()
     # put your code here
@@ -74,7 +80,7 @@ Example
     GC Content:
     0.25
 
-    julia&gt; question4(&quot;CCCGG&quot;)
+    julia&gt; question4(&quot;CCCGG&quot;);
     Sequence:
     CCCGG
     GC Content:
@@ -82,4 +88,4 @@ Example
 &quot;&quot;&quot;
 function question4(sequence)
     # Your code here
-end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 12 June 2020 01:08">Friday 12 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 12 June 2020 14:42">Friday 12 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
