@@ -1,6 +1,6 @@
 # Lesson 4 - Loop-d-loop
 
-[![Assignment 04 - Invitation](https://img.shields.io/badge/Assignment04-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/UbCNPRi2)
+[![Assignment 04 - Invitation](https://img.shields.io/badge/Assignment04-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/1vpkAM2r)
 [![Assignment 04 - Description](https://img.shields.io/badge/04-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment04)
 [![Assignment 04 - Rendered](https://img.shields.io/badge/04-Script-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment04)
 [![Assignment 04 - Due](https://img.shields.io/badge/Due-6%2F18%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment04)
@@ -70,7 +70,7 @@ for even_number in 2:2:10
 end
 
 for half in 1:0.5:3
-    println(tenth)
+    println(half)
 end
 ```
 
