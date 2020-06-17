@@ -239,7 +239,7 @@ When you do even simple things like type something in the REPL,
 there are functions being called
 to evaluate the expression and print the result.
 
-### Variables, arguments, and scope
+### [Variables, arguments, and scope]@id scope
 
 In chapter 3 of _Think Julia_, you read that
 [variables and parameters are local](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_variables_and_parameters_are_local)

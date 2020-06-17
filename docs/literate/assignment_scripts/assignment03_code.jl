@@ -214,7 +214,7 @@ end
 
 Calculates the GC ratio of a DNA sequence.
 The GC ratio is the total number of G and C bases divided by the total length of the sequence.
-For more info about GC content, see here:
+For more info about GC content, [see here](https://en.wikipedia.org/wiki/GC-content).
 
 Example
 ≡≡≡≡≡≡≡≡≡≡
