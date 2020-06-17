@@ -37,8 +37,9 @@
 Normalizes DNA sequences or bases to uppercase `String`s. 
 Throws an error if invalid bases are encountered.
 
-Examples
+Examples  
 ≡≡≡≡≡≡≡≡≡≡
+
     julia> normalizeDNA("aaatg")
     "AAATG"
 
@@ -84,8 +85,9 @@ Counts the number of each type of base
 in a DNA sequence and returns a tuple those counts
 in the order A, C, G, T
 
-Examples
+Examples  
 ≡≡≡≡≡≡≡≡≡≡
+
     julia> basecomposition("AATCGGG")
     (2, 1, 3, 1)
 
@@ -132,7 +134,7 @@ Calculates the GC ratio of a DNA sequence.
 The GC ratio is the total number of G and C bases divided by the total length of the sequence.
 For more info about GC content, see here:
 
-Example
+Examples  
 ≡≡≡≡≡≡≡≡≡≡
 
     julia> gc_content("AATG")
@@ -155,5 +157,73 @@ end
 
 # ## Kmer Composition
 #
-# Be sure that you've read the Kmer section
-# of Lesson 4 before attempting this question.
+# Be sure that you've read the sections of Lesson 4
+# on kmers and dictionaries before attempting the following questions.
+# 
+# What we'd like to do is to get a count of all of the unique kmers in a DNA sequence
+# But we can't simply generate all possible kmers
+# (there are too many for even small-ish values of k).
+# 
+# ### Question 4
+# 
+# Let's think of the process in pseudocode,
+# a plain-language high-level description of what we want to happen.
+# Here, `sequence` represents some DNA sequence,
+# and `k` is an integer representing the length of each kmer.
+# 
+# ```
+# make a dictionary to store kmers
+# for each base in sequence
+#   get a kmer of the base and the next (k-1) bases
+#   make sure the kmer is a valid DNA sequence 
+#   if this kmer is a key the dictionary
+#       add 1 to the value referenced by that kmer
+#   otherwise
+#       make a new entry in the dictionary with a value of 1
+# ```
+
+"""
+   kmercount(sequence, k)
+
+Finds all kmers in a sequence,
+returning a dictionary of those kmers
+and the number of times they appear in the sequence.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia> kmercount("ggg", 3)
+    Dict{Any,Any} with 1 entry:
+    "GGG" => 1
+
+    julia> kmercount("ATATATATA", 4)
+    Dict{Any,Any} with 2 entries:
+    "TATA" => 3
+    "ATAT" => 3
+
+    julia> kmercount("ATATATATAx", 4)
+    ERROR: Invalid base X encountered
+
+    julia> kmercount("A", 2)
+    ERROR: k must be a positive integer less than the length of the sequence
+"""
+function  kmercount(sequence, k)
+    1 <= k <= length(sequence) || error("k must be a positive integer less than the length of the sequence")
+    kmers = Dict() # initialize dictionary
+    
+    # We're going to loop through the string with numerical index,
+    # each time grabbing the bases at position i through i+k-1.
+    # What is the last index that we should search?    
+    stopindex = 0
+
+    for i in 1:stopindex
+        kmer = "" # Change to index the sequence from i to i+k-1
+        kmer = normalizeDNA(kmer) 
+        #   if this kmer is a key the dictionary
+        #       add 1 to the value referenced by that kmer
+        #   otherwise
+        #       make a new entry in the dictionary with a value of 1
+
+    end
+    return kmers
+end

@@ -423,5 +423,10 @@ my_dict["apples"] = my_dict["apples"] + 1;
 my_dict["apples"]
 ```
 
+In the assignment,
+we'll use dictionaries where the keys are the kmers,
+and the values are the counts.
+Let's get started!
+
 [^1]: There are 6 kmers of length 4 (9 - 4 + 1),
       ["ATTC", "TTCC", "TCCG", "CCGT", "CGTC", "GTCA"]
