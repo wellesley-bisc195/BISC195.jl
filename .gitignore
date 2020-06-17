@@ -4,3 +4,4 @@ Manifest.toml
 .DS_Store
 /docs/src/Lectures
 /docs/src/Assignments/*_code.md
+.vscode
