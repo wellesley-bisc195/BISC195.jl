@@ -13,21 +13,30 @@ Replacements(; kwargs...) = Replacements(Dict(string(k) => v for (k, v) in pairs
 PkgTemplates.user_view(::PkgTemplates.Plugin, t::Template, ::AbstractString) =
     PkgTemplates.getplugin(t, Replacements).d
 
-function templ(num)
+function templ(num, path)
     a = lpad(num, 2, "0")
     t = Template(
             user="wellesley-bisc195",
             authors="Kevin Bonham, PhD <kbonham@wellesley.edu>",
-            dir="/Users/ksb/repos/courses",
+            dir=path,
             julia=v"1.4",
             plugins=[# other than defaults
                 SrcDir(file="templates/module_template.jl"),
                 Tests(file="templates/tests_template.jl", project=true),
                 Readme(file="templates/readme_template.md"),
-                !TagBot(),
-                !CompatHelper(),
+                !TagBot,
+                !CompatHelper,
                 Git(ssh=true),
-                GitHubActions(),
+                GitHubActions(;
+                    destination="ci.yml",
+                    linux=true,
+                    osx=false,
+                    windows=false,
+                    x64=true,
+                    x86=false,
+                    coverage=false,
+                    extra_versions=["1.4"],
+                ),
                 Replacements(; ASSIGNMENT=a),
             ])
 
@@ -35,7 +44,7 @@ function templ(num)
     t("Assignment$a")
 end
 
-templ(1) # replace with assignment number
+templ(1, "/Users/ksb/repos/courses") # replace with assignment number, correct path
 ```
 
 ## TODO
