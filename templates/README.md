@@ -26,7 +26,7 @@ function templ(num, path)
                 Readme(file="templates/readme_template.md"),
                 !TagBot,
                 !CompatHelper,
-                Git(ssh=true),
+                Git(ssh=true, branch="trunk"),
                 GitHubActions(;
                     destination="ci.yml",
                     linux=true,
