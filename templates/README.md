@@ -44,7 +44,7 @@ function templ(num, path)
     t("Assignment$a")
 end
 
-templ(1, "/Users/ksb/repos/courses") # replace with assignment number, correct path
+templ(7, "/Users/Danielle/Documents/bisc195/assignments") # replace with assignment number, correct path
 ```
 templ(5, "/Users/ksc/repos/courses")
 # replace this path with anything that makes sense on my local
