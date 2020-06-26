@@ -158,7 +158,7 @@ this is a constant source of hard-to-find bugs.
        What is the value of `v`?
 
     4. Can you `push!()` a `Float64` to `w`?
-    5. Which of the following have the same *type* as `x`
+    5. Which of the following have the same *type* as `m`
        if `m = [1, 4]`?
 
        - `n = [5,4,3,2,1]`

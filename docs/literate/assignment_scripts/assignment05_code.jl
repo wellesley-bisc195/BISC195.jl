@@ -48,7 +48,8 @@ end
 # This function does the same thing,
 # using a slightly different method.
 # Look it over and see if it makes sense.
-# If it doesn't, try running some individual pieces in the REPL.
+# If it doesn't, try running some individual pieces in the REPL,
+# But don't modify the code (or if you do, make sure you know how to get it back)
 
 """
     complement(base)
@@ -172,3 +173,76 @@ function reverse_complement(sequence)
     # your code here
 end
 
+# ## Question 4a
+# 
+# [Chapter 9](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#reading_word_lists)
+# begins to describe how to work with files.
+# The file `words.txt` from _Think Julia_ is in the `data/` directory of the assignment repository.
+# First, look at the file from the shell (not a julia REPL)
+# using the `head` command.
+# 
+# ```sh
+# $ head data/words.txt
+# ```
+# 
+# By default, `head` prints the first 10 lines.
+# How can you change this behavior to show the first 15 lines?
+# (Hint: you may need a search engine).
+# Put the *shell command* to show the first 15 words of `data/words.txt`
+# in a String assigned to the variable `first15`
+
+first15 = "#= put shell command here =#"
+
+# ## Question 4b
+# 
+# What about the shell command to view the last 15 lines of `data/words.txt`?
+# Put this command in a string assigned to the variable `last15`
+
+last15 = "#= put shell command here =#"
+
+# ## Question 5
+# 
+# Write a function that reads through the words in a file
+# with a `for` loop and returns an array with only the words
+# that are valid DNA sequences.
+# Note: there may be one or more functions from previous Assignments
+# that are useful to reuse here.
+
+"""
+    find_dna(file)
+
+In a file with one word per line,
+returns an array with all words that are valid DNA sequences
+(that is, they contain only a, t, g, or c).
+
+Words may be upper- or lowercase,
+but returned array will contain only uppercase letters.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia> find_dna("data/words.txt") # assumes you're in Assignment05 directory
+    13-element Array{Any,1}:
+      "AA"
+      "ACT"
+      "ACTA"
+      "AGA"
+      "AT"
+      "CAT"
+      "GAG"
+      "GAGA"
+      "GAT"
+      "TA"
+      "TACT"
+      "TAG"
+      "TAT"
+"""
+function find_dna(file)
+    seqs = []
+    for line in eachline(file)
+        line = uppercase(line)
+        if all(c-> in(c, "ATGC"), line)
+            push!(seqs, line)
+        end
+    end
+    return seqs
+end
