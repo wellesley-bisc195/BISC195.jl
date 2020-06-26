@@ -51,8 +51,8 @@ makedocs(;
             "Assignment04" => "Assignments/Assignment04.md"
         ],
         "Lesson 5 - Building functions and composition" => [
-            "Lesson docs"  => "Lessons/Lesson4.md",
-            "Assignment04" => "Assignments/Assignment04.md"
+            "Lesson docs"  => "Lessons/Lesson5.md",
+            "Assignment04" => "Assignments/Assignment05.md"
         ],
         "Assignment Index" => "Assignments/Assignments.md",
         "Lecture Index"    => "Lectures/Lectures.md"
