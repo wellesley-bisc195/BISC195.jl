@@ -237,12 +237,9 @@ Example
       "TAT"
 """
 function find_dna(file)
-    seqs = []
+    ## 1. You probably want to make an empty array
+    
     for line in eachline(file)
-        line = uppercase(line)
-        if all(c-> in(c, "ATGC"), line)
-            push!(seqs, line)
-        end
+        ## if the line is valid dna, put it in the array
     end
-    return seqs
 end
