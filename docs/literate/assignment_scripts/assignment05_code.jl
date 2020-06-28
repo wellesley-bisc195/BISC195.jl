@@ -117,7 +117,7 @@ Examples
     Error: Cannot compare sequuences of different length
 """
 function isreversecomplement(seq1, seq2)
-    # your code here
+    ## your code here
 end
 
 # ## Question 3
@@ -127,7 +127,7 @@ end
 # First, it's probably helpful to know that julia has a built in `reverse()` function
 # that can take a `String` or `Vector` and return it with the indecies reversed.
 # 
-# ```julia`
+# ```julia
 # julia> reverse([4,3,2,1])
 # 4-element Array{Int64,1}:
 #  1
@@ -170,7 +170,7 @@ Examples
     CCCAA
 """
 function reverse_complement(sequence)
-    # your code here
+    ## your code here
 end
 
 # ## Question 4a
