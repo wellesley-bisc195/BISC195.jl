@@ -64,49 +64,72 @@ Examples
     julia&gt; isreversecomplement(&quot;G&quot;, &quot;CC&quot;)
     Error: Cannot compare sequuences of different length
 &quot;&quot;&quot;
-function isreversecomplement(seq1, seq2)</code></pre><p>your code here</p><pre><code class="language-julia">end</code></pre><h2 id="Question-3-1"><a class="docs-heading-anchor" href="#Question-3-1">Question 3</a><a class="docs-heading-anchor-permalink" href="#Question-3-1" title="Permalink"></a></h2><p>Now let&#39;s work on creating a function that <em>makes</em> the reverse complement of a sequence, instead of just checking it. First, it&#39;s probably helpful to know that julia has a built in <code>reverse()</code> function that can take a <code>String</code> or <code>Vector</code> and return it with the indecies reversed.</p><p>``<code>julia</code> julia&gt; reverse([4,3,2,1]) 4-element Array{Int64,1}:  1  2  3  4</p><p>julia&gt; reverse(&quot;beep boop&quot;) &quot;poob peeb&quot;</p><pre><code class="language-none">
-Now, create a function that takes a sequence
-and returns the reverse complement.
-The easiest way to do this is probably to perform a &quot;map&quot;
-of the `complement()` function to each character in the sequence,
-then reverse it (or reverse, then map).
-You can write the mapping by hand as in the book,
-or use `map()` as described in the lesson.
-</code></pre><p>julia &quot;&quot;&quot;     reverse_complement(sequence)</p><p>Takes a DNA sequence and returns the reverse complement of that sequence.</p><p>Takes lowercase or uppercase sequences, but always returns uppercase.</p><p>Examples ≡≡≡≡≡≡≡≡≡≡     julia&gt; reverse_complement(&quot;AAATTT&quot;)     &quot;AAATTT&quot;</p><pre><code class="language-none">julia&gt; reverse_complement(&quot;GCAT&quot;)
-&quot;ATGC&quot;
+function isreversecomplement(seq1, seq2)
+    # your code here
+end</code></pre><h2 id="Question-3-1"><a class="docs-heading-anchor" href="#Question-3-1">Question 3</a><a class="docs-heading-anchor-permalink" href="#Question-3-1" title="Permalink"></a></h2><p>Now let&#39;s work on creating a function that <em>makes</em> the reverse complement of a sequence, instead of just checking it. First, it&#39;s probably helpful to know that julia has a built in <code>reverse()</code> function that can take a <code>String</code> or <code>Vector</code> and return it with the indecies reversed.</p><pre><code class="language-julia">julia&gt; reverse([4,3,2,1])
+4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
 
-julia&gt; rc = reverse_complement(&quot;TTGGG&quot;);
+julia&gt; reverse(&quot;beep boop&quot;)
+&quot;poob peeb&quot;</code></pre><p>Now, create a function that takes a sequence and returns the reverse complement. The easiest way to do this is probably to perform a &quot;map&quot; of the <code>complement()</code> function to each character in the sequence, then reverse it (or reverse, then map). You can write the mapping by hand as in the book, or use <code>map()</code> as described in the lesson.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    reverse_complement(sequence)
 
-julia&gt; println(rc)
-CCCAA</code></pre><p>&quot;&quot;&quot; function reverse_complement(sequence)</p><pre><code class="language-none">
-your code here
-</code></pre><p>julia end</p><pre><code class="language-none">
-## Question 4a
+Takes a DNA sequence and returns the reverse complement
+of that sequence.
 
-[Chapter 9](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#reading_word_lists)
-begins to describe how to work with files.
-The file `words.txt` from _Think Julia_ is in the `data/` directory of the assignment repository.
-First, look at the file from the shell (not a julia REPL)
-using the `head` command.
-</code></pre><p>sh $ head data/words.txt</p><pre><code class="language-none">
-By default, `head` prints the first 10 lines.
-How can you change this behavior to show the first 15 lines?
-(Hint: you may need a search engine).
-Put the *shell command* to show the first 15 words of `data/words.txt`
-in a String assigned to the variable `first15`
-</code></pre><p>julia first15 = &quot;#= put shell command here =#&quot;</p><pre><code class="language-none">
-## Question 4b
+Takes lowercase or uppercase sequences,
+but always returns uppercase.
 
-What about the shell command to view the last 15 lines of `data/words.txt`?
-Put this command in a string assigned to the variable `last15`
-</code></pre><p>julia last15 = &quot;#= put shell command here =#&quot;</p><pre><code class="language-none">
-## Question 5
+Examples
+≡≡≡≡≡≡≡≡≡≡
+    julia&gt; reverse_complement(&quot;AAATTT&quot;)
+    &quot;AAATTT&quot;
 
-Write a function that reads through the words in a file
-with a `for` loop and returns an array with only the words
-that are valid DNA sequences.
-Note: there may be one or more functions from previous Assignments
-that are useful to reuse here.
-</code></pre><p>julia &quot;&quot;&quot;     find_dna(file)</p><p>In a file with one word per line, returns an array with all words that are valid DNA sequences (that is, they contain only a, t, g, or c).</p><p>Words may be upper- or lowercase, but returned array will contain only uppercase letters.</p><p>Example ≡≡≡≡≡≡≡≡≡     julia&gt; find<em>dna(&quot;data/words.txt&quot;) # assumes you&#39;re in Assignment05 directory     13-element Array{Any,1}:       &quot;AA&quot;       &quot;ACT&quot;       &quot;ACTA&quot;       &quot;AGA&quot;       &quot;AT&quot;       &quot;CAT&quot;       &quot;GAG&quot;       &quot;GAGA&quot;       &quot;GAT&quot;       &quot;TA&quot;       &quot;TACT&quot;       &quot;TAG&quot;       &quot;TAT&quot; &quot;&quot;&quot; function find</em>dna(file)     # 1. You probably want to make an empty array</p><pre><code class="language-none">for line in eachline(file)
-    # if the line is valid dna, put it in the array
-end</code></pre><p>end ```</p><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Sunday 28 June 2020 16:40">Sunday 28 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+    julia&gt; reverse_complement(&quot;GCAT&quot;)
+    &quot;ATGC&quot;
+
+    julia&gt; rc = reverse_complement(&quot;TTGGG&quot;);
+
+    julia&gt; println(rc)
+    CCCAA
+&quot;&quot;&quot;
+function reverse_complement(sequence)
+    # your code here
+end</code></pre><h2 id="Question-4a-1"><a class="docs-heading-anchor" href="#Question-4a-1">Question 4a</a><a class="docs-heading-anchor-permalink" href="#Question-4a-1" title="Permalink"></a></h2><p><a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#reading_word_lists">Chapter 9</a> begins to describe how to work with files. The file <code>words.txt</code> from <em>Think Julia</em> is in the <code>data/</code> directory of the assignment repository. First, look at the file from the shell (not a julia REPL) using the <code>head</code> command.</p><pre><code class="language-sh">$ head data/words.txt</code></pre><p>By default, <code>head</code> prints the first 10 lines. How can you change this behavior to show the first 15 lines? (Hint: you may need a search engine). Put the <em>shell command</em> to show the first 15 words of <code>data/words.txt</code> in a String assigned to the variable <code>first15</code></p><pre><code class="language-julia">first15 = &quot;#= put shell command here =#&quot;</code></pre><h2 id="Question-4b-1"><a class="docs-heading-anchor" href="#Question-4b-1">Question 4b</a><a class="docs-heading-anchor-permalink" href="#Question-4b-1" title="Permalink"></a></h2><p>What about the shell command to view the last 15 lines of <code>data/words.txt</code>? Put this command in a string assigned to the variable <code>last15</code></p><pre><code class="language-julia">last15 = &quot;#= put shell command here =#&quot;</code></pre><h2 id="Question-5-1"><a class="docs-heading-anchor" href="#Question-5-1">Question 5</a><a class="docs-heading-anchor-permalink" href="#Question-5-1" title="Permalink"></a></h2><p>Write a function that reads through the words in a file with a <code>for</code> loop and returns an array with only the words that are valid DNA sequences. Note: there may be one or more functions from previous Assignments that are useful to reuse here.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    find_dna(file)
+
+In a file with one word per line,
+returns an array with all words that are valid DNA sequences
+(that is, they contain only a, t, g, or c).
+
+Words may be upper- or lowercase,
+but returned array will contain only uppercase letters.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia&gt; find_dna(&quot;data/words.txt&quot;) # assumes you&#39;re in Assignment05 directory
+    13-element Array{Any,1}:
+      &quot;AA&quot;
+      &quot;ACT&quot;
+      &quot;ACTA&quot;
+      &quot;AGA&quot;
+      &quot;AT&quot;
+      &quot;CAT&quot;
+      &quot;GAG&quot;
+      &quot;GAGA&quot;
+      &quot;GAT&quot;
+      &quot;TA&quot;
+      &quot;TACT&quot;
+      &quot;TAG&quot;
+      &quot;TAT&quot;
+&quot;&quot;&quot;
+function find_dna(file)
+    # 1. You probably want to make an empty array
+
+    for line in eachline(file)
+        # if the line is valid dna, put it in the array
+    end
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Sunday 28 June 2020 18:10">Sunday 28 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
