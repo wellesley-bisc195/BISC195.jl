@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Lesson docs · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Lessons/Lesson5/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Building functions and composition</span><ul><li class="is-active"><a class="tocitem" href>Lesson docs</a><ul class="internal"><li><a class="tocitem" href="#Learning-objectives-1"><span>Learning objectives</span></a></li><li><a class="tocitem" href="#String-as-Array-1"><span>String as Array</span></a></li><li><a class="tocitem" href="#Aliasing-1"><span>Aliasing</span></a></li><li><a class="tocitem" href="#Maps-and-filters-revisited-1"><span>Maps and filters revisited</span></a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignment05/">Assignment05</a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Lesson 5 - Building functions and composition</a></li><li class="is-active"><a href>Lesson docs</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Lesson docs</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Lessons/Lesson5.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Lesson-5-Arrays-1"><a class="docs-heading-anchor" href="#Lesson-5-Arrays-1">Lesson 5 - Arrays</a><a class="docs-heading-anchor-permalink" href="#Lesson-5-Arrays-1" title="Permalink"></a></h1><p><a href="https://classroom.github.com/a/F3lWDTLh"><img src="https://img.shields.io/badge/Assignment05-Repository-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 05 - Invitation"/></a> <a href="../../Assignments/Assignment05/#assignment05-1"><img src="https://img.shields.io/badge/05-Description-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 05 - Description"/></a> <a href="../../Assignments/assignment05_code/#Instructions-for-Assignment05-1"><img src="https://img.shields.io/badge/05-Script-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 05 - Rendered"/></a> <a href="../../Assignments/Assignment05/#assignment05-1"><img src="https://img.shields.io/badge/Due-7%2F2%2F2020-orange?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 05 - Due"/></a></p><h2 id="Learning-objectives-1"><a class="docs-heading-anchor" href="#Learning-objectives-1">Learning objectives</a><a class="docs-heading-anchor-permalink" href="#Learning-objectives-1" title="Permalink"></a></h2><p><strong>Concepts</strong> - After completing this lesson, students will be able to:</p><ul><li>Compare and contrast <code>Vector</code>, <code>Matrix</code>, and <code>Tuple</code> types for storing ordered data</li><li>Differentiate between scalar and vector properties of <code>String</code>s</li><li>Explain the uses and limitations of mutable and immutable types</li><li>Recognize when to use copies or references to data</li></ul><p><strong>Skills</strong> - After completing this lesson, students will be able to:</p><ul><li>Solve bugs that occur from attempting to access keys or indexes that don&#39;t exist</li><li>Initialize and grow Vectors of different types</li><li>Use indexes, ranges, and loops to access subsets of data</li><li>Use string joining and interpolation to compose complex strings</li></ul><p><strong>Assignments</strong> - This lesson is complete when students have:</p><ul><li>Read <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap08">Chapter 8</a> and <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap10">Chapter 10</a> of Think Julia.</li><li>Run all code examples from Lesson 5 on their own computers</li><li>Cloned the Assignment 5 repository with github classroom.</li><li>Completed assignment 5 with all tests passing.</li></ul><h2 id="String-as-Array-1"><a class="docs-heading-anchor" href="#String-as-Array-1">String as Array</a><a class="docs-heading-anchor-permalink" href="#String-as-Array-1" title="Permalink"></a></h2><p>After reading chapters 8 and 10, you might have noticed that <code>String</code>s act an awful lot like 1D <code>Array</code>s (<code>Vector</code>s).</p><p>Both <code>String</code>s and <code>Vector</code>s:</p><ol><li>are ordered collections (<code>String</code>s are collections of <code>Char</code>, <code>Vector</code>s can have any type)</li><li>can be indexed and sliced</li></ol><p>There are many differences, but chief among them is that <code>Vector</code>s are &quot;mutable&quot;; that is, we can change the vector by changing individual elements, adding things, or removing things. </p><pre><code class="language-julia-repl">julia&gt; v = collect(2:2:10)
+5-element Array{Int64,1}:
+  2
+  4
+  6
+  8
+ 10
+
+julia&gt; push!(v, 42);
+
+julia&gt; pushfirst!(v, -1);
+
+julia&gt; v
+7-element Array{Int64,1}:
+ -1
+  2
+  4
+  6
+  8
+ 10
+ 42
+
+julia&gt; deleteat!(v, 1:2:7);
+
+julia&gt; v
+3-element Array{Int64,1}:
+  2
+  6
+ 10</code></pre><p><code>String</code>s, by contrast, are <em>immutable</em>. This might not be obvious, since you can do things like</p><pre><code class="language-julia-repl">julia&gt; s = &quot;a string&quot;
+&quot;a string&quot;
+
+julia&gt; s = s * &quot; &quot; * s
+&quot;a string a string&quot;</code></pre><p>It seems like <code>s</code> has changed, but it has not changed by altering the actual object - instead, we constructed an <strong>entirely new string</strong> and just reassigned <code>s</code> to the new <code>String</code>.</p><div class="admonition is-warning"><header class="admonition-header">Checking Questions</header><div class="admonition-body"><ol><li>Assign an empty vector (<code>[]</code>) to the variable <code>v1</code>, then try to <code>push!</code> an <code>Int64</code>, <code>Float64</code>, and <code>String</code> to it. What is the <code>typeof</code> the <code>Vector</code>?</li><li>Assign <code>[1.2, 3, 4]</code> to the variable <code>v2</code>. What is the type of the second elementt (<code>v2[2]</code>)? Is that what you expected?</li><li>Use <code>push!()</code> to add the integer <code>5</code> to the vector <code>v2</code>. What is the type of <code>v[5]</code>?</li><li>Use <code>push!()</code> to add the <code>String</code> <code>&quot;6&quot;</code> to the vector <code>v2</code>. What happens?</li></ol></div></div><p><code>String</code>s themselves are not <code>Vector</code>s, but we can use <code>Vector</code>s of <code>Char</code>s to act like mutable <code>String</code>s.</p><pre><code class="language-julia-repl">julia&gt; vc = collect(&quot;Collect makes vector&quot;)
+20-element Array{Char,1}:
+ &#39;C&#39;
+ &#39;o&#39;
+ &#39;l&#39;
+ &#39;l&#39;
+ &#39;e&#39;
+ &#39;c&#39;
+ &#39;t&#39;
+ &#39; &#39;
+ &#39;m&#39;
+ &#39;a&#39;
+ &#39;k&#39;
+ &#39;e&#39;
+ &#39;s&#39;
+ &#39; &#39;
+ &#39;v&#39;
+ &#39;e&#39;
+ &#39;c&#39;
+ &#39;t&#39;
+ &#39;o&#39;
+ &#39;r&#39;
+
+julia&gt; push!(vc, &#39;s&#39;);
+
+julia&gt; join(vc)
+&quot;Collect makes vectors&quot;</code></pre><p>The <code>join()</code> function takes a vector of <code>String</code>s or <code>Char</code>s and creates a new string.</p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>Remember that you can use the help REPL (press <code>?</code> at the REPL) to view the docstring of <code>join()</code>.</p></div></div><p>The <code>join()</code> function can also take <em>optional</em> arguments that can put a <code>String</code> in between each thing that&#39;s <code>join()</code>ed,</p><pre><code class="language-julia-repl">julia&gt; join([&quot;I&quot;, &quot;love&quot;, &quot;the&quot;, &quot;julia&quot;, &quot;language!&quot;], &quot; 👏 &quot;)
+&quot;I 👏 love 👏 the 👏 julia 👏 language!&quot;</code></pre><p>and something different between the last two values</p><pre><code class="language-julia-repl">julia&gt; join([&quot;Head&quot;, &quot;shoulders&quot;, &quot;knees&quot;, &quot;toes&quot;], &quot;, &quot;, &quot;, and &quot;)
+&quot;Head, shoulders, knees, and toes&quot;</code></pre><h2 id="Aliasing-1"><a class="docs-heading-anchor" href="#Aliasing-1">Aliasing</a><a class="docs-heading-anchor-permalink" href="#Aliasing-1" title="Permalink"></a></h2><p>Make sure you&#39;ve read <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_aliasing">the section on &quot;aliasing&quot;</a> in <em>Think Julia</em> prior to answering the following questions. Even if you already read it, it&#39;s worth reading again - this is a constant source of hard-to-find bugs.</p><div class="admonition is-warning"><header class="admonition-header">Checking questions</header><div class="admonition-body"><p>For each of the following questions, first try to predict the answer, then check your answer at the REPL. If you were wrong, try to explain the correct answer.</p><ol><li><p>The follwing code assigns 3 variables (<code>a</code>, <code>b</code>, and <code>c</code>) to the float 6.02e24, then reassigns one of them (<code>a</code>) to the float <code>3.14</code>.</p><pre><code class="language-julia">julia&gt; a = b = c = 6.02e24
+6.02e24
+
+julia&gt; a = 3.14
+3.14</code></pre><p>What is the value of <code>b</code>?</p></li><li><p>Can you assign <code>c</code> to an <code>Int64</code>?</p></li><li><p>The following code assigns 3 variables (<code>u</code>, <code>v</code>, <code>w</code>) to an empty Integer vector, then <code>push!</code>es the integer <code>12</code> to one of them (<code>u</code>)</p><p>```julia julia&gt; u = v = w = Int64[] 0-element Array{Int64,1}</p></li></ol><p>julia&gt; push!(u, 12)    1-element Array{Int64,1}:      12    ```</p><p>What is the value of <code>v</code>?</p><ol><li><p>Can you <code>push!()</code> a <code>Float64</code> to <code>w</code>?</p></li><li><p>Which of the following have the same <em>type</em> as <code>m</code> if <code>m = [1, 4]</code>?</p><ul><li><code>n = [5,4,3,2,1]</code></li><li><code>o = Int64[]</code></li><li><code>p = [&quot;2&quot;, &quot;1&quot;]</code></li><li>`q = [1.2, 3.4]</li></ul><p>Hint: you can check by doing eg <code>n isa (typeof(m))</code></p></li></ol></div></div><h2 id="Maps-and-filters-revisited-1"><a class="docs-heading-anchor" href="#Maps-and-filters-revisited-1">Maps and filters revisited</a><a class="docs-heading-anchor-permalink" href="#Maps-and-filters-revisited-1" title="Permalink"></a></h2><p>In <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#_map_filter_and_reduce">chapter 10 of <em>Think Julia</em></a>, you are introduced to the concept of &quot;map&quot; and &quot;filter&quot; functions, which apply a function to each element of a collection, or return only elements that meet a condition respectively.</p><p>In the chapter, the examples shown are of hand-written map and filter functions written with loops, but these pattterns are so useful that there are <code>map()</code> and <code>filter()</code> functions, each of which take a function as the first argument, and a collection as the second argument.</p><p>For example,</p><pre><code class="language-julia">function add3(x)
+    return x + 3
+end
+
+v = map(add3, [1,2,3,4])</code></pre><pre><code class="language-none">4-element Array{Int64,1}:
+ 4
+ 5
+ 6
+ 7</code></pre><p>This is the same as</p><pre><code class="language-julia">v = Int64[]
+
+for x in [1,2,3,4]
+    push!(v, add3(x))
+end</code></pre><p>This type of <code>map()</code> returns a copy of the vector, so the original data will not be altered, but you can also use <code>map!()</code> with the same syntax to mutate the underlying vector.</p><p>Similarly, one can use <code>filter()</code> (or, to mutate, <code>filter!()</code>) to perform a filtering function.  In this case, the function passed as the first argument must be a boolean function (anything that returns <code>true</code> will be kept).</p><pre><code class="language-julia">original = [3.14, 8.5, 25.3, 1.0]
+
+function lessthan5(x)
+    return x &lt; 5
+end
+
+newv = filter(lessthan5, original)</code></pre><pre><code class="language-none">2-element Array{Float64,1}:
+ 3.14
+ 1.0</code></pre><p>is the same as</p><pre><code class="language-julia">newv = Float64[]
+
+for x in original
+    if lessthan5(x)
+        push!(newv, x)
+    end
+end</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../Assignments/Assignment04/">« Assignment04</a><a class="docs-footer-nextpage" href="../../Assignments/Assignment05/">Assignment05 »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Sunday 28 June 2020 16:55">Sunday 28 June 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
