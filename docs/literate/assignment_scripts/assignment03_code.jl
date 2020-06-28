@@ -8,10 +8,10 @@
 # or use the VS Code julia extension to run individual lines.
 
 ## To view additional instructions for this assignment, #jl
-## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment03.html #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment03 #jl
 
 ## To view a rendered version of this document, #jl
-## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment03_code.html #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment03_code #jl
 
 # ## Writing real Code
 # 
