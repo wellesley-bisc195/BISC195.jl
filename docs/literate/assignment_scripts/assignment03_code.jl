@@ -36,7 +36,7 @@
 #     you can go find them from the command line or the julia REPL!
 #     In VS Code, open ~/.julia/logs/repl_history.jl.
 
-# ## Question 1 - a `compliment` function
+# ## Question 1 - a `complement` function
 
 """
     compliment(base)
