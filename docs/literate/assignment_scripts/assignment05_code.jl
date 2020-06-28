@@ -1,4 +1,4 @@
-# # Instructions for Assignment04
+# # Instructions for Assignment05
 #
 # ## Introduction
 # 
@@ -8,10 +8,10 @@
 # or use the VS Code julia extension to run individual lines.
 
 ## To view additional instructions for this assignment, #jl
-## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment04.html #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment05.html #jl
 
 ## To view a rendered version of this document, #jl
-## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment04_code.html #jl
+## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment05_code.html #jl
 
 # ## Question 1 - Dubugging Practice
 #
