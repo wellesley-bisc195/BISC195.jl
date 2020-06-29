@@ -13,5 +13,6 @@
 ## To view a rendered version of this document, #jl
 ## see https://wellesley-bisc195.github.io/BISC195.jl/stable/Assignments/assignment06_code #jl
 
-# ## Question 1 - Dubugging Practice
-#
+# ## Question 1 - Reading FASTA files
+# 
+# A common 
