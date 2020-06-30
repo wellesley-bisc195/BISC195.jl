@@ -22,16 +22,10 @@ sequences = [
     "C0016-3E_L001_R2_001.fastq.gz",
     "C0016-3E_L002_R1_001.fastq.gz",
     "C0016-3E_L002_R2_001.fastq.gz",
-    "C0016-3F_L001_R1_001.fastq.gz",
-    "C0016-3F_L001_R2_001.fastq.gz",
-    "C0016-3F_L002_R1_001.fastq.gz",
-    "C0016-3F_L002_R2_001.fastq.gz"
 ]
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
-# ## Regular Expressions match string patterns
-# 
-# **Simple Patterns:**
+# ##Simple Patterns:
 # 
 # - `abc` matches literal "abc"
 # - `[abc]` matches any one of `a`, `b`, or `c`
@@ -42,9 +36,7 @@ sequences = [
 # Puzzle: https://regexr.com/57ijc
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
-# ## Regular Expressions match string patterns
-# 
-# **Repeating Patterns:**
+# ##Repeating Patterns:
 # 
 # - `+` matches 1 or more of a pattern
 #   - eg. `[0-9]+` matches one or more digits
@@ -57,7 +49,8 @@ sequences = [
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "fragment"}}
 # Puzzle: https://regexr.com/57ik4
 
-# **Special Patterns:**
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
+# ## Special Patterns:
 # 
 # - `.` matches any character, except a new line
 # - `\w` matches any word character (same as `[A-Za-z0-9_]`)
@@ -76,10 +69,24 @@ sequences = [
 # ## More fun with regular Expressions
 # 
 # - Use the regexr cheatsheet (or find another one - they're all over)
+#   - There are _a lot_ more patterns that can be used
 # - https://regexcrossword.com/
+# - My most complicated regex to date: 
+
+# ```
+# ^([`~]{3,})(?:(?:(?:\\{|\\{\\.|)(julia)(?:;|))|(@(docs|autodocs|ref|meta|index|content|example|repl|eval|setup|raw)))\\s*(?:.*?)(\\}|)\\s*$
+# ```
 
 #nb # %% A slide [markdown] {"slideshow": {"slide_type": "fragment"}}
 # > Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems. 
 
-#nb # %% A slide [markdown] {"slideshow": {"slide_type": "fragment"}}
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "subslide"}}
 # ![xkcd regex](https://imgs.xkcd.com/comics/regular_expressions.png)
+
+#nb # %% A slide [markdown] {"slideshow": {"slide_type": "slide"}}
+# ## Regular expressions in julia
+
+for seq in sequences
+    m = match(r"^([MC]\d+\-[0-9][EF])_L00.+fastq\.gz", seq)
+    println(m.captures[1])
+end

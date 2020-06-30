@@ -79,7 +79,7 @@ and just reassigned `s` to the new `String`.
        What is the type of the second elementt (`v2[2]`)?
        Is that what you expected?
     3. Use `push!()` to add the integer `5` to the vector `v2`.
-       What is the type of `v[5]`?
+       What is the type of `v2[4]`?
     4. Use `push!()` to add the `String` `"6"` to the vector `v2`.
        What happens?
 
