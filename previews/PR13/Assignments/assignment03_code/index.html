@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Instructions for Assignment03 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/assignment03_code/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Instructions for Assignment03</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Instructions for Assignment03</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/assignment03_code.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Instructions-for-Assignment03"><a class="docs-heading-anchor" href="#Instructions-for-Assignment03">Instructions for Assignment03</a><a id="Instructions-for-Assignment03-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions-for-Assignment03" title="Permalink"></a></h1><h2 id="Introduction"><a class="docs-heading-anchor" href="#Introduction">Introduction</a><a id="Introduction-1"></a><a class="docs-heading-anchor-permalink" href="#Introduction" title="Permalink"></a></h2><p>Note: this file is runnable in its current state, but is incomplete. You can run the file from the command line, or use the VS Code julia extension to run individual lines.</p><h2 id="Writing-real-Code"><a class="docs-heading-anchor" href="#Writing-real-Code">Writing real Code</a><a id="Writing-real-Code-1"></a><a class="docs-heading-anchor-permalink" href="#Writing-real-Code" title="Permalink"></a></h2><p>In assignments 1 and 2, variable and function names were often things like <code>question1</code> and <code>question2</code>. From now on, we&#39;ll use more informative function and variable names so that our code is &quot;self documenting.&quot;</p><p>We&#39;ll also continue to use doc strings to help understand the specifications required for our functions.</p><h2 id="Understanding-DNA-sequences"><a class="docs-heading-anchor" href="#Understanding-DNA-sequences">Understanding DNA sequences</a><a id="Understanding-DNA-sequences-1"></a><a class="docs-heading-anchor-permalink" href="#Understanding-DNA-sequences" title="Permalink"></a></h2><p>We&#39;ve already done a fair amount of work in assignment 2 and in lesson 3 to make some functions for understanding DNA sequences. Below, I&#39;ve put a couple of function signatures with docstrings, but you can (and should!) copy the necessary functionality out of the functions you&#39;ve already defined, if applicable.</p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>If you defined those functions in the julia REPL, you can go find them from the command line or the julia REPL! In VS Code, open ~/.julia/logs/repl_history.jl.</p></div></div><h2 id="Question-1-a-complement-function"><a class="docs-heading-anchor" href="#Question-1-a-complement-function">Question 1 - a <code>complement</code> function</a><a id="Question-1-a-complement-function-1"></a><a class="docs-heading-anchor-permalink" href="#Question-1-a-complement-function" title="Permalink"></a></h2><pre><code class="language-julia">&quot;&quot;&quot;
+    compliment(base)
+
+Get the DNA compliment of the provided base:
+
+    A &lt;-&gt; T
+    G &lt;-&gt; C
+
+Accepts `String` or `Char`, but always returns `Char`.
+If a valid base is not provided, the function throws an error.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; compliment(&#39;A&#39;)
+    &#39;T&#39;
+
+    julia&gt; compliment(&quot;G&quot;)
+    &#39;C&#39;
+
+    julia&gt; compliment(&quot;T&quot;)
+    &#39;A&#39;
+
+    julia&gt; compliment(&#39;C&#39;)
+    &#39;G&#39;
+&quot;&quot;&quot;
+function compliment(base)
+    # See Lesson 3 for more info
+end</code></pre><h2 id="Question-2-some-boolean-functions"><a class="docs-heading-anchor" href="#Question-2-some-boolean-functions">Question 2 - some boolean functions</a><a id="Question-2-some-boolean-functions-1"></a><a class="docs-heading-anchor-permalink" href="#Question-2-some-boolean-functions" title="Permalink"></a></h2><pre><code class="language-julia">&quot;&quot;&quot;
+    ispurine(base)
+
+A boolean function that returns `true` if the base is a purine (A or G)
+and `false` if it is not.
+The function only supports bases A, C, G, and T (throws an error for other values).
+Accepts `String` or `Char`.
+
+Examples
+=========
+
+    julia&gt; ispurine(&#39;A&#39;)
+    true
+
+    julia&gt; ispurine(&quot;C&quot;)
+    false
+
+    julia&gt; ispurine(&#39;B&#39;)
+    Error: &quot;Base B not supported&quot;)
+&quot;&quot;&quot;
+function ispurine(base)
+    # We haven&#39;t made this before, but you should have all the pieces
+end
+
+&quot;&quot;&quot;
+    ispyrimidine(base)
+
+A boolean function that returns `true` if the base is a pyrimidine (C or T)
+and `false` if it is not.
+The function only supports bases A, C, G, and T (throws an error for other values).
+Accepts `String` or `Char`.
+
+Examples
+=========
+
+    julia&gt; ispyrimidine(&#39;G&#39;)
+    false
+
+    julia&gt; ispyrimidine(&quot;T&quot;)
+    true
+
+    julia&gt; ispyrimidine(&#39;X&#39;)
+    Error: &quot;Base X not supported&quot;
+&quot;&quot;&quot;
+function ispyrimidine(base)
+    # This is the strict opposite of `ispurine`.
+    # In principle, you can write this in one line - remember `!` means `NOT`.
+    # Eg `isuppercase(x)` means the same thing as `!islowercase(x)`
+end</code></pre><h2 id="Question-3-Using-boolean-functions-for-composition"><a class="docs-heading-anchor" href="#Question-3-Using-boolean-functions-for-composition">Question 3 - Using boolean functions for composition</a><a id="Question-3-Using-boolean-functions-for-composition-1"></a><a class="docs-heading-anchor-permalink" href="#Question-3-Using-boolean-functions-for-composition" title="Permalink"></a></h2><p>For the following function, you should not need to re-write the logic checking what kind of base this is. You&#39;ve already written it, and it&#39;s in a convenient function!</p><p>A big part of programming is re-use; if you find yourself writing the same code multiple times, you should probably put it in a function and call that instead!</p><pre><code class="language-julia">&quot;&quot;&quot;
+    base_type(base)
+
+Determines whether a base is a purine (A or G) or pyrimidine (T or C),
+and returns a `String`.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; base_type(&quot;G&quot;)
+    &quot;purine&quot;
+
+    julia&gt; base_type(&#39;C&#39;)
+    &quot;pyrimidine&quot;
+
+    julia&gt; base_type(&#39;Z&#39;)
+    Error: &quot;Base Z not supported&quot;
+
+    julia&gt; x = base_type(&#39;A&#39;); println(x)
+    purine
+&quot;&quot;&quot;
+function base_type(base)
+    # Note: this is different than the `base_type()` we defined in the lesson.
+    # Here, we want a fruitful function that returns the value rather than `print`ing it.
+    # Also, there&#39;s no need to re-write the logic. If your `ispurine` / `ispyrimidine` functions work,
+    # you can use them here.
+end</code></pre><h2 id="Question-4-Modifying-arguments-instead-of-adding-a-bunch-of-logic"><a class="docs-heading-anchor" href="#Question-4-Modifying-arguments-instead-of-adding-a-bunch-of-logic">Question 4 - Modifying arguments instead of adding a bunch of logic</a><a id="Question-4-Modifying-arguments-instead-of-adding-a-bunch-of-logic-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4-Modifying-arguments-instead-of-adding-a-bunch-of-logic" title="Permalink"></a></h2><p>One thing that none of our functions can do so far is to accept lowercase sequences. Most of the time, DNA sequences are written with uppercase letters, but we may not be able to count on that.</p><p>If we want to be able to accept lowercase strings, one possibility would be to add additional logic, Eg</p><p><code>if base == &#39;G&#39; || base == &quot;G&quot; || base = &#39;g&#39; || base == &quot;g&quot;</code></p><p>But that&#39;s a lot of typing - especially considering we&#39;d have to do this for every base! In programming, it&#39;s OK to be lazy (in fact, it&#39;s often better)! Instead, we can modify the parameters to be formatted the way we expect. For example, the <code>uppercase()</code> function takes a <code>String</code> or <code>Char</code> and returns the uppercase representation of it.</p><pre><code class="language-julia">julia&gt; uppercase(&#39;a&#39;)
+&#39;A&#39;: ASCII/Unicode U+0041 (category Lu: Letter, uppercase)
+
+julia&gt; uppercase(&quot;attc&quot;)
+&quot;ATTC&quot;</code></pre><p>Note that, if you simply use this function on a variable or parameter, it will remain unchanged (the function doesn&#39;t &quot;mutate&quot; its argument), but you can re-assign the variable or parameter.</p><pre><code class="language-julia">julia&gt; seq = &quot;attcgc&quot;
+&quot;attcgc&quot;
+
+julia&gt; uppercase(seq)
+&quot;ATTCGC&quot;
+
+julia&gt; seq
+&quot;attcgc&quot;
+
+julia&gt; seq = uppercase(seq)
+&quot;ATTCGC&quot;
+
+julia&gt; seq
+&quot;ATTCGC&quot;</code></pre><p>Some julia functions <em>can</em> mutate their aruments - we&#39;ll encounter some of those soon.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    gc_content(sequence)
+
+Calculates the GC ratio of a DNA sequence.
+The GC ratio is the total number of G and C bases divided by the total length of the sequence.
+For more info about GC content, [see here](https://en.wikipedia.org/wiki/GC-content).
+
+Example
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; gc_content(&quot;AATG&quot;)
+    0.25
+
+    julia&gt; gc_content(&quot;cccggg&quot;) * 100
+    100.0
+
+    julia&gt; gc_content(&quot;ATta&quot;)
+    0.0
+&quot;&quot;&quot;
+function gc_content(sequence)
+    # Start with the same code as `question3()` from assignment 2.
+    # only a small modification is necessary to make this work.
+end</code></pre><h2 id="Question-5-Incremental-development"><a class="docs-heading-anchor" href="#Question-5-Incremental-development">Question 5 - Incremental development</a><a id="Question-5-Incremental-development-1"></a><a class="docs-heading-anchor-permalink" href="#Question-5-Incremental-development" title="Permalink"></a></h2><p>Now that you&#39;ve learned how to do this, go back and modify the functions defined in questions 1-3 so that they are able to take lowercase arguments. You should not copy the code below this line to modify it, you should modify it in-place.</p><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Wednesday 1 July 2020 01:46">Wednesday 1 July 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
