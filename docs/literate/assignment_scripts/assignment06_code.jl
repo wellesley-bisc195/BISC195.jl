@@ -222,4 +222,3 @@ std_cov2_gc = 0.0
 # Write a function that will read any proper fasta file
 # and returns a tuple with the mean and standard deviation
 # of the sequence length and gc content.
-# Using this function on `data/ex1.fasta` should return (x,x,x,x).
