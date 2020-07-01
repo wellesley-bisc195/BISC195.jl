@@ -108,3 +108,118 @@ end
 # 3. The `split()` function can divide a `String` by a delimeter.
 # 4. You may need to do some searching on the internet.
 
+# ## Question 3 - parse the file
+# 
+# Alright - let's actually parse the file.
+# For now, the easiest thing to do
+# is to return two vectors, 
+# one containing the parsed identifiers as tuples,
+# and one containing the sequences as strings.
+# 
+# One thing to keep in mind
+# is that the sequences in a fasta file
+# can be spread out over multipl lines,
+# but they'll be much easier to work with as a single string,
+# so your function should have a way to join multiple lines
+# (remember the `join()` function?).
+# 
+# I've included a few example files in the "data" directory
+# with some example files to test your functions on.
+# The examples in the docstring below
+# assume that your working directory is the assignment directory.
+
+"""
+    function parse_fasta(path)
+
+Reads a fasta-formated file and returns 2 vectors,
+one containing parsed headers,
+the other containing the entire seqence as a `String`.
+
+Note: function does not validate DNA sequences for correctness.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia> ex1 = parse_fasta("data/ex1.fasta");
+
+    julia> ex1 isa Tuple
+    true
+
+    julia> ex1[1]
+    2-element Array{Tuple{String,String},1}:
+      ("ex1.1", "easy")
+      ("ex1.2", "multiline")
+
+    julia> ex1[2]
+    2-element Array{String,1}:
+    "AATTATAGC"
+    "CGCCCCCCAGTCGGATT"
+
+    julia> ex2 = parse_fasta("data/ex2.fasta");
+
+    julia> ex2[1]
+    4-element Array{Tuple{String,String},1}:
+      ("ex2.1", "oneper")
+      ("ex2.2", "wrong")
+      ("ex2.3", "wronger")
+      ("ex2.4", "wrongest")
+    
+    julia> ex2[2]
+    4-element Array{String,1}:
+      "ATCCGT"
+      "ATCGTGGaact"
+      "ATCGTGGaact"
+      "this isn't a dna string,but parse it anyway"
+"""
+function parse_fasta(path)
+    ## Think through the components you need
+    ## Does it make sense to define any containers at the beginning?
+    ## How will you loop through the file?
+    ## What do you need to get from each line?
+end
+
+# Tips:
+# 
+# 1. Build the function in parts
+#    - first, see if you can build the vector of headers,
+#      ignoring the sequences
+#    - next, see if you can collect the sequences,
+#      even if they're not joined together properly
+# 2. Work on pieces of the function in the REPL.
+#    Make sure each expression does what you think it does.
+#    
+#    For example, if you make a `for` loop to go through each line of the file,
+#    add `println()` statements to check the value of each variable
+#    in each loop.
+
+# ## Question 4 - Sequence Statistics
+# 
+# We now have most of the pieces necessary to get some summary statistics
+# of CoV2 genomes.
+# Note: You may want to grab some code from previous assignments.
+#
+# Calculate the mean sequence length and standard deviation
+# of the CoV2 geneomes in `data/cov2_genomes.fasta`.
+
+## helper code goes here
+
+mean_cov2_length = 0.0
+std_cov2_length = 0.0
+
+# Calculate the mean and standard deviation of GC content
+# of the CoV2 genomes in `data/cov2_genomes.fasta`.
+# GC content should be a number between 0 and 1.
+# Note: if you already parsed the fasta file above
+# and assigned the results to variables,
+# there's no need to re-parse it.
+
+## helper code goes here
+
+mean_cov2_gc = 0.0
+std_cov2_gc = 0.0
+
+# ## Bonus Question
+# 
+# Write a function that will read any proper fasta file
+# and returns a tuple with the mean and standard deviation
+# of the sequence length and gc content.
+# Using this function on `data/ex1.fasta` should return (x,x,x,x).
