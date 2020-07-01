@@ -50,11 +50,11 @@ makedocs(;
             "Lesson docs"  => "Lessons/Lesson4.md",
             "Assignment04" => "Assignments/Assignment04.md"
         ],
-        "Lesson 5 - Building functions and composition" => [
+        "Lesson 5 - Arrays" => [
             "Lesson docs"  => "Lessons/Lesson5.md",
             "Assignment05" => "Assignments/Assignment05.md"
         ],
-        "Lesson 6 - Building functions and composition" => [
+        "Lesson 6 - Miscellany" => [
             "Lesson docs"  => "Lessons/Lesson6.md",
             "Assignment06" => "Assignments/Assignment06.md"
         ],
