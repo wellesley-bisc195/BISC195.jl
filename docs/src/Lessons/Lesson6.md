@@ -1,6 +1,6 @@
 # Lesson 6 - Miscellany
 
-[![Assignment 06 - Invitation](https://img.shields.io/badge/Assignment06-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/F3lWDTLh)
+[![Assignment 06 - Invitation](https://img.shields.io/badge/Assignment06-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/reOfVyUk)
 [![Assignment 06 - Description](https://img.shields.io/badge/06-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment06)
 [![Assignment 06 - Rendered](https://img.shields.io/badge/06-Script-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment06)
 [![Assignment 06 - Due](https://img.shields.io/badge/Due-7%2F6%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment06)
