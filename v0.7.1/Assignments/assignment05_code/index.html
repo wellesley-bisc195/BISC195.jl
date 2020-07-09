@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Instructions for Assignment05 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/assignment05_code/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code Re-Use: Packages and Environments</span><ul><li><a class="tocitem" href="../../Lessons/Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment07/">Assignment07</a></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Instructions for Assignment05</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Instructions for Assignment05</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/assignment05_code.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Instructions-for-Assignment05"><a class="docs-heading-anchor" href="#Instructions-for-Assignment05">Instructions for Assignment05</a><a id="Instructions-for-Assignment05-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions-for-Assignment05" title="Permalink"></a></h1><h2 id="Introduction"><a class="docs-heading-anchor" href="#Introduction">Introduction</a><a id="Introduction-1"></a><a class="docs-heading-anchor-permalink" href="#Introduction" title="Permalink"></a></h2><p>Note: this file is runnable in its current state, but is incomplete. You can run the file from the command line, or use the VS Code julia extension to run individual lines.</p><h2 id="Question-1-Dubugging-Practice"><a class="docs-heading-anchor" href="#Question-1-Dubugging-Practice">Question 1 - Dubugging Practice</a><a id="Question-1-Dubugging-Practice-1"></a><a class="docs-heading-anchor-permalink" href="#Question-1-Dubugging-Practice" title="Permalink"></a></h2><p>At the end of <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#deb08">Chapter 8 of <em>Think Julia</em></a>, there is an exercise (8-6) intended to help you debug a string traversal function. Below is the initial code with errors. Fix it up as described in the chapter.</p><p>Note: you should always be completing the exercises from the book, by actually writing and executing the code, either in a file or in the REPL.</p><pre><code class="language-julia">function isreverse(word1, word2)
+    if length(word1) != length(word2)
+        return false
+    end
+    i = firstindex(word1)
+    j = lastindex(word2)
+    while j &gt;= 0
+        j = prevind(word2, j)
+        if word1[i] != word2[j]
+            return false
+        end
+        i = nextind(word1, i)
+    end
+    true
+end</code></pre><h2 id="Question-2-Reverse-complement"><a class="docs-heading-anchor" href="#Question-2-Reverse-complement">Question 2 - Reverse complement</a><a id="Question-2-Reverse-complement-1"></a><a class="docs-heading-anchor-permalink" href="#Question-2-Reverse-complement" title="Permalink"></a></h2><p>In Assignment03, you created a function called <code>complement()</code>, that took a DNA base as an argument, and returned its complement (<code>A &lt;-&gt; T</code> or <code>G &lt;-&gt; C</code>). This function does the same thing, using a slightly different method. Look it over and see if it makes sense. If it doesn&#39;t, try running some individual pieces in the REPL, But don&#39;t modify the code (or if you do, make sure you know how to get it back)</p><pre><code class="language-julia">&quot;&quot;&quot;
+    complement(base)
+
+Get the DNA complement of the provided base:
+
+    A &lt;-&gt; T
+    G &lt;-&gt; C
+
+Accepts uppercase or lowercase `String` or `Char`,
+but always returns an uppercase `Char`.
+If a valid base is not provided, the function throws an error.
+&quot;&quot;&quot;
+function complement(base)
+    complements = Dict(&quot;A&quot; =&gt; &#39;T&#39;,
+                       &quot;T&quot; =&gt; &#39;A&#39;,
+                       &quot;G&quot; =&gt; &#39;C&#39;,
+                       &quot;C&quot; =&gt; &#39;G&#39;)
+
+    base = uppercase(string(base))
+
+    !(base in keys(complements)) &amp;&amp; error(&quot;Invalid base $base&quot;)
+    return complements[base]
+end</code></pre><p>The &quot;reverse complement&quot; of a DNA sequence is valuable to know, since it represents the complementary sequence in the expected orientation (5&#39; -&gt; 3&#39;). If you haven&#39;t taken molecular biology and this sounds like gibberish, you may want to read up a bit on it <a href="https://en.wikipedia.org/wiki/Complementarity_(molecular_biology)">here</a></p><p>Now, write a function like <code>isreverse()</code> above, but that checks whether two sequences are the reverse AND complement of one another. Note one other difference here - rather than returning <code>false</code> if the sequences are different lengths, this function should error.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    isreversecomplement(seq1, seq2)
+
+Boolean function that checks whether two DNA seqences
+are the reverse complement of one another, irrespective of capitalization.
+Returns true if yes, false otherwise.
+
+If any invalid bases are encountered,
+or if sequences are different length, throws an error.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; isreversecomplement(&quot;aaatttcg&quot;, &quot;cgaaattt&quot;)
+    true
+
+    julia&gt; if isreversecomplement(&quot;C&quot;, &quot;A&quot;)
+               println(&quot;Yes!&quot;)
+           else
+               println(&quot;No!&quot;)
+           end
+    No!
+
+    julia&gt; isreversecomplement(&quot;TX&quot;, &quot;AG&quot;)
+    Error: Invalid base X
+
+    julia&gt; isreversecomplement(&quot;G&quot;, &quot;CC&quot;)
+    Error: Cannot compare sequuences of different length
+&quot;&quot;&quot;
+function isreversecomplement(seq1, seq2)
+    # your code here
+end</code></pre><h2 id="Question-3"><a class="docs-heading-anchor" href="#Question-3">Question 3</a><a id="Question-3-1"></a><a class="docs-heading-anchor-permalink" href="#Question-3" title="Permalink"></a></h2><p>Now let&#39;s work on creating a function that <em>makes</em> the reverse complement of a sequence, instead of just checking it. First, it&#39;s probably helpful to know that julia has a built in <code>reverse()</code> function that can take a <code>String</code> or <code>Vector</code> and return it with the indecies reversed.</p><pre><code class="language-julia">julia&gt; reverse([4,3,2,1])
+4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+
+julia&gt; reverse(&quot;beep boop&quot;)
+&quot;poob peeb&quot;</code></pre><p>Now, create a function that takes a sequence and returns the reverse complement. The easiest way to do this is probably to perform a &quot;map&quot; of the <code>complement()</code> function to each character in the sequence, then reverse it (or reverse, then map). You can write the mapping by hand as in the book, or use <code>map()</code> as described in the lesson.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    reverse_complement(sequence)
+
+Takes a DNA sequence and returns the reverse complement
+of that sequence.
+
+Takes lowercase or uppercase sequences,
+but always returns uppercase.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+    julia&gt; reverse_complement(&quot;AAATTT&quot;)
+    &quot;AAATTT&quot;
+
+    julia&gt; reverse_complement(&quot;GCAT&quot;)
+    &quot;ATGC&quot;
+
+    julia&gt; rc = reverse_complement(&quot;TTGGG&quot;);
+
+    julia&gt; println(rc)
+    CCCAA
+&quot;&quot;&quot;
+function reverse_complement(sequence)
+    # your code here
+end</code></pre><h2 id="Question-4a"><a class="docs-heading-anchor" href="#Question-4a">Question 4a</a><a id="Question-4a-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4a" title="Permalink"></a></h2><p><a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#reading_word_lists">Chapter 9</a> begins to describe how to work with files. The file <code>words.txt</code> from <em>Think Julia</em> is in the <code>data/</code> directory of the assignment repository. First, look at the file from the shell (not a julia REPL) using the <code>head</code> command.</p><pre><code class="language-sh">$ head data/words.txt</code></pre><p>By default, <code>head</code> prints the first 10 lines. How can you change this behavior to show the first 15 lines? (Hint: you may need a search engine). Put the <em>shell command</em> to show the first 15 words of <code>data/words.txt</code> in a String assigned to the variable <code>first15</code></p><pre><code class="language-julia">first15 = &quot;#= put shell command here =#&quot;</code></pre><h2 id="Question-4b"><a class="docs-heading-anchor" href="#Question-4b">Question 4b</a><a id="Question-4b-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4b" title="Permalink"></a></h2><p>What about the shell command to view the last 15 lines of <code>data/words.txt</code>? Put this command in a string assigned to the variable <code>last15</code></p><pre><code class="language-julia">last15 = &quot;#= put shell command here =#&quot;</code></pre><h2 id="Question-5"><a class="docs-heading-anchor" href="#Question-5">Question 5</a><a id="Question-5-1"></a><a class="docs-heading-anchor-permalink" href="#Question-5" title="Permalink"></a></h2><p>Write a function that reads through the words in a file with a <code>for</code> loop and returns an array with only the words that are valid DNA sequences. Note: there may be one or more functions from previous Assignments that are useful to reuse here.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    find_dna(file)
+
+In a file with one word per line,
+returns an array with all words that are valid DNA sequences
+(that is, they contain only a, t, g, or c).
+
+Words may be upper- or lowercase,
+but returned array will contain only uppercase letters.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia&gt; find_dna(&quot;data/words.txt&quot;) # assumes you&#39;re in Assignment05 directory
+    13-element Array{Any,1}:
+      &quot;AA&quot;
+      &quot;ACT&quot;
+      &quot;ACTA&quot;
+      &quot;AGA&quot;
+      &quot;AT&quot;
+      &quot;CAT&quot;
+      &quot;GAG&quot;
+      &quot;GAGA&quot;
+      &quot;GAT&quot;
+      &quot;TA&quot;
+      &quot;TACT&quot;
+      &quot;TAG&quot;
+      &quot;TAT&quot;
+&quot;&quot;&quot;
+function find_dna(file)
+    # 1. You probably want to make an empty array
+
+    for line in eachline(file)
+        # if the line is valid dna, put it in the array
+    end
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Thursday 9 July 2020 14:04">Thursday 9 July 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

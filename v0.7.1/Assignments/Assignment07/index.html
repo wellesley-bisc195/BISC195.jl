@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Assignment07 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/Assignment07/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code Re-Use: Packages and Environments</span><ul><li><a class="tocitem" href="../../Lessons/Lesson7/">Lesson docs</a></li><li class="is-active"><a class="tocitem" href>Assignment07</a><ul class="internal"><li><a class="tocitem" href="#Instructions"><span>Instructions</span></a></li></ul></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Lesson 7 - Code Re-Use: Packages and Environments</a></li><li class="is-active"><a href>Assignment07</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Assignment07</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/Assignment07.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="assignment07"><a class="docs-heading-anchor" href="#assignment07">Assignment07</a><a id="assignment07-1"></a><a class="docs-heading-anchor-permalink" href="#assignment07" title="Permalink"></a></h1><p><a href="https://classroom.github.com/a/OrKQtjqa"><img src="https://img.shields.io/badge/Assignment07-Repository-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 07 invitation"/></a> <a href="#assignment07"><img src="https://img.shields.io/badge/07-Description-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 07 - Description"/></a> <a href="#assignment07"><img src="https://img.shields.io/badge/Due-7%2F14%2F2020-orange?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 07 - Due"/></a></p><h2 id="Instructions"><a class="docs-heading-anchor" href="#Instructions">Instructions</a><a id="Instructions-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions" title="Permalink"></a></h2><p>Click the assignment 7 invitation above and clone the repository. This assignment is going to be a bit different than assignments in the past, so read on.</p><h3 id="Building-a-package"><a class="docs-heading-anchor" href="#Building-a-package">Building a package</a><a id="Building-a-package-1"></a><a class="docs-heading-anchor-permalink" href="#Building-a-package" title="Permalink"></a></h3><p><code>Assignment07</code> is a julia package (actually, all of your assignments have been julia packages). Let&#39;s take a look at it from the command line.</p><ol><li><p>Change your current working directory to the assignment directory.</p></li><li><p>List the contents of the directory (take a look back at <a href="Assignments/@ref lesson01">Lesson 1</a> if you don&#39;t remember how).</p><p>In the main directory, you should see (among other things) the <code>src/</code> directory, which contains the main project code, the <code>test/</code> directory, which contains the automated tests, and the <code>Project.toml</code> file, which describes the properties of the package.</p></li><li><p>Look at the contents of <code>Project.toml</code> (do you remember how to do this from the command line?).</p><pre><code class="language-none">name = &quot;Assignment07&quot;
+uuid = &quot;67893044-1481-44cf-8ab6-de350e09ee4e&quot;
+authors = [&quot;Kevin Bonham, PhD &lt;kbonham@wellesley.edu&gt;&quot;]
+version = &quot;0.1.0&quot;
+
+[compat]
+julia = &quot;1.4&quot;</code></pre><p>This file is written in a format called <code>toml</code> (for <a href="https://en.wikipedia.org/wiki/TOML">Tom&#39;s obvious, minimal language</a>). It&#39;s not julia code, but it has some similar features.</p><p>Open the file in VS Code, and add your name to the list of <code>authors</code>. Arrays in <code>toml</code> files have the same syntax as in <code>julia</code></p></li><li><p>Open a julia REPL, and set the working directory <code>Assignment07-&lt;username&gt;/</code> Open the Pkg REPL prompt (with <code>]</code>), and activate the project</p><pre><code class="language-julia">(@v1.4) pkg&gt; activate .
+Activating environment at `~/repos/courses/assignment07/Project.toml`
+
+(Assignment07) pkg&gt;</code></pre><p>Now, look at <code>Project.toml</code> again - you should see a new section <code>[deps]</code> that lists <code>BioSequences</code>. This describes your Package&#39;s &quot;dependencies,&quot; which are other packages that your package depends on to function correctly.</p></li><li><p>Look at the directory again - you should now see that a <code>Manifest.toml</code> file has been created. This file contains more specific information about the precise configuration (versions, names, locations, etc) of all the packages, including &quot;indirect&quot; dependencies (the dependencies of your dependencies). You should never edit this file manually.</p></li></ol><h3 id="Adding-code"><a class="docs-heading-anchor" href="#Adding-code">Adding code</a><a id="Adding-code-1"></a><a class="docs-heading-anchor-permalink" href="#Adding-code" title="Permalink"></a></h3><p>When you execute <code>using BioSequences</code>, julia interprets this as asking to execute the code found in the <code>BioSequences</code> package - specifically the code in <code>src/BioSequences.jl</code>. Take a look at that file on github <a href="https://github.com/BioJulia/BioSequences.jl/blob/master/src/BioSequences.jl">here</a>.</p><p>This file contains a <code>module</code> definition, which is declared like this:</p><pre><code class="language-julia">module BioSequences
+
+# code for the module
+
+end</code></pre><p>A <code>module</code> is a container for code that can be called with <code>using</code>. You can define a module right in your REPL:</p><pre><code class="language-julia">julia&gt; module MyModule
+
+       function somefunction()
+           println(&quot;Hi! I&#39;m a function in MyModule&quot;)
+       end
+
+       end
+Main.MyModule
+
+julia&gt; using .MyModule # the leading `.` is necessary for modules that aren&#39;t installed as packages
+
+julia&gt; MyModule.somefunction()
+Hi! I&#39;m a function in MyModule</code></pre><p>Note that <code>somefunction()</code> is not available by itself, you need to tell julia that it&#39;s found in <code>MyModule</code> by typing <code>MyModule.somefunction()</code>.  In order to make the function available without specifying its module, the module must <code>export</code> it.</p><pre><code class="language-julia">julia&gt; module MyModule
+
+       export somefunction,
+              otherfunction
+
+       function somefunction()
+           println(&quot;Hi! I&#39;m a function in MyModule&quot;)
+       end
+
+       function otherfunction()
+           println(&quot;Me too! Me too!&quot;)
+       end
+
+       function notexported()
+           println(&quot;Me too - but I&#39;m not exported :-(&quot;)
+       end
+
+       end
+WARNING: replacing module MyModule.
+Main.MyModule
+
+julia&gt; using .MyModule
+
+julia&gt; somefunction()
+Hi! I&#39;m a function in MyModule
+
+julia&gt; otherfunction()
+Me too! Me too!
+
+julia&gt; notexported()
+ERROR: UndefVarError: notexported not defined
+Stacktrace:
+ [1] top-level scope at REPL[14]:1
+ [2] eval(::Module, ::Any) at ./boot.jl:331
+ [3] eval_user_input(::Any, ::REPL.REPLBackend) at /Users/julia/buildbot/worker/package_macos64/build/usr/share/julia/stdlib/v1.4/REPL/src/REPL.jl:86
+ [4] run_backend(::REPL.REPLBackend) at /Users/ksb/.julia/packages/Revise/tV8FE/src/Revise.jl:1165
+ [5] top-level scope at none:0
+
+julia&gt; MyModule.notexported()
+Me too - but I&#39;m not exported :-(</code></pre><h3 id="Bioinformatics-Functionality"><a class="docs-heading-anchor" href="#Bioinformatics-Functionality">Bioinformatics Functionality</a><a id="Bioinformatics-Functionality-1"></a><a class="docs-heading-anchor-permalink" href="#Bioinformatics-Functionality" title="Permalink"></a></h3><p>Now, let&#39;s make Assignment07 into a package that you can reuse for future assignments.</p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>In many packages, there&#39;s so much code that it would be hard to keep track of if everything were in the main module file. Instead, most of the code is written in separate files, and then <code>include(&quot;code_file.jl&quot;)</code> is added to the module file.</p><p>In julia, <code>include(&quot;code_file.jl&quot;)</code> executes all of the text contained in <code>code_file.jl</code>, so it&#39;s identical to having that code in the module file itself, but it keeps things more orderly.</p><p>Take a look at the <code>src/AssignmentXX.jl</code> files in your previous assignments, and the module file of <code>BioSequences</code> linked above. They all follow this pattern.</p></div></div><p>Write and export the following functions in the <code>Assignment07</code> module. You may copy as much code as you like from previous assignments, but keep in mind that some of the functions have slightly different parameters.</p><div class="admonition is-warning"><header class="admonition-header">Bonus Challenge</header><div class="admonition-body"><p>You may write all of the code using <code>String</code>s for DNA sequences as we&#39;ve been doing. However, if you&#39;d like an additional challenge, you may try to write the functions using the DNA types from <code>BioSequences</code>.</p><p>If you&#39;d like to try this, edit the file in <code>test/runtests.jl</code> to comment out the &quot;Using Strings&quot; testset and un-comment the &quot;Using BioSequences&quot; testset. Tip - in VS code you can select a whole block of text and press <code>cmd+/</code> to comment/un-comment (for Windows users, it&#39;s &#39;ctrl+/`).</p></div></div><ol><li><p><code>normalizeDNA(sequence)</code>: This function is already written for you.</p></li><li><p><code>compsition(sequence)</code>: Like <code>basecomposition()</code> from assignment04, but instead of returning a <code>Tuple</code> of values, return a <code>Dict</code>, with keys <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, <code>&#39;T&#39;</code>, and <code>&#39;N&#39;</code>.</p><p>Examples:</p><pre><code class="language-julia">julia&gt; composition(&quot;ACCGGGTTTTN&quot;)
+Dict{Char,Int64} with 5 entries:
+  &#39;A&#39; =&gt; 1
+  &#39;G&#39; =&gt; 3
+  &#39;T&#39; =&gt; 4
+  &#39;N&#39; =&gt; 1
+  &#39;C&#39; =&gt; 2
+ 
+julia&gt; composition(&quot;AAX&quot;)
+ERROR: Invalid base, X</code></pre></li></ol><div class="admonition is-warning"><header class="admonition-header">Bonus Challenge</header><div class="admonition-body"><p>If you&#39;re using <code>BioSequences</code>, this function already exists:</p><pre><code class="language-julia">julia&gt; using BioSequences
+
+julia&gt; BioSequences.composition(dna&quot;ACCGGGTTTTN&quot;)
+Composition{DNA} with 5 entries:
+DNA_C =&gt; 2
+DNA_N =&gt; 1
+DNA_A =&gt; 1
+DNA_G =&gt; 3
+DNA_T =&gt; 4
+
+julia&gt; d[DNA_T]
+4</code></pre><p>You can use functions from BioSequences in your own functions by doing <code>using BioSequences</code>, but if you want to export them from your own package or add additional methods, you must do an &quot;import&quot;: <code>import BioSequences: composition</code></p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>This may be true for some other functions too... read the documentation, be sure that your functions meet the specifications. To use <code>import</code> on multiple functions, separate them by commas:</p><p>Eg. <code>import PackageA: func1, func2</code></p></div></div></div></div><ol><li><p><code>gc_content(seq)</code>: Exactly like <code>gc_content()</code> from Assignment 4, except that it should accommodate ambiguous bases (eg sequences that have <code>&#39;N&#39;</code> in them).</p><p>Examples:</p><pre><code class="language-julia">julia&gt; gc_content(&quot;ATNG&quot;)
+0.25
+
+julia&gt; gc_content(&quot;ccccggggn&quot;)
+0.8888888888888888</code></pre><div class="admonition is-warning"><header class="admonition-header">Bonus Challenge</header><div class="admonition-body"><p>The <code>BioSequences</code> tests assume you&#39;re passing <code>LongSequence</code>s as arguments, eg <code>gc_content(dna&quot;ATNG&quot;)</code>, but extra bonus if you can accommodate <code>String</code>s as well.</p></div></div></li><li><p><code>complement(sequence)</code>: Like <code>complement()</code> from Assignment 5, except that it should accomodate ambiguous bases (the complement of <code>N</code> is <code>N</code>), and should work on <code>String</code>s rather than <code>Char</code>.</p><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>In julia, you can write functions with the same name for different types. These different versions are called the &quot;methods&quot; of the function.</p><p>For example, you could define one version of <code>complement</code> that works on <code>Char</code>, and a different one that works on <code>String</code>s.</p><pre><code class="language-julia">julia&gt; function complement(base::Char)
+           comp = Dict(&#39;A&#39;=&gt;&#39;T&#39;,
+                       &#39;T&#39;=&gt;&#39;A&#39;,
+                       &#39;G&#39;=&gt;&#39;C&#39;,
+                       &#39;C&#39;=&gt;&#39;G&#39;,
+                       &#39;N&#39;=&gt;&#39;N&#39;)
+           return comp[base]
+       end
+complement (generic function with 1 method)
+
+julia&gt; function complement(seq::AbstractString)
+           # some other code here
+           println(&quot;string version!&quot;)
+       end
+complement (generic function with 2 methods)
+
+julia&gt; complement(&#39;C&#39;)
+&#39;G&#39;: ASCII/Unicode U+0047 (category Lu: Letter, uppercase)
+
+julia&gt; complement(&quot;ABC&quot;)
+string version!</code></pre></div></div><p>Examples:</p><pre><code class="language-julia">julia&gt; complement(&quot;ATTN&quot;)
+&quot;TAAN&quot;
+
+julia&gt; complement(&quot;ATTAGC&quot;)
+&quot;TAATCG&quot;</code></pre></li><li><p><code>reverse_complement(sequence)</code>: Exactly like <code>reverse_complement()</code> from Assignment 5, except that it should accomodate ambiguous bases (the complement of <code>N</code> is <code>N</code>).</p><p>Examples:</p><pre><code class="language-julia">julia&gt; reverse_complement(&quot;ATTAGC&quot;)
+&quot;GCTAAT&quot;
+
+julia&gt; reverse_complement(&quot;ATN&quot;)
+&quot;NAT&quot;</code></pre></li><li><p><code>parse_fasta(path)</code>: Similar to <code>parse_fasta()</code> from Assignment 6, with a few changes:</p><ul><li>headers don&#39;t need to be split into their component parts. That is, the array of headers should just be an array of strings  (though the leading <code>&gt;</code> should be removed).</li><li>All sequences should be valid DNA sequences (including <code>N</code>s)</li></ul><p>Examples:</p><pre><code class="language-julia">julia&gt; ex1 = parse_fasta(&quot;data/ex1.fasta&quot;);
+
+julia&gt; ex1[1]]
+ERROR: syntax: extra token &quot;]&quot; after end of expression
+Stacktrace:
+ [1] top-level scope at REPL[6]:1
+
+julia&gt; ex1[1]
+2-element Array{String,1}:
+ &quot;ex1.1 | easy&quot;
+ &quot;ex1.2 | multiline&quot;
+
+julia&gt; ex1[2]
+2-element Array{String,1}:
+ &quot;AATTATAGC&quot;
+ &quot;CGCCCCCCAGTCGGATT&quot;
+
+julia&gt; ex2 = parse_fasta(&quot;data/ex2.fasta&quot;);
+ERROR: invalid base H</code></pre><div class="admonition is-warning"><header class="admonition-header">Bonus Challenge</header><div class="admonition-body"><p>If you want an extra extra challenge, try using the <code>FASTX.jl</code> package to parse fasta files for you.</p><p>If you&#39;re writing your own, be sure that the sequences stored in your array have the type <code>LongSequence</code> and not String.</p></div></div></li></ol></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../Lessons/Lesson7/">« Lesson docs</a><a class="docs-footer-nextpage" href="../Assignments/">Assignment Index »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Thursday 9 July 2020 14:04">Thursday 9 July 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
