@@ -3,8 +3,7 @@
 
 [![Assignment 07 invitation](https://img.shields.io/badge/Assignment07-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/OrKQtjqa)
 [![Assignment 07 - Description](https://img.shields.io/badge/07-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment07)
-[![Assignment 07 - Rendered](https://img.shields.io/badge/07-Script-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment07)
-[![Assignment 07 - Due](https://img.shields.io/badge/Due-7%14F6%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment07)
+[![Assignment 07 - Due](https://img.shields.io/badge/Due-7%2F14%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment07)
 
 ## Learning objectives
 
@@ -128,24 +127,24 @@ You should return to the `julia>` prompt.
        ATTGC
        ```
     
-    Packages don't just provide additional functions,
-    they provide additonal types
-
-    ```julia
-    julia> typeof(seq)
-    LongSequence{DNAAlphabet{4}}
-    ```
-
-    A `LongSequence` from `BioSequences`, unlike a typical julia `String`,
-    is _mutable_.
-    That is, we can add or remove bases
-    just like we can add or remove elements from an array.
-
-    ```
-    julia> push!(seq, DNA_A)
-    6nt DNA Sequence:
-    ATTGCA
-    ```
+       Packages don't just provide additional functions,
+       they provide additonal types
+   
+       ```julia
+       julia> typeof(seq)
+       LongSequence{DNAAlphabet{4}}
+       ```
+   
+       A `LongSequence` from `BioSequences`, unlike a typical julia `String`,
+       is _mutable_.
+       That is, we can add or remove bases
+       just like we can add or remove elements from an array.
+   
+       ```
+       julia> push!(seq, DNA_A)
+       6nt DNA Sequence:
+       ATTGCA
+       ```
 
     3. `BioSequences` has functionality for getting the reverse complement
        and counting different base types.
