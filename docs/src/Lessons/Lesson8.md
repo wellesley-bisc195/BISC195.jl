@@ -20,7 +20,7 @@ so it will throw an error.
 You can fix this by making `MyTime` a mutable struct,
 or by returning a new instance of `MyTime`.
 If you do the later, the function signature
-should not have `!`.
+should not have `!` (because it's not mutating the arguments).
 
 (This issue has [already been reported](https://github.com/BenLauwens/ThinkJulia.jl/issues/35) to the book author)
 
@@ -38,5 +38,14 @@ But this is not the only kind of code.
 Often times, we also want to analyze a specific dataset,
 perform statistical tests, make plots, etc.
 In these cases,
-we typically want to include code along with plain-english explanations,
-and 
+we typically want to include code along with
+plain-english explanations, images (eg plots) and other information.
+
+There are several approaches to this,
+including [Jupyter notebooks](https://jupyter.org/) (**ju**lia, **py**thon, **R**),
+scripts that include explanations in comments
+(like your previous assignments)
+which can be rendered into more readable forms
+with packages like [`Literate.jl`](https://fredrikekre.github.io/Literate.jl/stable/outputformats/)),
+or plain-text files that include delineated blocks of code.
+
