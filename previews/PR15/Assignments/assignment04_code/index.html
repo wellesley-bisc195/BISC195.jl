@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Instructions for Assignment04 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/assignment04_code/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code Re-Use: Packages and Environments</span><ul><li><a class="tocitem" href="../../Lessons/Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment07/">Assignment07</a></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Instructions for Assignment04</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Instructions for Assignment04</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/assignment04_code.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Instructions-for-Assignment04"><a class="docs-heading-anchor" href="#Instructions-for-Assignment04">Instructions for Assignment04</a><a id="Instructions-for-Assignment04-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions-for-Assignment04" title="Permalink"></a></h1><h2 id="Introduction"><a class="docs-heading-anchor" href="#Introduction">Introduction</a><a id="Introduction-1"></a><a class="docs-heading-anchor-permalink" href="#Introduction" title="Permalink"></a></h2><p>Note: this file is runnable in its current state, but is incomplete. You can run the file from the command line, or use the VS Code julia extension to run individual lines.</p><h2 id="Base-Composition"><a class="docs-heading-anchor" href="#Base-Composition">Base Composition</a><a id="Base-Composition-1"></a><a class="docs-heading-anchor-permalink" href="#Base-Composition" title="Permalink"></a></h2><p>We&#39;ve already seen how to calculate GC content of a DNA sequence but sometimes it might be useful to have more information about the overall base composition. To do this, we can loop through a DNA sequence and count each type of base as it occurs.</p><p>But first, let&#39;s write a &quot;helper&quot; function that does some work to make sure that sequences are normalized into a particular form. In particular, we&#39;ll make sure they&#39;re allways uppercase, are <code>String</code>s rather than <code>Char</code>s, and don&#39;t contain any invalid bases. Note: you can convert a <code>Char</code> to a <code>String</code> with <code>string(c)</code>.</p><h3 id="Question-1"><a class="docs-heading-anchor" href="#Question-1">Question 1</a><a id="Question-1-1"></a><a class="docs-heading-anchor-permalink" href="#Question-1" title="Permalink"></a></h3><pre><code class="language-julia">&quot;&quot;&quot;
+    normalizeDNA(sequence)
+
+Normalizes DNA sequences or bases to uppercase `String`s.
+Throws an error if invalid bases are encountered.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; normalizeDNA(&quot;aaatg&quot;)
+    &quot;AAATG&quot;
+
+    julia&gt; normalizeDNA(&quot;XTG&quot;)
+    ERROR: Invalid base X encountered
+
+    julia&gt; normalizeDNA(5)
+    ERROR: Invalid base 5 encountered
+
+    julia&gt; normalizeDNA(&#39;G&#39;)
+    &quot;G&quot;
+
+    julia&gt; b = normalizeDNA(&#39;G&#39;);
+
+    julia&gt; typeof(b)
+    String
+&quot;&quot;&quot;
+function normalizeDNA(sequence)</code></pre><ol><li>make sequence into a String</li><li>make sequence uppercase</li></ol><pre><code class="language-julia">    for base in sequence
+        if !occursin(base, &quot;ACGT&quot;)
+            error(&quot;Invalid base $base encountered&quot;)
+        end
+    end</code></pre><p>return the normalized sequence</p><pre><code class="language-julia">end</code></pre><h3 id="Question-2"><a class="docs-heading-anchor" href="#Question-2">Question 2</a><a id="Question-2-1"></a><a class="docs-heading-anchor-permalink" href="#Question-2" title="Permalink"></a></h3><p>Now, we should be able to set <code>sequence = normalizeDNA(sequence)</code> in all of our other functions, and never worry about the form of the input.</p><p>The following function returns a <code>Tuple</code>, which is an immutable structure that contains multiple values.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    basecomposition(sequence)
+
+Counts the number of each type of base
+in a DNA sequence and returns a tuple those counts
+in the order A, C, G, T
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; basecomposition(&quot;AATCGGG&quot;)
+    (2, 1, 3, 1)
+
+    julia&gt; basecomposition(&#39;C&#39;)
+    (0, 1, 0, 0)
+
+    julia&gt; A,C,G,T = basecomposition(&quot;accgggtttt&quot;)
+    (1, 2, 3, 4)
+
+    julia&gt; A
+    1
+
+    julia&gt; T
+    4
+
+    julia&gt; basecomposition(&quot;BACCGGGTTTT&quot;)
+    ERROR: Invalid base B encountered
+&quot;&quot;&quot;
+function basecomposition(sequence)
+    sequence = normalizeDNA(sequence) # make uppercase string, check invalid bases
+    a = c = g = t = 0 # sets all 4 variables to `0`
+
+    for base in sequence</code></pre><p>add 1 to each base as it occurs</p><pre><code class="language-julia">    end
+
+    return a,c,g,t
+end</code></pre><p>Hint: If all of your base counts are zeros, What&#39;s the type of <code>base</code> as you loop through a <code>String</code>?</p><h3 id="Question-3"><a class="docs-heading-anchor" href="#Question-3">Question 3</a><a id="Question-3-1"></a><a class="docs-heading-anchor-permalink" href="#Question-3" title="Permalink"></a></h3><p>Now let&#39;s rewrite our <code>gc_content()</code> function from Assignment03 using our <code>basecomposition()</code> function. This one has the same docstring, but should require substantially less code.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    gc_content(sequence)
+
+Calculates the GC ratio of a DNA sequence.
+The GC ratio is the total number of G and C bases divided by the total length of the sequence.
+For more info about GC content, [see here](https://en.wikipedia.org/wiki/GC-content).
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; gc_content(&quot;AATG&quot;)
+    0.25
+
+    julia&gt; gc_content(&quot;cccggg&quot;) * 100
+    100.0
+
+    julia&gt; gc_content(&quot;ATta&quot;)
+    0.0
+
+    julia&gt; gc_content(&quot;ATty&quot;)
+    Error: Invalid base Y encountered
+&quot;&quot;&quot;
+function gc_content(sequence)</code></pre><p>Be sure to use <code>basecomposition()</code> in your answer. Note: Since <code>basecomposition()</code> already calls <code>normalizeDNA</code>, there&#39;s no need to call it here.</p><pre><code class="language-julia">end</code></pre><h2 id="Kmer-Composition"><a class="docs-heading-anchor" href="#Kmer-Composition">Kmer Composition</a><a id="Kmer-Composition-1"></a><a class="docs-heading-anchor-permalink" href="#Kmer-Composition" title="Permalink"></a></h2><p>Be sure that you&#39;ve read the sections of Lesson 4 on kmers and dictionaries before attempting the following questions.</p><p>What we&#39;d like to do is to get a count of all of the unique kmers in a DNA sequence But we can&#39;t simply generate all possible kmers (there are too many for even small-ish values of k).</p><h3 id="Question-4"><a class="docs-heading-anchor" href="#Question-4">Question 4</a><a id="Question-4-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4" title="Permalink"></a></h3><p>Let&#39;s think of the process in pseudocode, a plain-language high-level description of what we want to happen. Here, <code>sequence</code> represents some DNA sequence, and <code>k</code> is an integer representing the length of each kmer.</p><pre><code class="language-none">make a dictionary to store kmers
+for each base in sequence
+  get a kmer of the base and the next (k-1) bases
+  make sure the kmer is a valid DNA sequence
+  if this kmer is a key the dictionary
+      add 1 to the value referenced by that kmer
+  otherwise
+      make a new entry in the dictionary with a value of 1</code></pre><pre><code class="language-julia">&quot;&quot;&quot;
+   kmercount(sequence, k)
+
+Finds all kmers in a sequence,
+returning a dictionary of those kmers
+and the number of times they appear in the sequence.
+
+Examples
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; kmercount(&quot;ggg&quot;, 3)
+    Dict{Any,Any} with 1 entry:
+    &quot;GGG&quot; =&gt; 1
+
+    julia&gt; kmercount(&quot;ATATATATA&quot;, 4)
+    Dict{Any,Any} with 2 entries:
+    &quot;TATA&quot; =&gt; 3
+    &quot;ATAT&quot; =&gt; 3
+
+    julia&gt; kmercount(&quot;ATATATATAx&quot;, 4)
+    ERROR: Invalid base X encountered
+
+    julia&gt; kmercount(&quot;A&quot;, 2)
+    ERROR: k must be a positive integer less than the length of the sequence
+&quot;&quot;&quot;
+function  kmercount(sequence, k)
+    1 &lt;= k &lt;= length(sequence) || error(&quot;k must be a positive integer less than the length of the sequence&quot;)
+    kmers = Dict() # initialize dictionary</code></pre><p>We&#39;re going to loop through the string with numerical index, each time grabbing the bases at position i through i+k-1. What is the last index that we should search?</p><pre><code class="language-julia">    stopindex = 0
+
+    for i in 1:stopindex
+        kmer = &quot;&quot; # Change to index the sequence from i to i+k-1
+        kmer = normalizeDNA(kmer)</code></pre><p>if this kmer is a key the dictionary       add 1 to the value referenced by that kmer   otherwise       make a new entry in the dictionary with a value of 1</p><pre><code class="language-julia">    end
+    return kmers
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 10 July 2020 15:00">Friday 10 July 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
