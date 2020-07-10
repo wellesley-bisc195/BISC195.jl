@@ -154,3 +154,39 @@ using the `julia` extension (`alt+enter`)!
 If you want to see if your formatting looks the way that you expect,
 VS code has built-in markdown preview: `ctrl+shift+V`.
 
+!!! tip
+    You can use "code fences" in markdown for lots of other languages as well,
+    or just have a block of unformatted mono-space text.
+
+    ````
+    ```
+    # This is unformatted plain text
+    "No highlighting"
+    function foo()
+    end
+    ```
+
+    ```julia
+    # this is julia formatted
+    "With julia highlighting"
+    function foo()
+    end
+    ```
+    ````
+
+### Use notebooks for analysis
+
+[Assignment08](ref assignment08) has 2 parts -
+one where you continue to develop your bioinformatics
+analysis package from Lesson 7,
+and another where you use this code to do some analysis
+on SARS-CoV2 genomes.
+
+Even though they both involve writing code,
+it probably doesn't make sense to use the same workflow for both.
+For one, there's no need to wrap the analysis code into a package.
+
+But just like you should keep a lab notebook to record the results of experiments,
+it's important to keep track of the code you write 
+and the results that you get.
+To do this, we can use markdown files.
