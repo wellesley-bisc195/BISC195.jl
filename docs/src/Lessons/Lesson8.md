@@ -49,3 +49,108 @@ which can be rendered into more readable forms
 with packages like [`Literate.jl`](https://fredrikekre.github.io/Literate.jl/stable/outputformats/)),
 or plain-text files that include delineated blocks of code.
 
+### Using Markdown
+
+"Markdown" is a plain-text markup language
+that's relatively easy to learn and can express most common
+formatting that you might be used to from rich-text editors (eg Word)
+like **bold** and _italics_,
+but also some that you might be less familiar with
+like `inline code`.
+
+[Take a look at the source code](https://raw.githubusercontent.com/wellesley-bisc195/BISC195.jl/trunk/docs/src/Lessons/Lesson8.md)
+for this webpage - it's written in markdown
+(as are all of the pages for this website),
+and can be easily edited in VS Code just like your julia files.
+
+![Markdown](../assets/markdown.png)
+
+One can also write blocks of code that have syntax highlighting,
+the colors that you see in eg. VS Code
+that help you see the structure of your code.
+Eg. compare the following block without syntax highlighting
+
+```
+function a_function(str)
+    str = replace(str, " "=>"_")
+    println("hi! I'm a String! $str")
+end
+```
+
+to this one, that has it:
+
+```julia
+function a_function(str)
+    str = replace(str, " "=>"_")
+    println("hi! I'm a String! $str")
+end
+```
+
+There are many resources for learning markdown online,
+including the [official markdown documentation](https://daringfireball.net/projects/markdown/syntax).
+
+### Why use plaintext?
+
+You may be asking yourself,
+"Why use plain text when I have things like Word/Google Docs/Pages?"
+There are a few reasons including:
+
+1. There are many places where you'd like to have some formatting,
+   but rich-text editors are not available.
+   In many of these cases (eg github issues, many web forums),
+   markdown **is** supported.
+2. Documents from software like word often use proprietary encodings,
+   requiring anyone trying to read it to have the same software.
+   All computers can read plain-text files -
+   you can even read plain text files from the command line
+   (just try using `head` to see the first 10 lines of a `.docx` file)
+3. These proprietary file types often don't play well
+   with version control systems like git.
+
+### Using Markdown Notebooks
+
+Using markdown + julia is easy with VS Code.
+First, install the `Markdown Julia` extension for VS Code.
+(as a reminder, you can click the extensions button in the VS code sidebar
+and search for `julia`, then click "install" for `Markdown Julia`).
+
+Now, create a new file, and save it as any file with a `.md` extension,
+eg `test_notebook.md`.
+
+!!! tip
+    The `.md` extension is typical for markdown-formatted files,
+    and gives VS code (and other software) hints about how to handle it
+    (eg to provide the correct syntax highlighting),
+    but the extension doesn't have any special powers.
+    You can tell VS code to treat any file as markdown by changing the language mode.
+
+    ![language-mode](../assets/language-mode.png)
+
+Now write some markdown - eg
+
+````md
+# This is a level-1 header
+
+## This is a level-2 header
+
+Some text with **bold** or _italics_ or `inline code`.
+
+```julia
+# this is julia code
+function foo(arg)
+    arg = arg^2
+    println("woo! Syntax highlighting!")
+    return arg
+end
+```
+````
+
+Notice how code wrapped in 3 "backticks"
+(that's the key next to `1` and under `~` on American keyboards)
+is formatted like julia code?
+You can even run that code as if it were in a `.jl` file
+using the `julia` extension (`alt+enter`)!
+
+If you want to see if your formatting looks the way that you expect,
+VS code has built-in markdown preview: `ctrl+shift+V`.
+
