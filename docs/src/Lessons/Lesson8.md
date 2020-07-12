@@ -176,7 +176,7 @@ VS code has built-in markdown preview: `ctrl+shift+V`.
 
 ### Use notebooks for analysis
 
-[Assignment08](ref assignment08) has 2 parts -
+[Assignment08](@ref assignment08) has 2 parts -
 one where you continue to develop your bioinformatics
 analysis package from Lesson 7,
 and another where you use this code to do some analysis
