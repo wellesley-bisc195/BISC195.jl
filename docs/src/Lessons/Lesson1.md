@@ -950,7 +950,7 @@ bisc195 $
 - `rm` removes files
 - `rmdir` removes (empty) directories
 
-## Part 2 - git for version control
+## [Part 2 - git for version control](@id git-version-control)
 
 If you've ever worked on an assignment
 and ended up with a list of files like

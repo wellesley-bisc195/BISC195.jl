@@ -41,3 +41,13 @@
 [![Assignment 06 - Description](https://img.shields.io/badge/06-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment06)
 [![Assignment 06 - Rendered](https://img.shields.io/badge/06-Script-blue?style=for-the-badge&logo=open%20badges)](@ref Instructions-for-Assignment06)
 [![Assignment 06 - Due](https://img.shields.io/badge/Due-7%2F2%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment06)
+
+## Assignment07
+
+[![Assignment 07 invitation](https://img.shields.io/badge/Assignment07-Repository-blue?style=for-the-badge&logo=open%20badges)](https://classroom.github.com/a/OrKQtjqa)
+[![Assignment 07 - Description](https://img.shields.io/badge/07-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment07)
+[![Assignment 07 - Due](https://img.shields.io/badge/Due-7%2F14%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment07)
+
+## Assignment08
+
+[![Assignment 08 - Due](https://img.shields.io/badge/Due-7%2F17%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment08)
