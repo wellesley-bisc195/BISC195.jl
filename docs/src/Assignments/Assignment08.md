@@ -163,17 +163,17 @@ with a more descriptive name than `sequences.fasta`.
 Be sure to describe what you did in `data/data.md`.
 
 !!! tip
-   Usually, it's not a good idea to add and commit large files
-   like genome sequences to the git repository,
-   especially if those files are likely to change often
-   (since `git` stores a record of all of the different versions).
-
-   In this case, our file is not going to change, and it's not **that** big,
-   so it's ok to commit it, but if you want to avoid commiting it,
-   and to make `git` forget about trying to track it,
-   you can create a file called `.gitignore` inside your repo,
-   and put `data/<filename>` in it.
-   Be sure to add and commit the `.gitignore` file!
+    Usually, it's not a good idea to add and commit large files
+    like genome sequences to the git repository,
+    especially if those files are likely to change often
+    (since `git` stores a record of all of the different versions). 
+   
+    In this case, our file is not going to change, and it's not **that** big,
+    so it's ok to commit it, but if you want to avoid commiting it,
+    and to make `git` forget about trying to track it,
+    you can create a file called `.gitignore` inside your repo,
+    and put `data/<filename>` in it.
+    Be sure to add and commit the `.gitignore` file!
 
 ## Setting up julia project
 
@@ -195,9 +195,9 @@ pkg> dev /Users/<username>/Documents/BioinformaticsBISC195
 ```
 
 !!! note
-   As with `$` in shell prompts, the `pkg>` is an indicator
-   that you should be using the Pkg REPL (accessible by pressing `]`),
-   and isn't part of the actual command.
+    As with `$` in shell prompts, the `pkg>` is an indicator
+    that you should be using the Pkg REPL (accessible by pressing `]`),
+    and isn't part of the actual command.
 
 Once you've done this, you will be able to do `using BioinformaticsBISC195`
 in your julia code, as long as this julia project is active.
@@ -223,7 +223,7 @@ Also remember,
 in markdown files, julia code should go in "code fences."
 Eg.
 
-````
+````md
 # Some Coronavirus Analysis
 
 Here's some description of what I'm doing.
