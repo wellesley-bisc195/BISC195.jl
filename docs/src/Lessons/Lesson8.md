@@ -1,7 +1,7 @@
 # Lesson 8 - Putting it all together
 
 [![Assignment 08 - Description](https://img.shields.io/badge/08-Description-blue?style=for-the-badge&logo=open%20badges)](@ref assignment08)
-[![Assignment 08 - Due](https://img.shields.io/badge/Due-7%2F14%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment08)
+[![Assignment 08 - Due](https://img.shields.io/badge/Due-7%2F17%2F2020-orange?style=for-the-badge&logo=open%20badges)](@ref assignment08)
 
 **Assignments** - This lesson is complete when students have:
 
@@ -9,8 +9,8 @@
   and [Chapter 16](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap16)
   of Think Julia.
 - Run all code examples from Lesson 8 on their own computers
-- Cloned the Assignment 7 repository with github classroom.
-- Completed assignment 7 with all tests passing.
+- Cloned the Assignment 8 repository with github classroom.
+- Completed assignment 8 with all tests passing.
 
 _Book correction_: in the section of chapter 16
 [on modifiers](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#modifiers),

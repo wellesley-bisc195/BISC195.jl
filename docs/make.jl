@@ -58,11 +58,11 @@ makedocs(;
             "Lesson docs"  => "Lessons/Lesson6.md",
             "Assignment06" => "Assignments/Assignment06.md"
         ],
-        "Lesson 7 - Code Re-Use: Packages and Environments" => [
+        "Lesson 7 - Code re-use: packages and environments" => [
             "Lesson docs"  => "Lessons/Lesson7.md",
             "Assignment07" => "Assignments/Assignment07.md"
         ],
-        "Lesson 8 - Code Re-Use: Packages and Environments" => [
+        "Lesson 8 - Putting it all togeher" => [
             "Lesson docs"  => "Lessons/Lesson8.md",
             "Assignment08" => "Assignments/Assignment08.md"
         ],
