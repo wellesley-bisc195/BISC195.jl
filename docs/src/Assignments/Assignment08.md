@@ -132,7 +132,7 @@ At this point, you should have a git repo with the following structure:
 ├── data
 │   └── data.md
 ├── notebooks
-│   └── 1-kmer-counting.md
+│   └── 1-sequence-stats.md
 └── README.md
 ```
 
