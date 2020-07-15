@@ -96,6 +96,11 @@ separate from code that is used for one specific purpose.
    and use `git remote add` to set this as `origin`
    (refer [back to lesson 1](@ref git-version-control) if you need
    a reminder about how these commands work).
+
+   ```sh
+   $ git remote add origin <url>
+   ```
+
    Don't forget to add Kevin as a collaborator.
 3. Create a directory inside this repo called `notebooks`,
    and another called `data`.
@@ -104,6 +109,12 @@ separate from code that is used for one specific purpose.
    give it a title (use markdown to make the title Heading 1 format),
    and add `By <your name>` under the title in bold.
 5. Commit and push your changes.
+   Remember, the first time you push, you need to say _where_ to push:
+
+   ```sh
+   $ git push --set-upstream origin master
+   ```
+
    Take a look at the repo on github -
    your README should show up, correctly formatted,
    but the directories won't show up until there are committed files in them.
