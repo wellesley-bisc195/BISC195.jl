@@ -44,7 +44,7 @@ But when you call a function,
 what is actually executed is a specific "_method_"
 of that function.
 That is, a version of the function
-that depends on the types of its methods.
+that depends on the types of its arguments.
 
 When you first define a function,
 it only has one method (the one you just defined).
@@ -89,3 +89,155 @@ Fallback method!
 julia> somefunc(1.0, "hey!")
 Two argument method!!
 ```
+
+One can even define a method that calls another method
+of the same function!
+For example,
+we can write a `complement()` function that works on `Char`:
+
+```julia
+julia> function complement(base::Char)
+           base = uppercase(base)
+           comps = Dict('A' => 'T',
+                        'C' => 'G',
+                        'G' => 'C',
+                        'T' => 'A',
+                        'N' => 'N')
+           return comps[base]
+       end
+complement (generic function with 1 method)
+```
+
+And then another function that works on `String`s,
+that maps the `complement(::Char)` method onto the `String`.
+
+```julia
+julia> function complement(seq::AbstractString)
+           map(complement, seq)
+       end
+complement (generic function with 2 methods)
+
+julia> complement("ATTGC")
+"TAACG"
+```
+
+This works because `map` on a `String` applies the function
+to each element of the `String`, which are `Char`s. 
+
+Some functions have _a ton_ of methods -
+you can see them using the `methods()` function:
+
+```julia
+julia> methods(complement)
+# 2 methods for generic function "complement":
+[1] complement(base::Char) in Main at REPL[5]:2
+[2] complement(seq::AbstractString) in Main at REPL[3]:2
+```
+
+!!! warning "Checking Question"
+    How many methods does `+` have?
+
+## Writing your own types
+
+Sometimes, the best way to to solve a problem
+is to make a new type.
+For example, when you parsed FASTA files
+in Assignments 7 and 8,
+you were keeping headers and sequences separate - 
+this could lead to problems trying to keep them in sync
+later when you try to work with them.
+
+Further, most of you solved that assignment
+by keeping a bunch of extra vectors around
+that stored intermediate sequences,
+and had to deal with special-casing the first and last sequence.
+That works, but it's a lot to keep track of.
+
+Compare that approach to the following:
+
+```julia
+mutable struct FastaRecord
+    header
+    sequence
+end
+
+# these are "accessor" functions - they're not strictly necessary
+function header(fr::FastaRecord)
+    return fr.header
+end
+
+function sequence(fr::FastaRecord)
+    return fr.sequence
+end
+
+## Note: Simple functions like those above can be written with shortened syntax:
+# header(fr::FastaRecord) = fr.header
+# sequence(fr::FastaRecord) = fr.sequence
+
+# sequence! updates the sequence field adds it to the end of the `sequence` field
+function sequence!(fr::FastaRecord, seq::AbstractString)
+    fr.sequence = seq
+end
+
+function parse_fasta(path)
+    records = FastaRecord[]
+    for line in eachline(path)
+        if startswith(line, '>')
+            # if the line is a header, we push! a new record with an empty sequence to the `records` vector
+            header = line[2:end]
+            push!(records, FastaRecord(header, ""))
+        else
+            # otherwise, we add the line onto the end of the sequence
+            record = records[end]
+            newseq = sequence(record) * line
+            sequence!(record, newseq)
+        end
+    end
+    return records
+end
+```
+
+```julia
+julia> ex1 = parse_fasta("/Users/ksb/repos/courses/assignment07/data/ex1.fasta")
+2-element Array{FastaRecord,1}:
+ FastaRecord("ex1.1 | easy", "AATTATAGC")
+ FastaRecord("ex1.2 | multiline", "CGCCCCCCAGTCGGATT")
+```
+
+We can also write functions like `length` and `gc_content`
+that work on our `FastaRecord` type.
+
+```julia
+Base.length(fr::FastaRecord) = length(sequence(fr))
+
+# assuming you've already written `gc_content()` that works on `String`s
+gc_content(fr::FastaRecord) = gc_content(sequence(fr))
+```
+
+!!! Checking Question
+    If multiple methods work for a particular function call,
+    how does julia decide which one to use?
+
+    Eg, if I write
+
+    ```julia
+    julia> function foo(x::Number, y::Number)
+        println("first method")
+    end
+    foo (generic function with 1 method)
+
+    julia> function foo(x::Float64, y::Number)
+                println("second method")
+            end
+    foo (generic function with 2 methods)
+
+    julia> function foo(x::Float64, y::Float64)
+                println("third method")
+            end
+    foo (generic function with 3 methods)
+    ```
+
+    Which method is called when I run `foo(1.0, 1)`?
+    What about `foo(42, 1.0)`?
+    Try to answer the question before running the code,
+    then check to see if you're right.

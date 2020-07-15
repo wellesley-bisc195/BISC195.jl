@@ -5,3 +5,9 @@
 
 ## Continue Analysis of SARS-CoV2 genomes
 
+Let's continue with our analysis of SARS-CoV2 genomes.
+But before we do - I want to add one more trick to your workflow.
+In the following code examples the **package** repo
+from assignment 8 is called `BioinformaticsBISC195.jl`,
+and the **analysis** repo is called `CoVAnalsyis`.
+
