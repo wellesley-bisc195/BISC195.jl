@@ -174,7 +174,7 @@ end
 # header(fr::FastaRecord) = fr.header
 # sequence(fr::FastaRecord) = fr.sequence
 
-# sequence! updates the sequence field adds it to the end of the `sequence` field
+# sequence! updates the sequence field
 function sequence!(fr::FastaRecord, seq::AbstractString)
     fr.sequence = seq
 end
@@ -214,7 +214,7 @@ Base.length(fr::FastaRecord) = length(sequence(fr))
 gc_content(fr::FastaRecord) = gc_content(sequence(fr))
 ```
 
-!!! Checking Question
+!!! warning "Checking Question"
     If multiple methods work for a particular function call,
     how does julia decide which one to use?
 

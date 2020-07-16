@@ -135,18 +135,17 @@ it's always worth your time to make sure there aren't errors.
     Some possibilities:
 
     1. Add a filter to your `parse_fasta()` function.
-    This is not ideal, since it makes the function less generalizable to other problems.
+       This is not ideal, since it makes the function less generalizable to other problems.
     2. Find the index of all the sequences that are less than 25K bases long,
-    then remove the items at those indices from the sequence vector and the headers vector.
-    Take a look at the `findall()` function if you plan to take this path.
-
-    Warning: if you remove things one by one,
-    you may change the indices of other things in the vector.
+       then remove the items at those indices from the sequence vector and the headers vector.
+       Take a look at the `findall()` function if you plan to take this path.
+       Warning: if you remove things one by one,
+       you may change the indices of other things in the vector.
     3. Loop through the sequences, and, if they are long enough, push them into a new vector.
-    Again - be sure to take care of the headers as well.
+       Again - be sure to take care of the headers as well.
     4. Find the index of all of the sequences that are *longer* than 25k bases,
-    and then take a slice of the original vector.
-    Again, `findall()` may be useful here.
+       and then take a slice of the original vector.
+       Again, `findall()` may be useful here.
 
     Whatever you do, you should ensure that:
 
@@ -235,10 +234,10 @@ Set{Int64} with 4 elements:
     (anything other than `A`, `T`, `G`, or `C`).
 
     !!! tip
-    This function may take a long time to run on all of your genomes.
-    Use a small subset of genomes and/or the `ex1.fasta` file
-    while you're working on it to make sure it works
-    before trying to run it with all of your genomes.
+        This function may take a long time to run on all of your genomes.
+        Use a small subset of genomes and/or the `ex1.fasta` file
+        while you're working on it to make sure it works
+        before trying to run it with all of your genomes.
 
 ### Comparing unique kmers
 
@@ -310,3 +309,5 @@ Or alternatively, `((length of set1 - set2) + (length of set2 - set1)) / length 
   - [ ] Create histogram of filtered sequence lengths
 - [ ] Unique kmer function that discards kmers with ambiguous bases
 - [ ] Kmer set distance function that returns a distance metric
+
+[1]: The Julia language extension of VS Code loads `Revise.jl` automatically if you have it installed
