@@ -11,7 +11,6 @@ which Kevin will add to your github repo once you've created it and shared it wi
 
 - [ ] Code repo (from Assignment 7), renamed and in public repo
   - [ ] tests still passing
-  - [ ] kmer counting function, with tests added
 - [ ] Analysis repo complete
   - [ ] README has heading 1 title and bold author line
   - [ ] `Project.toml` with code repo, `Revise`, `DataFrames`, and `Plots` as dependencies
