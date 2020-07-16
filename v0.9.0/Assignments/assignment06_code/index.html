@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Instructions for Assignment06 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/assignment06_code/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code re-use: packages and environments</span><ul><li><a class="tocitem" href="../../Lessons/Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment07/">Assignment07</a></li></ul></li><li><span class="tocitem">Lesson 8 - Putting it all togeher</span><ul><li><a class="tocitem" href="../../Lessons/Lesson8/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment08/">Assignment08</a></li></ul></li><li><span class="tocitem">Lesson 9 - Analyzing coronavirus genomes</span><ul><li><a class="tocitem" href="../../Lessons/Lesson9/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment09/">Assignment09</a></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Instructions for Assignment06</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Instructions for Assignment06</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/assignment06_code.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Instructions-for-Assignment06"><a class="docs-heading-anchor" href="#Instructions-for-Assignment06">Instructions for Assignment06</a><a id="Instructions-for-Assignment06-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions-for-Assignment06" title="Permalink"></a></h1><h2 id="Introduction"><a class="docs-heading-anchor" href="#Introduction">Introduction</a><a id="Introduction-1"></a><a class="docs-heading-anchor-permalink" href="#Introduction" title="Permalink"></a></h2><p>Note: this file is runnable in its current state, but is incomplete. You can run the file from the command line, or use the VS Code julia extension to run individual lines.</p><h2 id="Question-1-Reading-FASTA-files"><a class="docs-heading-anchor" href="#Question-1-Reading-FASTA-files">Question 1 - Reading FASTA files</a><a id="Question-1-Reading-FASTA-files-1"></a><a class="docs-heading-anchor-permalink" href="#Question-1-Reading-FASTA-files" title="Permalink"></a></h2><p>A common way to interact with biological sequence data is in a format called <a href="https://en.wikipedia.org/wiki/FASTA_format"><code>FASTA</code></a>. This is a very simple format, where each &quot;record&quot; (sequence) contains:</p><ol><li>A &quot;header&quot; line, always starting with <code>&gt;</code>, that contains a description of the sequence</li><li>The sequence, which can be split across multiple lines</li></ol><p>For example, in the <code>data/</code> directory of this assignment, there is a file called <code>cov2_genomes.fasta</code>, which contains some genome sequences of Sars-CoV2 isolated from humans in the last month. Use the shell to take a look at the first 10 lines (<code>head</code>) of the file.</p><p>Now, let&#39;s work on building a julia function to help us use this file.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    count_records(path)
+
+Given a path to a `fasta` file,
+counts and returns the number of records it contains.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia&gt; count_records(&quot;data/cov2_genomes.fasta&quot;)
+    10
+&quot;&quot;&quot;
+function count_records(path)
+    # Your code here.
+end</code></pre><p>Hint - If you&#39;re having trouble, the easiest thing to do is probably to count lines that start with <code>&gt;</code>.</p><h2 id="Question-2-Split-the-headers"><a class="docs-heading-anchor" href="#Question-2-Split-the-headers">Question 2 - Split the headers</a><a id="Question-2-Split-the-headers-1"></a><a class="docs-heading-anchor-permalink" href="#Question-2-Split-the-headers" title="Permalink"></a></h2><p>It&#39;s nice to know the number of records the file contains, but it&#39;s more useful to actually be able to read and store those records.</p><p>Let&#39;s look again at the headers for these sequences. This can be accomplished from the terminal using <code>grep</code>. The simplest way to use <code>grep</code> is with 2 arguments - the first argument specifies a pattern to look for, and the second is the path to a file (or group of files).</p><p><code>grep</code> will then print to the screen all of the lines from the file that match that pattern. To see all of the header lines, for example,</p><pre><code class="language-sh">$ grep &#39;&gt;&#39; data/cov2_genomes.fasta</code></pre><p>Each header has 3 components, separated by <code>|</code> Write a function that divides the header into these 3 components, and returns them as a tuple.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    fasta_header(header)
+
+Divides a fasta header into its component parts,
+removing any leading or trailing spaces.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia&gt; fasta_header(&quot;&gt;M0002 |China|Homo sapiens&quot;)
+    (&quot;M0002&quot;, &quot;China&quot;, &quot;Homo sapiens&quot;)
+
+    julia&gt; fasta_header(&quot;AAATTC&quot;)
+    Error: Invalid header (headers must start with &#39;&gt;&#39;)
+
+    julia&gt; fasta_header(&quot;&gt;Another sequence&quot;)
+    (&quot;Another sequence&quot;,)
+
+    julia&gt; fasta_header(&quot;&gt;headers| can | have| any number | of | info blocks&quot;)
+    (&quot;headers&quot;, &quot;can&quot;, &quot;have&quot;, &quot;any number&quot;, &quot;of&quot;, &quot;info blocks&quot;)
+&quot;&quot;&quot;
+function fasta_header(header)
+    startswith(header, &#39;&gt;&#39;) || error(&quot;Invalid header (headers must start with &#39;&gt;&#39;)&quot;)
+
+    # Your code here
+end</code></pre><p>A couple of things to note about this function if you&#39;re strugling:</p><ol><li>Notice that, even though each header must start with a <code>&gt;</code>, the first item in the returned Tuple should not</li><li>The return item should always be a Tuple, even if there&#39;s only 1 item</li><li>The <code>split()</code> function can divide a <code>String</code> by a delimeter.</li><li>You may need to do some searching on the internet.</li></ol><h2 id="Question-3-parse-the-file"><a class="docs-heading-anchor" href="#Question-3-parse-the-file">Question 3 - parse the file</a><a id="Question-3-parse-the-file-1"></a><a class="docs-heading-anchor-permalink" href="#Question-3-parse-the-file" title="Permalink"></a></h2><p>Alright - let&#39;s actually parse the file. For now, the easiest thing to do is to return two vectors, one containing the parsed identifiers as tuples, and one containing the sequences as strings.</p><p>One thing to keep in mind is that the sequences in a fasta file can be spread out over multipl lines, but they&#39;ll be much easier to work with as a single string, so your function should have a way to join multiple lines (remember the <code>join()</code> function?).</p><p>I&#39;ve included a few example files in the &quot;data&quot; directory with some example files to test your functions on. The examples in the docstring below assume that your working directory is the assignment directory.</p><pre><code class="language-julia">&quot;&quot;&quot;
+    function parse_fasta(path)
+
+Reads a fasta-formated file and returns 2 vectors,
+one containing parsed headers,
+the other containing the entire seqence as a `String`.
+
+Note: function does not validate DNA sequences for correctness.
+
+Example
+≡≡≡≡≡≡≡≡≡
+    julia&gt; ex1 = parse_fasta(&quot;data/ex1.fasta&quot;);
+
+    julia&gt; ex1 isa Tuple
+    true
+
+    julia&gt; ex1[1]
+    2-element Array{Tuple{String,String},1}:
+      (&quot;ex1.1&quot;, &quot;easy&quot;)
+      (&quot;ex1.2&quot;, &quot;multiline&quot;)
+
+    julia&gt; ex1[2]
+    2-element Array{String,1}:
+    &quot;AATTATAGC&quot;
+    &quot;CGCCCCCCAGTCGGATT&quot;
+
+    julia&gt; ex2 = parse_fasta(&quot;data/ex2.fasta&quot;);
+
+    julia&gt; ex2[1]
+    4-element Array{Tuple{String,String},1}:
+      (&quot;ex2.1&quot;, &quot;oneper&quot;)
+      (&quot;ex2.2&quot;, &quot;wrong&quot;)
+      (&quot;ex2.3&quot;, &quot;wronger&quot;)
+      (&quot;ex2.4&quot;, &quot;wrongest&quot;)
+
+    julia&gt; ex2[2]
+    4-element Array{String,1}:
+      &quot;ATCCGT&quot;
+      &quot;ATCGTGGaact&quot;
+      &quot;ATCGTGGaact&quot;
+      &quot;this isn&#39;t a dna string,but parse it anyway&quot;
+&quot;&quot;&quot;
+function parse_fasta(path)
+    # Think through the components you need
+    # Does it make sense to define any containers at the beginning?
+    # How will you loop through the file?
+    # What do you need to get from each line?
+end</code></pre><p>Tips:</p><ol><li><p>Build the function in parts</p><ul><li>first, see if you can build the vector of headers, ignoring the sequences</li><li>next, see if you can collect the sequences, even if they&#39;re not joined together properly</li></ul></li><li><p>Work on pieces of the function in the REPL. Make sure each expression does what you think it does.</p><p>For example, if you make a <code>for</code> loop to go through each line of the file, add <code>println()</code> statements to check the value of each variable in each loop.</p></li></ol><h2 id="Question-4-Sequence-Statistics"><a class="docs-heading-anchor" href="#Question-4-Sequence-Statistics">Question 4 - Sequence Statistics</a><a id="Question-4-Sequence-Statistics-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4-Sequence-Statistics" title="Permalink"></a></h2><p>We now have most of the pieces necessary to get some summary statistics of CoV2 genomes. Note: You may want to grab some code from previous assignments.</p><p>Calculate the mean sequence length and standard deviation of the CoV2 geneomes in <code>data/cov2_genomes.fasta</code>.</p><pre><code class="language-julia"># helper code goes here
+
+mean_cov2_length = 0.0
+std_cov2_length = 0.0</code></pre><p>Calculate the mean and standard deviation of GC content of the CoV2 genomes in <code>data/cov2_genomes.fasta</code>. GC content should be a number between 0 and 1. Note: if you already parsed the fasta file above and assigned the results to variables, there&#39;s no need to re-parse it.</p><pre><code class="language-julia"># helper code goes here
+
+mean_cov2_gc = 0.0
+std_cov2_gc = 0.0</code></pre><h2 id="Bonus-Question"><a class="docs-heading-anchor" href="#Bonus-Question">Bonus Question</a><a id="Bonus-Question-1"></a><a class="docs-heading-anchor-permalink" href="#Bonus-Question" title="Permalink"></a></h2><p>Write a function that will read any proper fasta file and returns a tuple with the mean and standard deviation of the sequence length and gc content.</p><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Thursday 16 July 2020 19:57">Thursday 16 July 2020</span>. Using Julia version 1.4.2.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
