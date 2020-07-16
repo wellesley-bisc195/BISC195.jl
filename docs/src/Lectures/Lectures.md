@@ -38,3 +38,8 @@
 
 ![Lecture 8 - date](https://img.shields.io/badge/Date-7%2F7%2F2020-orange?style=for-the-badge)
 [![Lecture 8 - video](https://img.shields.io/badge/Lecture08-Video-blue?style=for-the-badge)](https://wellesley.zoom.us/rec/share/vcUkP6Co9lxLHbP_9k3eR6caQYP_X6a8hiceqaYNmEoHewgAq1Icrk7y-l5CPHvW)
+
+## Lecture 9
+
+![Lecture 9 - date](https://img.shields.io/badge/Date-7%2F16%2F2020-orange?style=for-the-badge)
+[![Lecture 9 - video](https://img.shields.io/badge/Lecture09-Video-blue?style=for-the-badge)](https://wellesley.zoom.us/rec/share/xZF3D-3dqkZJRtbv-lHSS54zRoboX6a8gyZI8vBbz0tXxFHHIlBmTXP128aNWkQg?startTime=1594907827000)
