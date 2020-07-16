@@ -66,6 +66,10 @@ makedocs(;
             "Lesson docs"  => "Lessons/Lesson8.md",
             "Assignment08" => "Assignments/Assignment08.md"
         ],
+        "Lesson 9 - Analyzing coronavirus genomes" => [
+            "Lesson docs"  => "Lessons/Lesson9.md",
+            "Assignment09" => "Assignments/Assignment09.md"
+        ],
         "Assignment Index" => "Assignments/Assignments.md",
         "Lecture Index"    => "Lectures/Lectures.md"
     ]
