@@ -1,4 +1,4 @@
-# Lecture Index
+# [Lecture Index](@id lecture-index)
 
 ## Lecture 1
 

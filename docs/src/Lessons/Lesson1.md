@@ -59,7 +59,8 @@ The part that is complicated is that code tends to be:
 1. Literal - the computer can only do exactly what you specifically tell it;
    it won't try to guess your meaning
    and it doesn't understand nuance.
-1. Procedural - you must provide **all** of the commands
+1. Procedural - computer instructions follow a defined procedure;
+   you must provide **all** of the commands
    and you must provide them **in the correct order**
 
 [Watch this video](https://www.youtube.com/watch?v=cDA3_5982h8)
@@ -295,7 +296,6 @@ as well as other directories you may recognize.
     Now, enter `ls` again,
     and you should see the contents of your Windows home folder.
 
-
 The `ls` command can also take a directory
 as an "argument."[^8]
 We'll talk more about what that means later -
@@ -315,7 +315,7 @@ If your `Desktop` is pristine, congratulations!
 You won't see any output.
 
 The filesystem is organized hierarchically -
-At the very top of the hierarchy is the **[^2]**,
+at the very top of the hierarchy is the **root**[^2],
 which you can think of as a folder that contains all other files and folders.
 On a Mac (and other Unix systems),
 the root is referred to with a single forward slash (`/`),
@@ -572,7 +572,8 @@ but this file only has 1 line, so that's all that's shown.
     Usually, it's a good idea to have the extension reflect what's in the file,
     `.txt` for text, `.jl` for julia code etc.
 
-We can look at multiple files at the same time using the con`cat`enate command:
+We can look at multiple files at the same time using the con`cat`enate command
+(don't forget to use `TAB` to type less!)
 
 ```sh
 bisc195 $ cat file1.txt file2.txt file3.txt
@@ -641,7 +642,7 @@ This is file #9
 ```
 
 Notice that in this example, `file10.txt` is not included,
-since there are 2 characters between `file` and `.txt`.
+since in that file name, there are **2** characters between `file` and `.txt`.
 
 Finally, you can use brackets to specify specific characters,
 or ranges of characters:
@@ -735,7 +736,7 @@ don't move on to the next step.
 
 Once you've created the `lesson1/` directory,
 let's `m`o`v`e the text files we've created into it.
-The `mv` command take the form `mv <source> <destination>`.
+The `mv` command takes the form `mv <source> <destination>`.
 For example:
 
 ```sh
@@ -798,7 +799,7 @@ all_files.txt file10.txt    file6.txt     file7.txt     file8.txt     file9.txt 
 ```
 
 !!! practice
-    Can you figure out how to move the rest of the `file*.txt` files
+    Can you figure out how to move the rest of the `file<something>.txt` files
     to the `lesson1/` directory using a glob pattern?
 
 Once you've moved all the text files _other than_ `all_files.txt`
@@ -861,7 +862,6 @@ all_files.txt lesson1
 As you can see,
 `all_files.txt` is now present in both the parent `bisc195/` directory
 _and_ the `lesson1/` directory.
-
 
 !!! tip "Practice"
     Make a copy of `file1.txt` called `file1_second.txt`
@@ -933,20 +933,20 @@ bisc195 $
 - `cd` changes the current working directory
 - `pwd` prints (shows) the current working directory
 - `ls <path>` lists the contents of a directory
-    - `ls` without a path argument lists the contents of the current working directory
-    - `ls <glob>` lists the files/directories matching a pattern (eg ls *.txt)
+  - `ls` without a path argument lists the contents of the current working directory
+  - `ls <glob>` lists the files/directories matching a pattern (eg ls *.txt)
 - use relative or absolute paths
-    - aboslute paths start with `/` (root) or `~/` (home)
-    - relative paths start with `./`, `../` or file and directory names
+  - aboslute paths start with `/` (root) or `~/` (home)
+  - relative paths start with `./`, `../` or file and directory names
 - `mkdir` for creating directories
 - `mv <source(s)> <destination>` to move files and directories
 - `cp <source(s)> <destination>` to copy files and directories
 - glob patterns can be used to act on many files at once
-    - `*` = 0 or more characters (eg. *.txt)
-    - `?` = exactly 1 character (eg. file?.txt)
-    - `[]` = specific characters or range of characters
-        - eg `file[246].txt` = `file2.txt file3.txt file6.txt`
-        - eg `file[5-7].txt` = `file5.txt file6.txt file7.txt`
+  - `*` = 0 or more characters (eg. *.txt)
+  - `?` = exactly 1 character (eg. file?.txt)
+  - `[]` = specific characters or range of characters
+    - eg `file[246].txt` = `file2.txt file4.txt file6.txt`
+    - eg `file[5-7].txt` = `file5.txt file6.txt file7.txt`
 - `rm` removes files
 - `rmdir` removes (empty) directories
 

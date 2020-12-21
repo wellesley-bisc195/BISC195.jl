@@ -180,7 +180,7 @@ function sequence!(fr::FastaRecord, seq::AbstractString)
 end
 
 function parse_fasta(path)
-    records = FastaRecord[]
+    records = FastaRecord[] # this is special syntax for `Vector{FastaRecord}()`
     for line in eachline(path)
         if startswith(line, '>')
             # if the line is a header, we push! a new record with an empty sequence to the `records` vector

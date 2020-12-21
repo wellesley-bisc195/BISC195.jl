@@ -3,10 +3,10 @@ uuid = "330f54e6-ee29-40e7-8c38-a258ddbc4e5e"
 desc = "Functions and documentation for 'Essental Skills for Computational Biology' course"
 authors = ["Kevin Bonham <kevbonham@gmail.com>"]
 licence = "MIT"
-version = "0.9.0"
+version = "0.10.0-dev"
 
 [compat]
-julia = "1.4"
+julia = "1.6"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
