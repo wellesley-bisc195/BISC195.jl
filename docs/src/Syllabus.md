@@ -46,10 +46,11 @@ After completing this course, students will be able to:
 
 - Navigate their computer and manipulate files using a command line interface.
 - Determine the appropriate data structures for representing numerical or biological sequence data.
-- Use 
-- Search for a solution to a novel error or software bug and implement it in code.
+- Effectively apply abstraction, conditional logic, and control flow
+  to write scripts to solve complex biological problems.
+- Recognize the components of exceptions (error messages) and identify solutions to correct them.
 - Use a version control system to keep track of changes to their code
-  and collaborate with others.
+  and collaborate with others on complex code bases.
 - Find, download, and process large biological sequence datasets from an online source  
   using a public-facing application programming interface (API).
 
@@ -66,8 +67,7 @@ Recommended: Molecular and/or Cell Biology.
 **Online textbook (free):**
 [Think Julia: How to think like a computer scientist](https://benlauwens.github.io/ThinkJulia.jl/latest/book.html)
 
-
-#### Lessons
+### Lessons
 
 ```@contents
 Pages = ["Lessons/Lesson1.md",
@@ -83,7 +83,7 @@ Pages = ["Lessons/Lesson1.md",
 Depth = 1
 ```
 
-#### Assignments
+### Assignments
 
 ```@contents
 Pages = ["Assignments/Assignment01.md",
