@@ -1,4 +1,4 @@
-# Syllabus
+# [BISC 195 Syllabus](@id syllabus)
 
 ## Course Info
 
@@ -6,21 +6,19 @@ Course Code: BISC 195
 Course Title: Essential Skills for Computational Biology
 
 ### Instructor
-| **Name:**         | Kevin Bonham, PhD      | Danielle Peterson ('20) |
-|:------------------|:----------------------:|:-----------------------:|
-| **Role:**         | Instructor             | TA                      |
-| **E-mail:**        | kbonham@wellesley.edu  | dpeterso@wellesley.edu  |
-| **Github:**       | `kescobo`              | `danielle-peterson`     |
+| **Name:**         | Kevin Bonham, PhD       | TA TBD |
+|:------------------|:-----------------------:|:------:|
+| **Role:**         | Instructor              | TA     |
+| **E-mail:**        | kbonham@wellesley.edu  | TBD    |
+| **Github:**       | `kescobo`               | TBD    |
 
-### Course Run Info - Wellesley SRP Summer 2020
+### Course Run Info - Wellesley Summer 2021
 
-**June 8th - July 17th**
+TBD
 
 #### Course Meeting Times
 
-- **Tu/Th 10am - 11am**: Reserved for lecture  
-- **M/W 10am - 12pm**: Lab / Office Hours
-- **Tu/Th 1pm - 3pm**: Lab / Office Hours
+TBD
 
 ## Description
 
@@ -29,9 +27,9 @@ At the same time, many biologists are intimidated by the prospect of programming
 In an era of high-throughput assays
 and datasets with thousands of samples containing millions of molecular sequences,
 a basic knowledge of computational methods is critical.
-Many tools for analyzing vast quantities of molecular data have only command-line interfaces,
-and performing statistical tests or plotting these large datasets
-is impossible with excel or other software with a graphical user interface.
+Many tools for investigating vast quantities of molecular data have only command-line interfaces,
+andanalyzing these large datasets is impossible
+with excel or other software with a graphical user interface.
 This course will provide an introduction to essential computational techniques
 for biological data analysis using a modern programming language,
 focusing on strategies for solving problems rather than specific syntax.
@@ -42,9 +40,11 @@ After completing this course, students will be able to:
 
 - Navigate their computer and manipulate files using a command line interface.
 - Write a script to perform statistical analyses on and plot a large numerical dataset.
-- Find, download, and process large biological sequence datasets from an online source.
 - Search for a solution to a novel error or software bug and implement it in code.
-- Use a version control system to keep track of changes to their code.
+- Use a version control system to keep track of changes to their code
+  and collaborate with others.
+- Find, download, and process large biological sequence datasets from an online source  
+  using a public-facing application programming interface (API).
 
 ### Prerequisites
 
@@ -65,7 +65,13 @@ Recommended: Molecular and/or Cell Biology.
 ```@contents
 Pages = ["Lessons/Lesson1.md",
          "Lessons/Lesson2.md",
-         "Lessons/Lesson3.md"
+         "Lessons/Lesson3.md",
+         "Lessons/Lesson4.md",
+         "Lessons/Lesson5.md",
+         "Lessons/Lesson6.md",
+         "Lessons/Lesson7.md",
+         "Lessons/Lesson8.md",
+         "Lessons/Lesson9.md",
           ]
 Depth = 1
 ```
@@ -76,6 +82,12 @@ Depth = 1
 Pages = ["Assignments/Assignment01.md",
          "Assignments/Assignment02.md",
          "Assignments/Assignment03.md"
+         "Assignments/Assignment04.md"
+         "Assignments/Assignment05.md"
+         "Assignments/Assignment06.md"
+         "Assignments/Assignment07.md"
+         "Assignments/Assignment08.md"
+         "Assignments/Assignment09.md"
           ]
 Depth = 1
 ```

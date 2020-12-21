@@ -78,5 +78,5 @@ makedocs(;
 deploydocs(;
     repo="github.com/wellesley-bisc195/BISC195.jl",
     push_preview = true,
-    devbranch="trunk",
+    devbranch="main",
 )

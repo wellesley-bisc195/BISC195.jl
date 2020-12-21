@@ -67,19 +67,15 @@ and how to get the most out of taking this course.
 ### Reading lesson content
 
 All of the course materials can be found on this website.
-Lectures, written content and practice problems, 
+Lectures, written content and practice problems,
 readings, and assignments
 can all be found with the appropriate lesson.
 There are also indices for each type of lesson content.
 
-```@raw html
-<!-- TODO: Fill in these links -->
-```
-
-- [Lesson index](#)
-- [Lecture index](#)
-- [Readings index](#)
-- [Assignment index](#)
+- [Syllabus](@ref syllabus)
+- [Lesson index](@ref lesson-index)
+- [Lecture index](@ref lecture-index)
+- [Assignment index](@ref assignment-index)
 
 #### Call-out boxes
 
@@ -99,7 +95,7 @@ that contain different kinds of information:
     messing up an input will not be a problem,
     but in rare cases you can potentially lose data
     or (very rarely) damage your computer.
-    
+
     Ask Kevin if you want advice on keeping your computer backed up.
 
 !!! warning "Checking Questions"
