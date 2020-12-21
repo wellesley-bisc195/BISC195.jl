@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Instructions for Assignment02 · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Assignments/assignment02_code/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../../Lessons/Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../../Lessons/Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../../Lessons/Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../../Lessons/Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../../Lessons/Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code re-use: packages and environments</span><ul><li><a class="tocitem" href="../../Lessons/Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment07/">Assignment07</a></li></ul></li><li><span class="tocitem">Lesson 8 - Putting it all togeher</span><ul><li><a class="tocitem" href="../../Lessons/Lesson8/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment08/">Assignment08</a></li></ul></li><li><span class="tocitem">Lesson 9 - Analyzing coronavirus genomes</span><ul><li><a class="tocitem" href="../../Lessons/Lesson9/">Lesson docs</a></li><li><a class="tocitem" href="../Assignment09/">Assignment09</a></li></ul></li><li><a class="tocitem" href="../Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Instructions for Assignment02</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Instructions for Assignment02</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Assignments/assignment02_code.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Instructions-for-Assignment02"><a class="docs-heading-anchor" href="#Instructions-for-Assignment02">Instructions for Assignment02</a><a id="Instructions-for-Assignment02-1"></a><a class="docs-heading-anchor-permalink" href="#Instructions-for-Assignment02" title="Permalink"></a></h1><h2 id="Introduction"><a class="docs-heading-anchor" href="#Introduction">Introduction</a><a id="Introduction-1"></a><a class="docs-heading-anchor-permalink" href="#Introduction" title="Permalink"></a></h2><p>In this assignment, you will start to put the pieces together. Note: this file is runnable in its current state, but is incomplete. You can run the file from the command line, or use the VS Code julia extension to run individual lines.</p><p>The following code is used for set up; there is no need to change it. If you <em>do</em> change it to figure out what it&#39;s doing, make sure you change it back or your assignment may not work correctly</p><pre><code class="language-julia">using Random
+Random.seed!(42)
+
+function generate_sequence(len)
+    seq = join(rand([&#39;A&#39;,&#39;C&#39;,&#39;G&#39;,&#39;T&#39;], len))
+    println(&quot;Your sequence is: &quot;, seq)
+    return seq
+end
+
+my_seq = generate_sequence(20)</code></pre><h2 id="Question-1"><a class="docs-heading-anchor" href="#Question-1">Question 1</a><a id="Question-1-1"></a><a class="docs-heading-anchor-permalink" href="#Question-1" title="Permalink"></a></h2><p>The code above generates a random 20nt DNA sequence, and assigns it to the variable <code>my_seq</code>. What kind of data type is <code>my_seq</code> (eg Float64, Int64, String, or something else)? Assign the variable <code>question1</code> to the correct type.</p><p>Hint1: rather than guess, you can just use the <code>typeof()</code> function.</p><pre><code class="language-julia">question1 = &quot;&quot;</code></pre><p>Hint2: If you&#39;re having trouble, note that your answer should not contain quotes. Eg. if you thing that <code>seq</code> has the type <code>MyType</code>, your code should read <code>question1 = MyType</code> and not <code>question1 = &quot;MyType&quot;</code></p><h2 id="Question-2"><a class="docs-heading-anchor" href="#Question-2">Question 2</a><a id="Question-2-1"></a><a class="docs-heading-anchor-permalink" href="#Question-2" title="Permalink"></a></h2><p>The function bellow has a &quot;doc string&quot;, which explains what the function should do. Many julia functions have doc strings, which makes it easy to get help right from the REPL</p><p>Open a julia REPL and type <code>?</code>. You will see the <code>julia&gt;</code> prompt change to <code>help?&gt;</code>. Now type <code>println</code> and hit enter. The docstring of <code>println</code> is printed and you&#39;re returned to a julia prompt</p><p>Evaluate the following function, including the docstring, in the REPL (that is, copy from the tripple quotes down to the &quot;end&quot; and paste it into the REPL, then hit enter)</p><pre><code class="language-julia">&quot;&quot;&quot;
+    question2(sequence)
+
+Checks if `sequence` is a String.
+Returns a boolean value, `true` or `false`.
+
+Example
+≡≡≡≡≡≡≡≡≡
+
+    julia&gt; question2(&quot;hello&quot;)
+    true
+
+    julia&gt; question2(1001)
+    false
+
+    julia&gt; if question2(&quot;a string&quot;)
+               println(&quot;Hey, it&#39;s a string!&quot;)
+           end
+    Hey, it&#39;s a string!
+&quot;&quot;&quot;
+function question2()
+    # put your code here
+end</code></pre><p>At the moment, this function doesn&#39;t do what it says it should. Actually, it doesn&#39;t do anything. Fix the function so that it takes one argument and returns <code>true</code> if the argument is a String, and returns <code>false</code> otherwise. You should be able to run the examples in the docstring and get the correct answer, and to run this function using <code>my_seq</code> as the argument (it should return <code>true</code>).</p><p>Hint: You haven&#39;t explicitly encountered a way to check if a type is another type. Learning to search for answers is a key programming skill! Try searching &quot;check if type is string julia&quot;. Typically, when I see search results, I prioritize in this order:</p><ol><li>stackoverflow.com</li><li>docs.julialang.org</li><li>discourse.julialang.org</li><li>github.com</li></ol><h2 id="Question-3"><a class="docs-heading-anchor" href="#Question-3">Question 3</a><a id="Question-3-1"></a><a class="docs-heading-anchor-permalink" href="#Question-3" title="Permalink"></a></h2><p>Let&#39;s try something a bit more complicated. The <code>question3()</code> function has a doc string, but is also incomplete. I&#39;ve written some code to get you started, complete it so that the examples work as expected in the docstring. If you use this function on <code>my_seq</code>, you should get the answer <code>0.3</code></p><pre><code class="language-julia">&quot;&quot;&quot;
+    question3(sequence)
+
+Calculates the GC ratio of a DNA sequence.
+The GC ratio is the total number of G and C bases divided by the total length of the sequence.
+For more info about GC content, see here:
+
+Example
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; question3(&quot;AATG&quot;)
+    0.25
+
+    julia&gt; question3(&quot;CCCGG&quot;)
+    1.0
+
+    julia&gt; question3(&quot;ATTA&quot;)
+    0.0
+&quot;&quot;&quot;
+function question3(sequence)
+    # throw an error if the string contains anything other than ACGT
+    if any(c-&gt; !in(c, [&#39;A&#39;,&#39;C&#39;,&#39;G&#39;,&#39;T&#39;]), sequence)
+        throw(ArgumentError(&quot;Sequence must only contain ACGT&quot;))
+    end
+
+    # change line to assign `seqlength` to the length of `sequence` instead of `1`
+    # If you&#39;re stuck, search for &quot;length of string julia&quot;
+    seqlength = 1
+
+    # count the number of G&#39;s
+    gs = count(==(&#39;G&#39;), sequence)
+    # count the number of C&#39;s
+    cs = count(==(&#39;C&#39;), sequence)
+
+    return gs + cs / seqlength # something is wrong with this line...
+end</code></pre><h2 id="Question-4"><a class="docs-heading-anchor" href="#Question-4">Question 4</a><a id="Question-4-1"></a><a class="docs-heading-anchor-permalink" href="#Question-4" title="Permalink"></a></h2><p>This process should be familiar by now.</p><p>Hint: you do not need to re-write code if you already have it. That is, don&#39;t copy any code from <code>question3</code>, just call it!</p><pre><code class="language-julia">&quot;&quot;&quot;
+    question4(sequence)
+
+Calculates the GC content of a DNA sequence
+and prints it to the screen.
+
+Example
+≡≡≡≡≡≡≡≡≡≡
+
+    julia&gt; question4(&quot;AATC&quot;)
+    Sequence:
+    AATC
+    GC Content:
+    0.25
+
+    julia&gt; question4(&quot;CCCGG&quot;);
+    Sequence:
+    CCCGG
+    GC Content:
+    1.0
+&quot;&quot;&quot;
+function question4(sequence)
+    # Your code here
+end</code></pre><hr/><p><em>This page was generated using <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</em></p></article><nav class="docs-footer"><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 21 December 2020 17:36">Monday 21 December 2020</span>. Using Julia version 1.5.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

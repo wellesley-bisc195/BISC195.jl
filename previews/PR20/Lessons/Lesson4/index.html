@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Lesson docs · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Lessons/Lesson4/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li class="is-active"><a class="tocitem" href>Lesson docs</a><ul class="internal"><li><a class="tocitem" href="#Learning-objectives"><span>Learning objectives</span></a></li><li><a class="tocitem" href="#Repeating-code-with-loops"><span>Repeating code with loops</span></a></li><li><a class="tocitem" href="#Loops-and-Strings-Strings-as-containers"><span>Loops and Strings - Strings as containers</span></a></li><li><a class="tocitem" href="#Kmers"><span>Kmers</span></a></li><li><a class="tocitem" href="#A-Brief-Introduction-to-Dictionaries"><span>A Brief Introduction to Dictionaries</span></a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code re-use: packages and environments</span><ul><li><a class="tocitem" href="../Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment07/">Assignment07</a></li></ul></li><li><span class="tocitem">Lesson 8 - Putting it all togeher</span><ul><li><a class="tocitem" href="../Lesson8/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment08/">Assignment08</a></li></ul></li><li><span class="tocitem">Lesson 9 - Analyzing coronavirus genomes</span><ul><li><a class="tocitem" href="../Lesson9/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment09/">Assignment09</a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Lesson 4 - Building functions and composition</a></li><li class="is-active"><a href>Lesson docs</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Lesson docs</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Lessons/Lesson4.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Lesson-4-Loop-d-loop"><a class="docs-heading-anchor" href="#Lesson-4-Loop-d-loop">Lesson 4 - Loop-d-loop</a><a id="Lesson-4-Loop-d-loop-1"></a><a class="docs-heading-anchor-permalink" href="#Lesson-4-Loop-d-loop" title="Permalink"></a></h1><p><a href="https://classroom.github.com/a/1vpkAM2r"><img src="https://img.shields.io/badge/Assignment04-Repository-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 04 - Invitation"/></a> <a href="../../Assignments/Assignment04/#assignment04"><img src="https://img.shields.io/badge/04-Description-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 04 - Description"/></a> <a href="../../Assignments/assignment04_code/#Instructions-for-Assignment04"><img src="https://img.shields.io/badge/04-Script-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 04 - Rendered"/></a> <a href="../../Assignments/Assignment04/#assignment04"><img src="https://img.shields.io/badge/Due-6%2F18%2F2020-orange?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 04 - Due"/></a></p><h2 id="Learning-objectives"><a class="docs-heading-anchor" href="#Learning-objectives">Learning objectives</a><a id="Learning-objectives-1"></a><a class="docs-heading-anchor-permalink" href="#Learning-objectives" title="Permalink"></a></h2><p><strong>Concepts</strong> - After completing this lesson, students will be able to:</p><ul><li>Compare and contrast <code>for</code> loops and <code>while</code> loops</li><li>Recognize the difference between <code>String</code>s and <code>Char</code>s</li><li>Debug errors that occur from writing infinite loops</li></ul><p><strong>Skills</strong> - After completing this lesson, students will be able to:</p><ul><li>Use a <code>for</code> loop to accomplish a task incrementally</li><li>Write a <code>while</code> loop to repeat code until a condition is met</li><li>Stop a loop before it&#39;s complete with <code>break</code></li></ul><p><strong>Assignments</strong> - This lesson is complete when students have:</p><ul><li>Read <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap04">Chapter 4</a> and <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap07">Chapter 7</a> of Think Julia.</li><li>Run all code examples from Lesson 4 on their own computers</li><li>Cloned the Assignment 4 repository with github classroom.</li><li>Completed assignment 4 with all tests passing.</li></ul><h2 id="Repeating-code-with-loops"><a class="docs-heading-anchor" href="#Repeating-code-with-loops">Repeating code with loops</a><a id="Repeating-code-with-loops-1"></a><a class="docs-heading-anchor-permalink" href="#Repeating-code-with-loops" title="Permalink"></a></h2><p>Writing code is about being lazy - never write more code than you have to! We&#39;ve already seen that we can use functions to wrap up code that can then be used over and over and over and...</p><p>But there are plenty more opportunities for re-using code, especially &quot;loops.&quot; In the 🐢exercise from <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap04">Chapter 4</a> you&#39;ve seen one use of the <code>for</code> loop.</p><pre><code class="language-julia">for i in 1:5
+    println(i * 3)
+end</code></pre><pre class="documenter-example-output">3
+6
+9
+12
+15</pre><p>This loop says, &quot;For each number, 1 to 5, print that number times 3.&quot;</p><p>The way the computer evaluates this is as a loop -</p><ol><li><code>i</code> is set to 1, <code>println(i * 3)</code><ol><li>loop back to the top</li></ol></li><li><code>i</code> is set to 2, <code>println(i * 3)</code><ol><li>loop back to the top</li></ol></li><li>etc...</li></ol><h3 id="Using-ranges-in-for-loops"><a class="docs-heading-anchor" href="#Using-ranges-in-for-loops">Using ranges in <code>for</code> loops</a><a id="Using-ranges-in-for-loops-1"></a><a class="docs-heading-anchor-permalink" href="#Using-ranges-in-for-loops" title="Permalink"></a></h3><p>The <code>1:5</code> is a &quot;range&quot;, it&#39;s all of the integers from 1 to 5. In julia, there are many ways to express ranges - and they don&#39;t always have to increment by 1!</p><p>The easiest way to use ranges is with the <code>:</code> syntax, <code>&lt;start&gt;:&lt;optional-increment&gt;:&lt;end&gt;</code>.</p><pre><code class="language-julia-repl">julia&gt; for even_number in 2:2:10
+           println(even_number)
+       end
+2
+4
+6
+8
+10
+
+julia&gt; for half in 1:0.5:3
+           println(half)
+       end
+1.0
+1.5
+2.0
+2.5
+3.0</code></pre><p>You can even go backwards!</p><pre><code class="language-julia-repl">julia&gt; function decrement(n)
+           for d in n:-1:0
+               println(d)
+           end
+       end
+decrement (generic function with 1 method)
+
+julia&gt; decrement(5)
+5
+4
+3
+2
+1
+0</code></pre><p>For more complicated ranges, we can also use the <code>range()</code> function. Use the REPL <code>help?</code> mode to learn about the <code>range</code> function by typing <code>?</code> (the prompt should change to <code>help?&gt;</code>), then type <code>range</code> and press <code>enter</code>.</p><div class="admonition is-category-practice"><header class="admonition-header">Practice</header><div class="admonition-body"><p>Use the <code>range()</code> function to make a range that goes from <code>10</code> to <code>1000</code> with 4 entries.</p><p>You should be able to run:</p><pre><code class="language-julia">julia&gt; for i in range(#= your code here =#)
+           println(i)
+       end
+10.0
+340.0
+670.0
+1000.0</code></pre></div></div><h3 id="While-loops"><a class="docs-heading-anchor" href="#While-loops">While loops</a><a id="While-loops-1"></a><a class="docs-heading-anchor-permalink" href="#While-loops" title="Permalink"></a></h3><p>In many cases, the same loop can be written in many different ways. For example,</p><pre><code class="language-julia-repl">julia&gt; function whiledecrement(n)
+           while n &gt;= 0 # greater than or equal to
+               println(n)
+               n = n - 1
+           end
+       end
+whiledecrement (generic function with 1 method)
+
+julia&gt; whiledecrement(5)
+5
+4
+3
+2
+1
+0</code></pre><p>Where <code>for</code> loops march through a predetermined sequence, <code>while</code> loops continue until a particular condition is met.</p><h3 id="Loops-and-scope"><a class="docs-heading-anchor" href="#Loops-and-scope">Loops and scope</a><a id="Loops-and-scope-1"></a><a class="docs-heading-anchor-permalink" href="#Loops-and-scope" title="Permalink"></a></h3><p>In julia, loops have their own scope (we talked about <a href="Lessons/@ref scope">scope back in Lesson 2</a>). Functions also have their own scope, and the way that the scope of loops and the scope of functions interact can be a bit counter-intuitive.</p><p>The best way to get a sense of this is to see some examples.</p><pre><code class="language-julia">i = 5
+
+for i in 1:3
+    println(i)
+end
+
+println(i)</code></pre><pre class="documenter-example-output">1
+2
+3
+5</pre><pre><code class="language-julia">function strangeloop(j)
+    k = 1
+    for k in 1:j
+        println(k)
+    end
+    println(k)
+end
+
+k = 5
+
+strangeloop(k)
+
+println(k)</code></pre><pre class="documenter-example-output">1
+2
+3
+4
+5
+1
+5</pre><pre><code class="language-julia">m = 10
+
+while m &gt; 0
+    print(&quot;$m &quot;)
+    m = m - 1
+end</code></pre><pre><code class="language-none">ERROR: UndefVarError: m not defined</code></pre><p>Wait, what happened to <code>m</code>?</p><pre><code class="language-julia">while m &gt; 0
+    print(&quot;$m &quot;)
+    break
+end</code></pre><pre><code class="language-none">10</code></pre><p>This occurs because, though the <code>m</code> in <code>while m &gt; 0</code> refers to the <code>m</code> assigned to <code>10</code>, inside the loop, <code>m</code> hasn&#39;t been defined. So the expression <code>m - 1</code> throws an error.</p><p>In a function, things are a bit different:</p><pre><code class="language-julia">function strangewhile(n)
+    while n &gt; 0
+        print(&quot;$n &quot;)
+        n = n - 1
+    end
+    println(&quot;&quot;) # getting a newline
+    println(n)
+end
+
+strangewhile(10)</code></pre><pre><code class="language-none">10 9 8 7 6 5 4 3 2 1
+0</code></pre><p>Loops inside the function have access to the function arguments. Re-assigning <code>n</code> inside the function changes what the function-scope <code>n</code> refers to, but doesn&#39;t leak outside the function.</p><pre><code class="language-julia">my_n = 5
+
+strangewhile(my_n)</code></pre><pre><code class="language-none">5 4 3 2 1
+0</code></pre><pre><code class="language-julia">my_n</code></pre><pre><code class="language-none">5</code></pre><h2 id="Loops-and-Strings-Strings-as-containers"><a class="docs-heading-anchor" href="#Loops-and-Strings-Strings-as-containers">Loops and Strings - Strings as containers</a><a id="Loops-and-Strings-Strings-as-containers-1"></a><a class="docs-heading-anchor-permalink" href="#Loops-and-Strings-Strings-as-containers" title="Permalink"></a></h2><p>Loops can also operate on <code>String</code>s, which are built from <code>Char</code>s.</p><pre><code class="language-julia-repl">julia&gt; my_string = &quot;This is a String&quot;;
+
+julia&gt; for c in my_string
+           println(c)
+       end
+T
+h
+i
+s
+ 
+i
+s
+ 
+a
+ 
+S
+t
+r
+i
+n
+g</code></pre><p>We can also access individual parts of a <code>String</code> by &quot;indexing&quot; them. The syntax for this in julia is to put the index in <code>[]</code>.</p><p>We can index with individual numbers...</p><pre><code class="language-julia-repl">julia&gt; my_string[1]
+&#39;T&#39;: ASCII/Unicode U+0054 (category Lu: Letter, uppercase)</code></pre><p>or with ranges...</p><pre><code class="language-julia-repl">julia&gt; my_string[5:8]
+&quot; is &quot;</code></pre><p>Or with the special <code>end</code> keyword, which references the last index of a collection.</p><pre><code class="language-julia-repl">julia&gt; lastindex(my_string)
+16
+
+julia&gt; my_string[end]
+&#39;g&#39;: ASCII/Unicode U+0067 (category Ll: Letter, lowercase)
+
+julia&gt; my_string[end-5:end]
+&quot;String&quot;</code></pre><div class="admonition is-info"><header class="admonition-header">Note</header><div class="admonition-body"><p>For those of you that have learned other programming languages like python or java, you might be confused that the first index is <code>1</code> instead of <code>0</code>. That is because julia uses &quot;1-based&quot; indexing.</p><p>For those of you that have used R or matlab, or for those of you that have otherwise never been conditioned to think of <code>0</code> as the first thing, this is probably intuitive.</p></div></div><div class="admonition is-success"><header class="admonition-header">Tip</header><div class="admonition-body"><p>Notice that the type of a string indexed by a number (or the pieces of a <code>for</code> loop) is <code>Char</code>,  and the type when indexed by a range is a <code>String</code>:</p><pre><code class="language-julia">julia&gt; typeof(my_string[1])
+Char
+
+julia&gt; typeof(my_string[1:2])
+String</code></pre><div class="admonition is-warning"><header class="admonition-header">Checking Question</header><div class="admonition-body"><p>How can you get a single letter <code>String</code> with indexing?</p></div></div></div></div><h2 id="Kmers"><a class="docs-heading-anchor" href="#Kmers">Kmers</a><a id="Kmers-1"></a><a class="docs-heading-anchor-permalink" href="#Kmers" title="Permalink"></a></h2><p>Over the next couple of lessons, we&#39;re going to build some functions that help us to find and count all of the &quot;kmers&quot; of any length in a sequence, then use them to help us identify DNA sequences from various organisms.</p><p>A &quot;kmer&quot; is a sequence (DNA, RNA, or amino acid) of a given length, <code>k</code>. </p><p>It is often useful to know the kmer composition of a sequence, given different values of <code>k</code>. For example, the 2mer (kmers with length 2) composition of the sequence &quot;ATATATC&quot; is:</p><ul><li>&quot;AT&quot; = 3</li><li>&quot;TA&quot; = 2</li><li>&quot;TC&quot; = 1</li></ul><p>Note that all reference frames are valid that is, we don&#39;t just march along by 2s. So the 3mer composition of the same sequence would be</p><ul><li>&quot;ATA&quot; = 2</li><li>&quot;TAT&quot; = 2</li><li>&quot;ATC&quot; = 1</li></ul><p>Another way to say this is that the sum of the counts of all kmers in a sequence must be equal to the length of the sequence minus <code>k</code> plus 1.</p><div class="admonition is-warning"><header class="admonition-header">Checking questions</header><div class="admonition-body"><ol><li>How many 4mers are in the sequence &quot;ATTCCGTCA&quot; (the length of the sequence is 9)</li><li>All of the 5mers in the above sequence are unique. What are they?  Answer below<sup class="footnote-reference"><a id="citeref-1" href="#footnote-1">[1]</a></sup>, but don&#39;t peek until you&#39;ve tried it!</li></ol></div></div><h2 id="A-Brief-Introduction-to-Dictionaries"><a class="docs-heading-anchor" href="#A-Brief-Introduction-to-Dictionaries">A Brief Introduction to Dictionaries</a><a id="A-Brief-Introduction-to-Dictionaries-1"></a><a class="docs-heading-anchor-permalink" href="#A-Brief-Introduction-to-Dictionaries" title="Permalink"></a></h2><p>Earlier, when we wanted to calculate GC content of a DNA sequence, we looped through a sequence, counted anything that was a <code>G</code> or <code>C</code>, and then divided that number by the length of the sequence.</p><p>If we want to know the composition of all of the bases in DNA that would be easy to write out by hand, because there are only 4 options. You&#39;ll do this for real in Assignment04, but the <a href="https://en.wikipedia.org/wiki/Pseudocode">psedocode</a> might look something like this:</p><pre><code class="language-none">set variables a,c,g,t to 0
+for each base in the sequence
+    if the base is &#39;A&#39;, add one to `a`
+    or if the base is &#39;C&#39;, add one to `c`
+    or if the base is &#39;G&#39;, add one to `g`
+    or if the base is &#39;T&#39;, add one to `t`
+end
+return a,c,g,t</code></pre><p>But doing something like this for proteins, where each amino acid might be one of 20 options, or for kmers where the number of possibilities increases exponentially with <code>k</code> (there are 16 possible DNA 2mers, 64 possible DNA 3mers, etc) that would be untenable. </p><p>Another option is to use a data structure called a &quot;Dictionary.&quot; What follows is a very brief introduction to dictionaries, we&#39;ll learn more about them next week. </p><p>Dictionaries store data as <code>key =&gt; value</code> pairs, where the <code>key</code> can by (almost) any type and is used to access or alter the <code>value</code>. This is probably confusing, but may be clearer with some examples.</p><pre><code class="language-julia-repl">julia&gt; my_dict = Dict(&quot;apples&quot;=&gt; 4, &quot;bananas&quot; =&gt; 1, &quot;strawberries&quot;=&gt;10)
+Dict{String,Int64} with 3 entries:
+  &quot;bananas&quot;      =&gt; 1
+  &quot;apples&quot;       =&gt; 4
+  &quot;strawberries&quot; =&gt; 10</code></pre><p>Here, the fruits are the <code>key</code>s, and the <code>Int64s</code> are the <code>value</code>s. We can access values using the <code>keys</code> as the index:</p><pre><code class="language-julia-repl">julia&gt; my_dict[&quot;bananas&quot;]
+1
+
+julia&gt; my_dict[&quot;strawberries&quot;] * 2
+20</code></pre><p>We can check if a dictionary has a particular key with the boolean function <code>haskey()</code>. </p><pre><code class="language-julia-repl">julia&gt; haskey(my_dict, &quot;apples&quot;)
+true
+
+julia&gt; haskey(my_dict, &quot;kumquat&quot;)
+false</code></pre><p>If we try to access the dictionary with a key that doesn&#39;t exist, we&#39;ll get an error.</p><pre><code class="language-julia">julia&gt; my_dict[&quot;kumquat&quot;]</code></pre><pre><code class="language-none">ERROR: KeyError: key &quot;kumquat&quot; not found</code></pre><p>But we can add new entries to the dictionary if we assign them to new values.</p><pre><code class="language-julia-repl">julia&gt; my_dict[&quot;kumquat&quot;] = 0
+0
+
+julia&gt; haskey(my_dict, &quot;kumquat&quot;)
+true</code></pre><p>And we can update entries by reassigning them, as if they are variables.</p><pre><code class="language-julia-repl">julia&gt; my_dict[&quot;apples&quot;] = my_dict[&quot;apples&quot;] + 1;
+
+julia&gt; my_dict[&quot;apples&quot;]
+5</code></pre><p>In the assignment, we&#39;ll use dictionaries where the keys are the kmers, and the values are the counts. Let&#39;s get started!</p><section class="footnotes is-size-7"><ul><li class="footnote" id="footnote-1"><a class="tag is-link" href="#citeref-1">1</a>There are 6 kmers of length 4 (9 - 4 + 1),   [&quot;ATTC&quot;, &quot;TTCC&quot;, &quot;TCCG&quot;, &quot;CCGT&quot;, &quot;CGTC&quot;, &quot;GTCA&quot;]</li></ul></section></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../Assignments/Assignment03/">« Assignment03</a><a class="docs-footer-nextpage" href="../../Assignments/Assignment04/">Assignment04 »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 21 December 2020 17:36">Monday 21 December 2020</span>. Using Julia version 1.5.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Lesson docs · BISC195.jl</title><link rel="canonical" href="https://wellesley-bisc195.github.io/BISC195.jl/Lessons/Lesson9/"/><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="../.."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../../assets/documenter.js"></script><script src="../../siteinfo.js"></script><script src="../../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../../assets/themeswap.js"></script><link href="../../assets/admonitions.css" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="../../"><img class="docs-light-only" src="../../assets/logo.svg" alt="BISC195.jl logo"/><img class="docs-dark-only" src="../../assets/logo-dark.svg" alt="BISC195.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">BISC195.jl</span></div><form class="docs-search" action="../../search/"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="../../">Home</a></li><li><a class="tocitem" href="../../Syllabus/">Syllabus</a></li><li><span class="tocitem">Lesson 1 - Getting Started</span><ul><li><a class="tocitem" href="../Lesson1/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment01/">Assignment01</a></li></ul></li><li><span class="tocitem">Lesson 2 - Data Types and Functions</span><ul><li><a class="tocitem" href="../Lesson2/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment02/">Assignment02</a></li></ul></li><li><span class="tocitem">Lesson 3 - Building functions and composition</span><ul><li><a class="tocitem" href="../Lesson3/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment03/">Assignment03</a></li></ul></li><li><span class="tocitem">Lesson 4 - Building functions and composition</span><ul><li><a class="tocitem" href="../Lesson4/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment04/">Assignment04</a></li></ul></li><li><span class="tocitem">Lesson 5 - Arrays</span><ul><li><a class="tocitem" href="../Lesson5/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment05/">Assignment05</a></li></ul></li><li><span class="tocitem">Lesson 6 - Miscellany</span><ul><li><a class="tocitem" href="../Lesson6/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment06/">Assignment06</a></li></ul></li><li><span class="tocitem">Lesson 7 - Code re-use: packages and environments</span><ul><li><a class="tocitem" href="../Lesson7/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment07/">Assignment07</a></li></ul></li><li><span class="tocitem">Lesson 8 - Putting it all togeher</span><ul><li><a class="tocitem" href="../Lesson8/">Lesson docs</a></li><li><a class="tocitem" href="../../Assignments/Assignment08/">Assignment08</a></li></ul></li><li><span class="tocitem">Lesson 9 - Analyzing coronavirus genomes</span><ul><li class="is-active"><a class="tocitem" href>Lesson docs</a><ul class="internal"><li><a class="tocitem" href="#Types-can-be-scary-(but-don&#39;t-have-to-be)"><span>Types can be scary (but don&#39;t have to be)</span></a></li><li><a class="tocitem" href="#Functions-vs-Methods"><span>Functions vs Methods</span></a></li><li><a class="tocitem" href="#Writing-your-own-types"><span>Writing your own types</span></a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignment09/">Assignment09</a></li></ul></li><li><a class="tocitem" href="../../Assignments/Assignments/">Assignment Index</a></li><li><a class="tocitem" href="../../Lectures/Lectures/">Lecture Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li><a class="is-disabled">Lesson 9 - Analyzing coronavirus genomes</a></li><li class="is-active"><a href>Lesson docs</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Lesson docs</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/wellesley-bisc195/BISC195.jl/blob/master/docs/src/Lessons/Lesson9.md#L" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Lesson-9-Types-and-methods"><a class="docs-heading-anchor" href="#Lesson-9-Types-and-methods">Lesson 9 - Types and methods</a><a id="Lesson-9-Types-and-methods-1"></a><a class="docs-heading-anchor-permalink" href="#Lesson-9-Types-and-methods" title="Permalink"></a></h1><p><a href="../../Assignments/Assignment09/#assignment09"><img src="https://img.shields.io/badge/09-Description-blue?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 09 - Description"/></a> <a href="../../Assignments/Assignment09/#assignment09"><img src="https://img.shields.io/badge/Due-7%2F20%2F2020-orange?style=for-the-badge&amp;logo=open%20badges" alt="Assignment 09 - Due"/></a></p><p><strong>Assignments</strong> - This lesson is complete when students have:</p><ul><li>Read <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap17">Chapter 17</a> and <a href="https://benlauwens.github.io/ThinkJulia.jl/latest/book.html#chap18">Chapter 18</a> of Think Julia.</li><li>Run all code examples from Lesson 9 on their own computers</li><li>Cloned the Assignment 9 repository with github classroom.</li><li>Completed assignment 9 with all tests passing.</li></ul><h2 id="Types-can-be-scary-(but-don&#39;t-have-to-be)"><a class="docs-heading-anchor" href="#Types-can-be-scary-(but-don&#39;t-have-to-be)">Types can be scary (but don&#39;t have to be)</a><a id="Types-can-be-scary-(but-don&#39;t-have-to-be)-1"></a><a class="docs-heading-anchor-permalink" href="#Types-can-be-scary-(but-don&#39;t-have-to-be)" title="Permalink"></a></h2><p>The first programming language I learned was python, which has a very lax relationship with types. When I first started learning julia, seeing types everywhere freaked me out a little bit.</p><p>One bit of good news is that, most of the time, you don&#39;t need to worry <em>too</em> much about types to write julia code. As you&#39;ve seen, beyond knowing that things like <code>split()</code> only work on strings, or seeing a <code>MethodError</code> and needing to know what that means, mostly you can write functions without specifying argument types and you can get a lot done with built-in types.</p><p>But knowing a little bit about types can lead to simpler and clearer code and can help you debug problems more easily. But if it&#39;s not immediately obvious how to use types, or the syntax is a bit clumsy for a bit, that&#39;s fine. It&#39;s useful to know this tool exists, but you don&#39;t need to use it all the time.</p><h2 id="Functions-vs-Methods"><a class="docs-heading-anchor" href="#Functions-vs-Methods">Functions vs Methods</a><a id="Functions-vs-Methods-1"></a><a class="docs-heading-anchor-permalink" href="#Functions-vs-Methods" title="Permalink"></a></h2><p>As you&#39;ve seen, a function is an action performed on data. Most functions have names, like <code>length()</code> or <code>gc_content()</code>, But when you call a function, what is actually executed is a specific &quot;<em>method</em>&quot; of that function. That is, a version of the function that depends on the types of its arguments.</p><p>When you first define a function, it only has one method (the one you just defined).</p><pre><code class="language-julia">julia&gt; function somefunc(x)
+           println(&quot;Fallback method!&quot;)
+       end
+somefunc (generic function with 1 method)</code></pre><p>But in julia, the same function <strong>name</strong> can refer to many methods, with different argument types, and even different numbers of arguments.</p><pre><code class="language-julia">julia&gt; function somefunc(x::Number)
+           println(&quot;Number method!!&quot;)
+       end
+somefunc (generic function with 2 methods)
+
+julia&gt; function somefunc(x::AbstractString)
+           println(&quot;AbstractString method!!&quot;)
+       end
+somefunc (generic function with 3 methods)
+
+julia&gt; function somefunc(x,y)
+           println(&quot;Two argument method!!&quot;)
+       end
+somefunc (generic function with 4 methods)
+
+julia&gt; somefunc(2.3)
+Number method!!
+
+julia&gt; somefunc(&quot;woo!&quot;)
+AbstractString method!!
+
+julia&gt; somefunc([])
+Fallback method!
+
+julia&gt; somefunc(1.0, &quot;hey!&quot;)
+Two argument method!!</code></pre><p>One can even define a method that calls another method of the same function! For example, we can write a <code>complement()</code> function that works on <code>Char</code>:</p><pre><code class="language-julia">julia&gt; function complement(base::Char)
+           base = uppercase(base)
+           comps = Dict(&#39;A&#39; =&gt; &#39;T&#39;,
+                        &#39;C&#39; =&gt; &#39;G&#39;,
+                        &#39;G&#39; =&gt; &#39;C&#39;,
+                        &#39;T&#39; =&gt; &#39;A&#39;,
+                        &#39;N&#39; =&gt; &#39;N&#39;)
+           return comps[base]
+       end
+complement (generic function with 1 method)</code></pre><p>And then another function that works on <code>String</code>s, that maps the <code>complement(::Char)</code> method onto the <code>String</code>.</p><pre><code class="language-julia">julia&gt; function complement(seq::AbstractString)
+           map(complement, seq)
+       end
+complement (generic function with 2 methods)
+
+julia&gt; complement(&quot;ATTGC&quot;)
+&quot;TAACG&quot;</code></pre><p>This works because <code>map</code> on a <code>String</code> applies the function to each element of the <code>String</code>, which are <code>Char</code>s. </p><p>Some functions have <em>a ton</em> of methods - you can see them using the <code>methods()</code> function:</p><pre><code class="language-julia">julia&gt; methods(complement)
+# 2 methods for generic function &quot;complement&quot;:
+[1] complement(base::Char) in Main at REPL[5]:2
+[2] complement(seq::AbstractString) in Main at REPL[3]:2</code></pre><div class="admonition is-warning"><header class="admonition-header">Checking Question</header><div class="admonition-body"><p>How many methods does <code>+</code> have?</p></div></div><h2 id="Writing-your-own-types"><a class="docs-heading-anchor" href="#Writing-your-own-types">Writing your own types</a><a id="Writing-your-own-types-1"></a><a class="docs-heading-anchor-permalink" href="#Writing-your-own-types" title="Permalink"></a></h2><p>Sometimes, the best way to to solve a problem is to make a new type. For example, when you parsed FASTA files in Assignments 7 and 8, you were keeping headers and sequences separate -  this could lead to problems trying to keep them in sync later when you try to work with them.</p><p>Further, most of you solved that assignment by keeping a bunch of extra vectors around that stored intermediate sequences, and had to deal with special-casing the first and last sequence. That works, but it&#39;s a lot to keep track of.</p><p>Compare that approach to the following:</p><pre><code class="language-julia">mutable struct FastaRecord
+    header
+    sequence
+end
+
+# these are &quot;accessor&quot; functions - they&#39;re not strictly necessary
+function header(fr::FastaRecord)
+    return fr.header
+end
+
+function sequence(fr::FastaRecord)
+    return fr.sequence
+end
+
+## Note: Simple functions like those above can be written with shortened syntax:
+# header(fr::FastaRecord) = fr.header
+# sequence(fr::FastaRecord) = fr.sequence
+
+# sequence! updates the sequence field
+function sequence!(fr::FastaRecord, seq::AbstractString)
+    fr.sequence = seq
+end
+
+function parse_fasta(path)
+    records = FastaRecord[] # this is special syntax for `Vector{FastaRecord}()`
+    for line in eachline(path)
+        if startswith(line, &#39;&gt;&#39;)
+            # if the line is a header, we push! a new record with an empty sequence to the `records` vector
+            header = line[2:end]
+            push!(records, FastaRecord(header, &quot;&quot;))
+        else
+            # otherwise, we add the line onto the end of the sequence
+            record = records[end]
+            newseq = sequence(record) * line
+            sequence!(record, newseq)
+        end
+    end
+    return records
+end</code></pre><pre><code class="language-julia">julia&gt; ex1 = parse_fasta(&quot;/Users/ksb/repos/courses/assignment07/data/ex1.fasta&quot;)
+2-element Array{FastaRecord,1}:
+ FastaRecord(&quot;ex1.1 | easy&quot;, &quot;AATTATAGC&quot;)
+ FastaRecord(&quot;ex1.2 | multiline&quot;, &quot;CGCCCCCCAGTCGGATT&quot;)</code></pre><p>We can also write functions like <code>length</code> and <code>gc_content</code> that work on our <code>FastaRecord</code> type.</p><pre><code class="language-julia">Base.length(fr::FastaRecord) = length(sequence(fr))
+
+# assuming you&#39;ve already written `gc_content()` that works on `String`s
+gc_content(fr::FastaRecord) = gc_content(sequence(fr))</code></pre><div class="admonition is-warning"><header class="admonition-header">Checking Question</header><div class="admonition-body"><p>If multiple methods work for a particular function call, how does julia decide which one to use?</p><p>Eg, if I write</p><pre><code class="language-julia">julia&gt; function foo(x::Number, y::Number)
+    println(&quot;first method&quot;)
+end
+foo (generic function with 1 method)
+
+julia&gt; function foo(x::Float64, y::Number)
+            println(&quot;second method&quot;)
+        end
+foo (generic function with 2 methods)
+
+julia&gt; function foo(x::Float64, y::Float64)
+            println(&quot;third method&quot;)
+        end
+foo (generic function with 3 methods)</code></pre><p>Which method is called when I run <code>foo(1.0, 1)</code>? What about <code>foo(42, 1.0)</code>? Try to answer the question before running the code, then check to see if you&#39;re right.</p></div></div></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../../Assignments/Assignment08/">« Assignment08</a><a class="docs-footer-nextpage" href="../../Assignments/Assignment09/">Assignment09 »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Monday 21 December 2020 17:36">Monday 21 December 2020</span>. Using Julia version 1.5.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
