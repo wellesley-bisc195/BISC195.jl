@@ -54,7 +54,7 @@ and how to get the most out of taking this course.
     lectures, and course content,
     but this is intentional.
     Have I mentioned before how important practice is?
-4. **Fail early and fail often. Embrace your error messages.**
+5. **Fail early and fail often. Embrace your error messages.**
     If you never make a mistake, you are not learning how to program.
     If you are practicing enough, trying new things,
     most of the time you will fail.

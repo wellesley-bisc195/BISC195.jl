@@ -24,22 +24,29 @@ TBD
 
 Modern biology depends on computing.
 At the same time, many biologists are intimidated by the prospect of programming.
-In an era of high-throughput assays
-and datasets with thousands of samples containing millions of molecular sequences,
+In an era of high-throughput assays and datasets with thousands of samples containing millions of molecular sequences,
 a basic knowledge of computational methods is critical.
 Many tools for investigating vast quantities of molecular data have only command-line interfaces,
-andanalyzing these large datasets is impossible
-with excel or other software with a graphical user interface.
-This course will provide an introduction to essential computational techniques
-for biological data analysis using a modern programming language,
-focusing on strategies for solving problems rather than specific syntax.
+and analyzing these large datasets is impossible with excel or other software with a graphical user interface.
+This course will provide an introduction to the essential computer science concepts
+necessary for doing bioinformatics and biological data analysis,
+including abstraction, control flow, functional programming, and modularization.
+This knowledge will enable students to design, create and debug their own programs
+to wrangle large datasets, use command-line tools with confidence,
+and perform reproducible analyses.
+In addition, students will learn practical coding-adjacent skills
+such as interacting with their computer using the shell,
+distributed version control systems,
+and interaction with online biological sequence databases for DNA and protein
+through application program interfaces (APIs).
 
 ### Learning Objectives
 
 After completing this course, students will be able to:
 
 - Navigate their computer and manipulate files using a command line interface.
-- Write a script to perform statistical analyses on and plot a large numerical dataset.
+- Determine the appropriate data structures for representing numerical or biological sequence data.
+- Use 
 - Search for a solution to a novel error or software bug and implement it in code.
 - Use a version control system to keep track of changes to their code
   and collaborate with others.
